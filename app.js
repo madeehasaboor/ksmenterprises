@@ -3,150 +3,394 @@ let products = [];
 
 // Portfolio items data
 const portfolioItems = [
-    // Professional Car Care Products (only items with existing images)
+    // Professional Car Care Products (using actual files in products directory)
     {
         id: 1,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.36 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.23 AM.jpeg"
     },
     {
         id: 2,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.36 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.23 AM (1).jpeg"
     },
     {
         id: 3,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.36 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.23 AM (2).jpeg"
     },
     {
         id: 4,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.24 AM.jpeg"
     },
     {
         id: 5,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.24 AM (1).jpeg"
     },
     {
         id: 6,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.24 AM (2).jpeg"
     },
     {
         id: 7,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.38 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.24 AM (3).jpeg"
     },
     {
         id: 8,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.38 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.25 AM.jpeg"
     },
     {
         id: 9,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.38 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.25 AM (1).jpeg"
     },
     {
         id: 10,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.25 AM (2).jpeg"
     },
     {
         id: 11,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.26 AM.jpeg"
     },
     {
         id: 12,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.26 AM (1).jpeg"
     },
     {
         id: 13,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.40 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.26 AM (2).jpeg"
     },
     {
         id: 14,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.40 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.27 AM.jpeg"
     },
     {
         id: 15,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.40 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.27 AM (1).jpeg"
     },
     {
         id: 16,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.41 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.27 AM (2).jpeg"
     },
     {
         id: 17,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.41 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.27 AM (3).jpeg"
     },
     {
         id: 18,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.41 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.28 AM.jpeg"
     },
     {
         id: 19,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.42 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.28 AM (1).jpeg"
     },
     {
         id: 20,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.42 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.28 AM (2).jpeg"
     },
     {
         id: 21,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.42 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.29 AM.jpeg"
     },
     {
         id: 22,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.43 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.29 AM (1).jpeg"
     },
     {
         id: 23,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.43 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.29 AM (2).jpeg"
     },
     {
         id: 24,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.43 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.30 AM.jpeg"
     },
     {
         id: 25,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.44 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.30 AM (1).jpeg"
     },
     {
         id: 26,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.44 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.30 AM (2).jpeg"
     },
     {
         id: 27,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.44 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.30 AM (3).jpeg"
     },
     {
         id: 28,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.31 AM.jpeg"
     },
     {
         id: 29,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.31 AM (1).jpeg"
     },
     {
         id: 30,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.31 AM (2).jpeg"
     },
     {
         id: 31,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.46 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.32 AM.jpeg"
     },
     {
         id: 32,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.46 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.32 AM (1).jpeg"
     },
     {
         id: 33,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.46 AM (2).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.32 AM (2).jpeg"
     },
     {
         id: 34,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.47 AM.jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.33 AM.jpeg"
     },
     {
         id: 35,
-        image: "products/WhatsApp Image 2025-08-01 at 11.11.47 AM (1).jpeg"
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.33 AM (1).jpeg"
     },
     {
         id: 36,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.33 AM (2).jpeg"
+    },
+    {
+        id: 37,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.33 AM (3).jpeg"
+    },
+    {
+        id: 38,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.34 AM.jpeg"
+    },
+    {
+        id: 39,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.34 AM (1).jpeg"
+    },
+    {
+        id: 40,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.34 AM (2).jpeg"
+    },
+    {
+        id: 41,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.35 AM.jpeg"
+    },
+    {
+        id: 42,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.35 AM (1).jpeg"
+    },
+    {
+        id: 43,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.35 AM (2).jpeg"
+    },
+    {
+        id: 44,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.36 AM.jpeg"
+    },
+    {
+        id: 45,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.36 AM (1).jpeg"
+    },
+    {
+        id: 46,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.36 AM (2).jpeg"
+    },
+    {
+        id: 47,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM.jpeg"
+    },
+    {
+        id: 48,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM (1).jpeg"
+    },
+    {
+        id: 49,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM (2).jpeg"
+    },
+    {
+        id: 50,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.37 AM (3).jpeg"
+    },
+    {
+        id: 51,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.38 AM.jpeg"
+    },
+    {
+        id: 52,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.38 AM (1).jpeg"
+    },
+    {
+        id: 53,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.38 AM (2).jpeg"
+    },
+    {
+        id: 54,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM.jpeg"
+    },
+    {
+        id: 55,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM (1).jpeg"
+    },
+    {
+        id: 56,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM (2).jpeg"
+    },
+    {
+        id: 57,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.39 AM (3).jpeg"
+    },
+    {
+        id: 58,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.40 AM.jpeg"
+    },
+    {
+        id: 59,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.40 AM (1).jpeg"
+    },
+    {
+        id: 60,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.40 AM (2).jpeg"
+    },
+    {
+        id: 61,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.41 AM.jpeg"
+    },
+    {
+        id: 62,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.41 AM (1).jpeg"
+    },
+    {
+        id: 63,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.41 AM (2).jpeg"
+    },
+    {
+        id: 64,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.42 AM.jpeg"
+    },
+    {
+        id: 65,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.42 AM (1).jpeg"
+    },
+    {
+        id: 66,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.42 AM (2).jpeg"
+    },
+    {
+        id: 67,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.43 AM.jpeg"
+    },
+    {
+        id: 68,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.43 AM (1).jpeg"
+    },
+    {
+        id: 69,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.43 AM (2).jpeg"
+    },
+    {
+        id: 70,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.44 AM.jpeg"
+    },
+    {
+        id: 71,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.44 AM (1).jpeg"
+    },
+    {
+        id: 72,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.44 AM (2).jpeg"
+    },
+    {
+        id: 73,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM.jpeg"
+    },
+    {
+        id: 74,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM (1).jpeg"
+    },
+    {
+        id: 75,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM (2).jpeg"
+    },
+    {
+        id: 76,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.45 AM (3).jpeg"
+    },
+    {
+        id: 77,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.46 AM.jpeg"
+    },
+    {
+        id: 78,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.46 AM (1).jpeg"
+    },
+    {
+        id: 79,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.46 AM (2).jpeg"
+    },
+    {
+        id: 80,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.47 AM.jpeg"
+    },
+    {
+        id: 81,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.47 AM (1).jpeg"
+    },
+    {
+        id: 82,
         image: "products/WhatsApp Image 2025-08-01 at 11.11.47 AM (2).jpeg"
+    },
+    {
+        id: 83,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.48 AM.jpeg"
+    },
+    {
+        id: 84,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.48 AM (1).jpeg"
+    },
+    {
+        id: 85,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.48 AM (2).jpeg"
+    },
+    {
+        id: 86,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.49 AM.jpeg"
+    },
+    {
+        id: 87,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.49 AM (1).jpeg"
+    },
+    {
+        id: 88,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.50 AM.jpeg"
+    },
+    {
+        id: 89,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.50 AM (1).jpeg"
+    },
+    {
+        id: 90,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.50 AM (2).jpeg"
+    },
+    {
+        id: 91,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.51 AM.jpeg"
+    },
+    {
+        id: 92,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.51 AM (1).jpeg"
+    },
+    {
+        id: 93,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.51 AM (2).jpeg"
+    },
+    {
+        id: 94,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.51 AM (3).jpeg"
+    },
+    {
+        id: 95,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.52 AM.jpeg"
+    },
+    {
+        id: 96,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.52 AM (1).jpeg"
+    },
+    {
+        id: 97,
+        image: "products/WhatsApp Image 2025-08-01 at 11.11.52 AM (2).jpeg"
     }
 ];
 
