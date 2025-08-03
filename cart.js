@@ -186,15 +186,39 @@ Best regards,
 KSM Enterprises E-commerce System
     `;
     
-    // Create a WhatsApp message link as an alternative
-    const whatsappMessage = `New Order - ${orderSummary.orderNumber}%0A%0ACustomer: ${customerInfo.name}%0APhone: ${customerInfo.phone}%0AAddress: ${customerInfo.address}%0A%0AOrder Details:%0A${orderSummary.items.replace(/\n/g, '%0A')}%0A%0ATotal: Rs. ${orderSummary.total.toLocaleString()}`;
-    const whatsappLink = `https://wa.me/+923234890184?text=${whatsappMessage}`;
+    // Send email using Formspree (free service)
+    const formData = new FormData();
+    formData.append('subject', subject);
+    formData.append('message', body);
+    formData.append('email', 'madeehasaboor@gmail.com');
+    formData.append('order_number', orderSummary.orderNumber);
+    formData.append('customer_name', customerInfo.name);
+    formData.append('customer_phone', customerInfo.phone);
+    formData.append('customer_address', customerInfo.address);
+    formData.append('order_details', orderSummary.items);
+    formData.append('total_amount', `Rs. ${orderSummary.total.toLocaleString()}`);
     
-    console.log('WhatsApp link:', whatsappLink);
-    
-    // Open WhatsApp with the order details
-    window.open(whatsappLink, '_blank');
-    
-    // Also show order details in an alert
-    alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to WhatsApp. Please check your WhatsApp for complete order information.`);
+    fetch('https://formspree.io/f/xayzqkqp', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log('Email sent successfully');
+            alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to madeehasaboor@gmail.com`);
+        } else {
+            throw new Error('Email sending failed');
+        }
+    })
+    .catch(error => {
+        console.error('Email sending failed:', error);
+        // Fallback to WhatsApp
+        const whatsappMessage = `New Order - ${orderSummary.orderNumber}%0A%0ACustomer: ${customerInfo.name}%0APhone: ${customerInfo.phone}%0AAddress: ${customerInfo.address}%0A%0AOrder Details:%0A${orderSummary.items.replace(/\n/g, '%0A')}%0A%0ATotal: Rs. ${orderSummary.total.toLocaleString()}`;
+        const whatsappLink = `https://wa.me/+923234890184?text=${whatsappMessage}`;
+        window.open(whatsappLink, '_blank');
+        alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to WhatsApp. Please check your WhatsApp for complete order information.`);
+    });
 } 
