@@ -188,7 +188,7 @@ KSM Enterprises E-commerce System
     
     // Create a WhatsApp message link as an alternative
     const whatsappMessage = `New Order - ${orderSummary.orderNumber}%0A%0ACustomer: ${customerInfo.name}%0APhone: ${customerInfo.phone}%0AAddress: ${customerInfo.address}%0A%0AOrder Details:%0A${orderSummary.items.replace(/\n/g, '%0A')}%0A%0ATotal: Rs. ${orderSummary.total.toLocaleString()}`;
-    const whatsappLink = `https://wa.me/923227437888?text=${whatsappMessage}`;
+    const whatsappLink = `https://wa.me/+923234890184?text=${whatsappMessage}`;
     
     console.log('WhatsApp link:', whatsappLink);
     
