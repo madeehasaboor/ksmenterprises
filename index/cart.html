@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - KSM Enterprises</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>KSM ENTERPRISES</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h2>Shopping Cart</h2>
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="cart-total">
+                        <p>Total Items: <span id="totalItems">0</span></p>
+                        <p>Total Amount: <span id="totalAmount">Rs. 0</span></p>
+                    </div>
+                    
+                    <!-- Customer Information Form -->
+                    <div class="customer-form" id="customerForm" style="display: none;">
+                        <h4>Customer Information</h4>
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Delivery Address *</label>
+                            <textarea id="customerAddress" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email (Optional)</label>
+                            <input type="email" id="customerEmail">
+                        </div>
+                    </div>
+                    
+                    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    <button class="continue-shopping" onclick="window.location.href='shop.html'">Continue Shopping</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KSM Enterprises</h3>
+                    <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> Sales: 04237103750 - 1</p>
+                    <p><i class="fas fa-headset"></i> 24/7 Helpline: 03234890184</p>
+                    <p><i class="fas fa-envelope"></i> ksmenterprises22@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Badami Bagh Centre, Badami Bagh, Lahore</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Brands</h4>
+                    <ul>
+                        <li><a href="#">Formula 1</a></li>
+                        <li><a href="#">AIM Car Care</a></li>
+                        <li><a href="#">WD-40 Products</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KSM Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html> 
