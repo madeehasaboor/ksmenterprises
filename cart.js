@@ -187,7 +187,7 @@ KSM Enterprises E-commerce System
     `;
     
     // Create mailto link
-    const mailtoLink = `mailto:ksmenterprises22@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const mailtoLink = `mailto:madehasaboor@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     // Open email client
     window.open(mailtoLink);
