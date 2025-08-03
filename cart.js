@@ -191,4 +191,34 @@ KSM Enterprises E-commerce System
     
     // Open email client
     window.open(mailtoLink);
+    
+    // Also show order details on screen for immediate reference
+    showOrderDetails(orderSummary, customerInfo);
+}
+
+function showOrderDetails(orderSummary, customerInfo) {
+    const orderDetails = `
+ORDER CONFIRMED!
+
+Order Number: ${orderSummary.orderNumber}
+Date: ${new Date().toLocaleDateString()}
+Time: ${new Date().toLocaleTimeString()}
+
+CUSTOMER INFORMATION:
+Name: ${customerInfo.name}
+Phone: ${customerInfo.phone}
+Address: ${customerInfo.address}
+${customerInfo.email ? `Email: ${customerInfo.email}` : ''}
+
+ORDER DETAILS:
+${orderSummary.items}
+
+Total Amount: Rs. ${orderSummary.total.toLocaleString()}
+
+Please contact the customer at ${customerInfo.phone} to arrange delivery.
+
+Order details have been sent to madeehasaboor@gmail.com
+    `;
+    
+    alert(orderDetails);
 } 
