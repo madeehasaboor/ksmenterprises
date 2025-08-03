@@ -186,39 +186,13 @@ Best regards,
 KSM Enterprises E-commerce System
     `;
     
-    // Create mailto link
-    const mailtoLink = `mailto:madeehasaboor@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    // Create a WhatsApp message link as an alternative
+    const whatsappMessage = `New Order - ${orderSummary.orderNumber}%0A%0ACustomer: ${customerInfo.name}%0APhone: ${customerInfo.phone}%0AAddress: ${customerInfo.address}%0A%0AOrder Details:%0A${orderSummary.items.replace(/\n/g, '%0A')}%0A%0ATotal: Rs. ${orderSummary.total.toLocaleString()}`;
+    const whatsappLink = `https://wa.me/923234890184?text=${whatsappMessage}`;
     
-    // Open email client
-    window.open(mailtoLink);
+    // Open WhatsApp with the order details
+    window.open(whatsappLink, '_blank');
     
-    // Also show order details on screen for immediate reference
-    showOrderDetails(orderSummary, customerInfo);
-}
-
-function showOrderDetails(orderSummary, customerInfo) {
-    const orderDetails = `
-ORDER CONFIRMED!
-
-Order Number: ${orderSummary.orderNumber}
-Date: ${new Date().toLocaleDateString()}
-Time: ${new Date().toLocaleTimeString()}
-
-CUSTOMER INFORMATION:
-Name: ${customerInfo.name}
-Phone: ${customerInfo.phone}
-Address: ${customerInfo.address}
-${customerInfo.email ? `Email: ${customerInfo.email}` : ''}
-
-ORDER DETAILS:
-${orderSummary.items}
-
-Total Amount: Rs. ${orderSummary.total.toLocaleString()}
-
-Please contact the customer at ${customerInfo.phone} to arrange delivery.
-
-Order details have been sent to madeehasaboor@gmail.com
-    `;
-    
-    alert(orderDetails);
+    // Also show order details in an alert
+    alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to WhatsApp. Please check your WhatsApp for complete order information.`);
 } 
