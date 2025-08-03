@@ -190,7 +190,7 @@ KSM Enterprises E-commerce System
     const formData = new FormData();
     formData.append('subject', subject);
     formData.append('message', body);
-    formData.append('email', 'madeehasaboor@gmail.com');
+    formData.append('email', 'saboormadiha@gmail.com');
     formData.append('order_number', orderSummary.orderNumber);
     formData.append('customer_name', customerInfo.name);
     formData.append('customer_phone', customerInfo.phone);
@@ -208,7 +208,7 @@ KSM Enterprises E-commerce System
     .then(response => {
         if (response.ok) {
             console.log('Email sent successfully');
-            alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to madeehasaboor@gmail.com`);
+            alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to saboormadiha@gmail.com`);
         } else {
             throw new Error('Email sending failed');
         }
