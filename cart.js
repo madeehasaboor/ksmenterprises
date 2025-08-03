@@ -159,54 +159,20 @@ function createOrderSummary() {
 }
 
 function sendOrderEmail(orderSummary, customerInfo) {
-    const subject = `New Order - ${orderSummary.orderNumber}`;
-    const body = `
-Dear KSM Enterprises,
-
-A new order has been placed:
-
-Order Number: ${orderSummary.orderNumber}
-Date: ${new Date().toLocaleDateString()}
-Time: ${new Date().toLocaleTimeString()}
-
-CUSTOMER INFORMATION:
-Name: ${customerInfo.name}
-Phone: ${customerInfo.phone}
-Address: ${customerInfo.address}
-${customerInfo.email ? `Email: ${customerInfo.email}` : ''}
-
-ORDER DETAILS:
-${orderSummary.items}
-
-Total Amount: Rs. ${orderSummary.total.toLocaleString()}
-
-Please process this order and contact the customer for delivery details.
-
-Best regards,
-KSM Enterprises E-commerce System
-    `;
-    
-    // Send email using Formspree (free service)
-    const formData = new FormData();
-    formData.append('subject', subject);
-    formData.append('message', body);
-    formData.append('email', 'saboormadiha@gmail.com');
-    formData.append('order_number', orderSummary.orderNumber);
-    formData.append('customer_name', customerInfo.name);
-    formData.append('customer_phone', customerInfo.phone);
-    formData.append('customer_address', customerInfo.address);
-    formData.append('order_details', orderSummary.items);
-    formData.append('total_amount', `Rs. ${orderSummary.total.toLocaleString()}`);
-    
-    fetch('https://formspree.io/f/xayzqkqp', {
+    // Send email using backend API
+    fetch('https://api.ksmenterprises.sbs/api/order', {
         method: 'POST',
-        body: formData,
         headers: {
-            'Accept': 'application/json'
-        }
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            orderSummary,
+            customerInfo
+        })
     })
-    .then(response => {
-        if (response.ok) {
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
             console.log('Email sent successfully');
             alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to saboormadiha@gmail.com`);
         } else {
@@ -217,7 +183,7 @@ KSM Enterprises E-commerce System
         console.error('Email sending failed:', error);
         // Fallback to WhatsApp
         const whatsappMessage = `New Order - ${orderSummary.orderNumber}%0A%0ACustomer: ${customerInfo.name}%0APhone: ${customerInfo.phone}%0AAddress: ${customerInfo.address}%0A%0AOrder Details:%0A${orderSummary.items.replace(/\n/g, '%0A')}%0A%0ATotal: Rs. ${orderSummary.total.toLocaleString()}`;
-        const whatsappLink = `https://wa.me/+923234890184?text=${whatsappMessage}`;
+        const whatsappLink = `https://wa.me/03234890184?text=${whatsappMessage}`;
         window.open(whatsappLink, '_blank');
         alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to WhatsApp. Please check your WhatsApp for complete order information.`);
     });
