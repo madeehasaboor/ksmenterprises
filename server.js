@@ -1,0 +1,71 @@
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const app = express();
+const port = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.static('.')); // Serve static files
+
+// Email transporter
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER || 'saboormadiha@gmail.com',
+        pass: process.env.EMAIL_PASSWORD || 'dbxh suia sgqc epiv'
+    }
+});
+
+// Order endpoint
+app.post('/api/order', async (req, res) => {
+    try {
+        const { orderSummary, customerInfo } = req.body;
+        
+        const mailOptions = {
+            from: 'saboormadiha@gmail.com',
+            to: 'saboormadiha@gmail.com',
+            subject: `New Order - ${orderSummary.orderNumber}`,
+            html: `
+                <h2>New Order Received</h2>
+                <p><strong>Order Number:</strong> ${orderSummary.orderNumber}</p>
+                <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
+                <p><strong>Time:</strong> ${new Date().toLocaleTimeString()}</p>
+                
+                <h3>Customer Information:</h3>
+                <p><strong>Name:</strong> ${customerInfo.name}</p>
+                <p><strong>Phone:</strong> ${customerInfo.phone}</p>
+                <p><strong>Address:</strong> ${customerInfo.address}</p>
+                ${customerInfo.email ? `<p><strong>Email:</strong> ${customerInfo.email}</p>` : ''}
+                <p><strong>Payment Method:</strong> ${
+                    customerInfo.paymentMethod === 'cod' ? 'Cash on Delivery (COD)' : 
+                    customerInfo.paymentMethod === 'jazzCash' ? 'JazzCash' : 
+                    'Bank Transfer'
+                }</p>
+                ${customerInfo.paymentMethod === 'jazzCash' && customerInfo.paymentDetails ? `
+                <p><strong>Customer JazzCash Number:</strong> ${customerInfo.paymentDetails.jazzCashNumber}</p>
+                ${customerInfo.paymentDetails.transactionId ? `<p><strong>Transaction ID:</strong> ${customerInfo.paymentDetails.transactionId}</p>` : ''}
+                ` : ''}
+                
+                <h3>Order Details:</h3>
+                <pre>${orderSummary.items}</pre>
+                
+                <h3>Total Amount: Rs. ${orderSummary.total.toLocaleString()}</h3>
+                
+                <p>Please process this order and contact the customer for delivery details.</p>
+            `
+        };
+        
+        await transporter.sendMail(mailOptions);
+        
+        res.json({ success: true, message: 'Order email sent successfully' });
+    } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).json({ success: false, message: 'Failed to send email' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+}); 
