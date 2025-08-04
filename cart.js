@@ -166,6 +166,15 @@ function proceedToCheckout() {
         }
     }
     
+    // Validate Bank Transfer fields if selected
+    if (paymentMethod.value === 'bankTransfer') {
+        const bankTransactionId = document.getElementById('bankTransactionId').value.trim();
+        if (!bankTransactionId) {
+            alert('Please enter the bank transaction ID or reference number');
+            return;
+        }
+    }
+    
     if (!customerName || !customerPhone || !customerAddress) {
         alert('Please fill in all required fields (Name, Phone, Address)');
         return;
@@ -180,6 +189,11 @@ function proceedToCheckout() {
         paymentDetails = {
             jazzCashNumber: document.getElementById('jazzCashNumber').value.trim(),
             transactionId: document.getElementById('transactionId').value.trim()
+        };
+    } else if (paymentMethod.value === 'bankTransfer') {
+        paymentDetails = {
+            bankTransactionId: document.getElementById('bankTransactionId').value.trim(),
+            bankName: document.getElementById('bankName').value.trim()
         };
     }
     
@@ -206,6 +220,20 @@ function proceedToCheckout() {
     document.getElementById('customerPhone').value = '';
     document.getElementById('customerAddress').value = '';
     document.getElementById('customerEmail').value = '';
+    
+    // Reset payment method fields
+    if (document.getElementById('jazzCashNumber')) {
+        document.getElementById('jazzCashNumber').value = '';
+    }
+    if (document.getElementById('transactionId')) {
+        document.getElementById('transactionId').value = '';
+    }
+    if (document.getElementById('bankTransactionId')) {
+        document.getElementById('bankTransactionId').value = '';
+    }
+    if (document.getElementById('bankName')) {
+        document.getElementById('bankName').value = '';
+    }
     
     alert('Order submitted! You will receive a confirmation email shortly.');
 }
@@ -274,6 +302,14 @@ function sendOrderEmail(orderSummary, customerInfo) {
                 paymentDetailsText = `%0A• Customer JazzCash: ${customerInfo.paymentDetails.jazzCashNumber}`;
                 if (customerInfo.paymentDetails.transactionId) {
                     paymentDetailsText += `%0A• Transaction ID: ${customerInfo.paymentDetails.transactionId}`;
+                }
+            }
+        } else if (customerInfo.paymentMethod === 'bankTransfer') {
+            paymentMethodText = '🏦 Bank Transfer';
+            if (customerInfo.paymentDetails && customerInfo.paymentDetails.bankTransactionId) {
+                paymentDetailsText = `%0A• Transaction ID: ${customerInfo.paymentDetails.bankTransactionId}`;
+                if (customerInfo.paymentDetails.bankName) {
+                    paymentDetailsText += `%0A• Customer Bank: ${customerInfo.paymentDetails.bankName}`;
                 }
             }
         } else {
