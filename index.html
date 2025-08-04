@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KSM Enterprises - Pakistan's Premium Car Care Distribution</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
+                <img src="ksm-logo.jpg.jpg" alt="KSM Enterprises Logo" class="logo-image">
                 <h1>KSM ENTERPRISES</h1>
             </div>
             <nav class="nav">
@@ -35,38 +37,136 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background-logo">
-            <img src="../ksm-logo.jpg.jpg" alt="KSM Enterprises Background Logo" class="hero-logo-bg">
+            <img src="ksm-logo.jpg.jpg" alt="KSM Enterprises Background Logo" class="hero-logo-bg">
         </div>
         <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                <span>40 Years of Excellence</span>
+            </div>
             <h1>Welcome to KSM Enterprises</h1>
-            <p>Pakistan's Premium Car Care Distribution Portfolio</p>
-            <button class="cta-button" onclick="window.location.href='portfolio.html'">View Portfolio</button>
+            <div class="hero-caption">
+                <strong>Your car deserves the best, and we deliver.</strong>
+            </div>
+            <p>Pakistan's Premier Car Care Distribution Portfolio - Serving Excellence Since 1984</p>
+            <div class="hero-buttons">
+                <button class="cta-button primary" onclick="window.location.href='portfolio.html'">
+                    <i class="fas fa-eye"></i>
+                    View Portfolio
+                </button>
+                <button class="cta-button secondary" onclick="window.location.href='shop.html'">
+                    <i class="fas fa-shopping-bag"></i>
+                    Shop Now
+                </button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Premium Brands</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Introduction Section -->
-    <section class="introduction-section">
+    <!-- Features Section -->
+    <section class="features-section">
         <div class="container">
-            <div class="intro-content">
-                <div class="intro-text">
-                    <p>OUR COMPANY HAS BEEN PROVIDING SERVICES THROUGHOUT PAKISTAN SINCE THE PAST 40 YEARS TO ALL SECTORS OF THE MARKET. OUR FOCUS REMAINS ON PROVIDING HIGH QUALITY PRODUCTS TO OUR CLIENTS VIA OUR WELL ESTABLISHED PRODUCT RANGE.</p>
-                </div>
-                <div class="intro-features">
-                    <div class="feature-item">
+            <div class="section-header">
+                <h2>Why Choose KSM Enterprises?</h2>
+                <p>Delivering excellence in automotive care solutions across Pakistan</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
                         <i class="fas fa-award"></i>
-                        <h4>40 Years Experience</h4>
-                        <p>Four decades of excellence in car care distribution</p>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <h4>Nationwide Service</h4>
-                        <p>Serving all sectors across Pakistan</p>
+                    <h3>Premium Quality</h3>
+                    <p>We partner with world-class brands to bring you the finest car care products available in the market.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-star"></i>
-                        <h4>Premium Quality</h4>
-                        <p>High-quality products for discerning clients</p>
+                    <h3>Fast Delivery</h3>
+                    <p>Quick and reliable delivery across Pakistan with our extensive distribution network.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
                     </div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support to assist you with all your automotive care needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Trusted Partner</h3>
+                    <p>Four decades of trust and reliability in the automotive care industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Showcase Section -->
+    <section class="brands-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Brand Portfolio</h2>
+                <p>Representing the world's leading automotive care brands</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h4>Formula 1</h4>
+                    <p>Professional grade car care products</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <h4>AIM Car Care</h4>
+                    <p>Advanced automotive cleaning solutions</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h4>WD-40 Products</h4>
+                    <p>Multi-purpose maintenance products</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience Excellence?</h2>
+                <p>Join thousands of satisfied customers who trust KSM Enterprises for their automotive care needs.</p>
+                <div class="cta-buttons">
+                    <button class="cta-button primary" onclick="window.location.href='contact.html'">
+                        <i class="fas fa-phone"></i>
+                        Get In Touch
+                    </button>
+                    <button class="cta-button secondary" onclick="window.location.href='about.html'">
+                        <i class="fas fa-info-circle"></i>
+                        Learn More
+                    </button>
                 </div>
             </div>
         </div>
@@ -77,21 +177,45 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>KSM Enterprises</h3>
-                    <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
+                    <div class="footer-logo">
+                        <img src="ksm-logo.jpg.jpg" alt="KSM Enterprises Logo" class="footer-logo-img">
+                        <h3>KSM Enterprises</h3>
+                    </div>
+                    <p>Pakistan's leading car care distribution company with 40 years of excellence in delivering premium automotive solutions.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-phone"></i> Sales: 04237103750 - 1</p>
-                    <p><i class="fas fa-headset"></i> 24/7 Helpline: 03234890184</p>
-                    <p><i class="fas fa-envelope"></i> ksmenterprises22@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Badami Bagh Centre, Badami Bagh, Lahore</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>Sales: 04237103750 - 1</p>
+                            <p>24/7 Helpline: 03234890184</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>ksmenterprises22@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Badami Bagh Centre, Badami Bagh, Lahore</p>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Our Brands</h4>
@@ -99,14 +223,16 @@
                         <li><a href="#">Formula 1</a></li>
                         <li><a href="#">AIM Car Care</a></li>
                         <li><a href="#">WD-40 Products</a></li>
+                        <li><a href="#">Premium Accessories</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 KSM Enterprises. All rights reserved.</p>
+                <p>&copy; 2024 KSM Enterprises. All rights reserved. | Designed with excellence in mind.</p>
             </div>
         </div>
     </footer>
+
     <script>
         // Initialize cart count
         document.addEventListener('DOMContentLoaded', function() {
@@ -114,6 +240,35 @@
             const cartCount = document.getElementById('cartCount');
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             cartCount.textContent = totalItems;
+
+            // Smooth scrolling for hero scroll indicator
+            const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    document.querySelector('.features-section').scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Add scroll animation for hero stats
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.feature-card, .brand-item, .hero-stats').forEach(el => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
