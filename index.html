@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KSM Enterprises - Pakistan's Premium Car Care Distribution</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -35,12 +35,82 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background-logo">
-            <img src="../ksm-logo.jpg.jpg" alt="KSM Enterprises Background Logo" class="hero-logo-bg">
+            <img src="ksm-logo.jpg.jpg" alt="KSM Enterprises Background Logo" class="hero-logo-bg">
         </div>
         <div class="hero-content">
-            <h1>Welcome to KSM Enterprises</h1>
+            <h1>PROFESSIONAL CAR CARE PRODUCTS</h1>
             <p>Pakistan's Premium Car Care Distribution Portfolio</p>
+            <div class="hero-tagline">
+                <span class="tagline-highlight">CAR</span>
+                <span class="tagline-highlight">WASH</span>
+                <span class="tagline-highlight">BLACK</span>
+                <span class="tagline-highlight">BRIGHT</span>
+            </div>
             <button class="cta-button" onclick="window.location.href='portfolio.html'">View Portfolio</button>
+        </div>
+    </section>
+
+    <!-- Brands Showcase Section -->
+    <section class="brands-showcase">
+        <div class="container">
+            <h2 class="section-title">Our Premium Brands</h2>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <img src="brand logos/frontendformula1-logo.jpg.jpg" alt="Formula 1 Car Care" class="brand-image">
+                    </div>
+                    <h3>Formula 1</h3>
+                    <p>Premium racing-grade car care products</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <img src="brand logos/frontendaim-logo.jpg.jpg" alt="AIM Car Care" class="brand-image">
+                    </div>
+                    <h3>AIM Car Care</h3>
+                    <p>Professional detailing solutions</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <img src="brand logos/frontendwd40-logo.jpg.jpg" alt="WD-40 Products" class="brand-image">
+                    </div>
+                    <h3>WD-40</h3>
+                    <p>Multi-purpose maintenance products</p>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-logo">
+                        <img src="brand logos/frontenddtr-logo.jpg.jpg" alt="DTR Products" class="brand-image">
+                    </div>
+                    <h3>DTR</h3>
+                    <p>Advanced automotive care</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Slideshow Section -->
+    <section class="product-slideshow-section">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="slideshow-container">
+                <div class="slideshow-wrapper">
+                    <div class="slides-track" id="slidesTrack">
+                        <!-- Slides will be dynamically loaded -->
+                    </div>
+                </div>
+                
+                <!-- Navigation arrows -->
+                <button class="slide-nav prev" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slide-nav next" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- Slide indicators -->
+                <div class="slide-indicators" id="slideIndicators">
+                    <!-- Indicators will be dynamically generated -->
+                </div>
+            </div>
         </div>
     </section>
 
@@ -99,6 +169,7 @@
                         <li><a href="#">Formula 1</a></li>
                         <li><a href="#">AIM Car Care</a></li>
                         <li><a href="#">WD-40 Products</a></li>
+                        <li><a href="#">DTR Products</a></li>
                     </ul>
                 </div>
             </div>
@@ -107,6 +178,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="app.js"></script>
     <script>
         // Initialize cart count
         document.addEventListener('DOMContentLoaded', function() {
@@ -114,6 +187,121 @@
             const cartCount = document.getElementById('cartCount');
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             cartCount.textContent = totalItems;
+            
+            // Initialize slideshow
+            initializeSlideshow();
+        });
+
+        // Slideshow functionality
+        let currentSlide = 0;
+        let slideInterval;
+        const slides = [];
+
+        function initializeSlideshow() {
+            // Sample product data - you can modify this to load from your actual product data
+            const featuredProducts = [
+                { image: 'products/1.jpeg', title: 'Premium Car Wash', category: 'Cleaning' },
+                { image: 'products/2.jpeg', title: 'Professional Wax', category: 'Protection' },
+                { image: 'products/3.jpeg', title: 'Tire Shine', category: 'Detailing' },
+                { image: 'products/4.jpeg', title: 'Interior Cleaner', category: 'Interior Care' },
+                { image: 'products/5.jpeg', title: 'Glass Cleaner', category: 'Visibility' },
+                { image: 'products/photo (6).jpeg', title: 'Engine Degreaser', category: 'Maintenance' },
+                { image: 'products/photo (7).jpeg', title: 'Leather Conditioner', category: 'Interior Care' },
+                { image: 'products/photo (8).jpeg', title: 'Chrome Polish', category: 'Detailing' }
+            ];
+
+            createSlides(featuredProducts);
+            createIndicators(featuredProducts.length);
+            startAutoSlide();
+            
+            // Add event listeners
+            document.getElementById('prevBtn').addEventListener('click', () => changeSlide(-1));
+            document.getElementById('nextBtn').addEventListener('click', () => changeSlide(1));
+        }
+
+        function createSlides(products) {
+            const slidesTrack = document.getElementById('slidesTrack');
+            slidesTrack.innerHTML = '';
+
+            products.forEach((product, index) => {
+                const slide = document.createElement('div');
+                slide.className = `slide ${index === 0 ? 'active' : ''}`;
+                slide.innerHTML = `
+                    <div class="slide-image">
+                        <img src="${product.image}" alt="${product.title}" onerror="this.src='products/1.jpeg'">
+                    </div>
+                    <div class="slide-content">
+                        <span class="slide-category">${product.category}</span>
+                        <h3 class="slide-title">${product.title}</h3>
+                    </div>
+                `;
+                slidesTrack.appendChild(slide);
+            });
+        }
+
+        function createIndicators(count) {
+            const indicators = document.getElementById('slideIndicators');
+            indicators.innerHTML = '';
+
+            for (let i = 0; i < count; i++) {
+                const indicator = document.createElement('button');
+                indicator.className = `indicator ${i === 0 ? 'active' : ''}`;
+                indicator.addEventListener('click', () => goToSlide(i));
+                indicators.appendChild(indicator);
+            }
+        }
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+            
+            currentSlide += direction;
+            
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+            
+            updateSlidePosition();
+        }
+
+        function goToSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+            
+            slides[currentSlide].classList.remove('active');
+            indicators[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            
+            slides[currentSlide].classList.add('active');
+            indicators[currentSlide].classList.add('active');
+            
+            updateSlidePosition();
+        }
+
+        function updateSlidePosition() {
+            const slidesTrack = document.getElementById('slidesTrack');
+            slidesTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+        }
+
+        function startAutoSlide() {
+            slideInterval = setInterval(() => {
+                changeSlide(1);
+            }, 5000); // Change slide every 5 seconds
+        }
+
+        // Pause auto-slide on hover
+        document.querySelector('.slideshow-container').addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+
+        document.querySelector('.slideshow-container').addEventListener('mouseleave', () => {
+            startAutoSlide();
         });
     </script>
 </body>
