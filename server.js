@@ -23,8 +23,12 @@ app.post('/api/order', async (req, res) => {
     try {
         const { orderSummary, customerInfo } = req.body;
         
+        // Use customer's email as sender if available, otherwise use default
+        const fromEmail = customerInfo.email || 'saboormadiha@gmail.com';
+        const fromName = customerInfo.name || 'KSM Customer';
+        
         const mailOptions = {
-            from: 'saboormadiha@gmail.com',
+            from: `"${fromName}" <${fromEmail}>`,
             to: 'saboormadiha@gmail.com',
             subject: `New Order - ${orderSummary.orderNumber}`,
             html: `
@@ -47,6 +51,10 @@ app.post('/api/order', async (req, res) => {
                 <p><strong>Customer JazzCash Number:</strong> ${customerInfo.paymentDetails.jazzCashNumber}</p>
                 ${customerInfo.paymentDetails.transactionId ? `<p><strong>Transaction ID:</strong> ${customerInfo.paymentDetails.transactionId}</p>` : ''}
                 ` : ''}
+                ${customerInfo.paymentMethod === 'bankTransfer' && customerInfo.paymentDetails ? `
+                <p><strong>Bank Transaction ID:</strong> ${customerInfo.paymentDetails.bankTransactionId}</p>
+                ${customerInfo.paymentDetails.bankName ? `<p><strong>Customer Bank:</strong> ${customerInfo.paymentDetails.bankName}</p>` : ''}
+                ` : ''}
                 
                 <h3>Order Details:</h3>
                 <pre>${orderSummary.items}</pre>
@@ -54,7 +62,11 @@ app.post('/api/order', async (req, res) => {
                 <h3>Total Amount: Rs. ${orderSummary.total.toLocaleString()}</h3>
                 
                 <p>Please process this order and contact the customer for delivery details.</p>
-            `
+                
+                <hr>
+                <p><em>This order was placed through the KSM Enterprises website.</em></p>
+            `,
+            replyTo: customerInfo.email || 'saboormadiha@gmail.com'
         };
         
         await transporter.sendMail(mailOptions);
