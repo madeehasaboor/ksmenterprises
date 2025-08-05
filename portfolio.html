@@ -3,9 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - KSM Enterprises</title>
+    <title>Professional Car Care Products - KSM Enterprises</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      body {
+        background: linear-gradient(135deg, #000 0%, #1a1a1a 50%, #000 100%);
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .header {
+        background: rgba(0, 0, 0, 0.95);
+        border-bottom: 2px solid #333;
+        backdrop-filter: blur(10px);
+      }
+      
+      .logo h1 {
+        color: #fff;
+        font-size: 2.2em;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      
+      .nav a {
+        color: #ccc;
+        transition: all 0.3s ease;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+      
+      .nav a:hover, .nav a.active {
+        color: #fff;
+        text-shadow: 0 0 10px rgba(255,255,255,0.5);
+      }
+      
+      .hero-section {
+        background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+        padding: 80px 0 60px 0;
+        text-align: center;
+        position: relative;
+      }
+      
+      .hero-title {
+        font-size: 3.5em;
+        font-weight: 300;
+        color: #fff;
+        margin-bottom: 20px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.4em;
+        color: #ccc;
+        margin-bottom: 40px;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      
+      .brand-slideshow-section {
+        padding: 60px 0;
+        background: rgba(0, 0, 0, 0.8);
+      }
+      
+      .brand-slideshow-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 40px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      
+      .brand-slide {
+        display: none;
+        text-align: center;
+        animation: fadeIn 1s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .brand-slide.active {
+        display: block;
+      }
+      
+      .brand-header {
+        margin-bottom: 30px;
+      }
+      
+      .brand-logo {
+        width: 120px;
+        height: 80px;
+        object-fit: contain;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+      
+      .brand-logo:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+      }
+      
+      .brand-title {
+        font-size: 2.2em;
+        color: #fff;
+        margin-bottom: 15px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+      
+      .section-title {
+        text-align: center;
+        font-size: 2.5em;
+        color: #fff;
+        margin-bottom: 50px;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+      
+      .footer {
+        background: #000;
+        border-top: 1px solid #333;
+        padding: 60px 0 30px 0;
+      }
+      
+      .footer h3, .footer h4 {
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+      
+      .footer a {
+        color: #ccc;
+        transition: color 0.3s ease;
+      }
+      
+      .footer a:hover {
+        color: #fff;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5em;
+        }
+        
+        .brand-slideshow-container {
+          margin: 0 20px;
+          padding: 30px 20px;
+        }
+        
+        .brand-nav {
+          width: 40px;
+          height: 40px;
+          font-size: 1em;
+        }
+        
+        .brand-nav.prev {
+          left: -20px;
+        }
+        
+        .brand-nav.next {
+          right: -20px;
+        }
+        
+        .products-grid {
+          grid-template-columns: 1fr;
+          padding: 0 15px;
+        }
+      }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -18,7 +199,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -32,13 +213,160 @@
         </div>
     </header>
 
-    <!-- Portfolio Section -->
-    <section id="products" class="products-section">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">PROFESSIONAL CAR CARE PRODUCTS</h1>
+            <p class="hero-subtitle">PREMIUM AUTOMOTIVE SOLUTIONS</p>
+        </div>
+    </section>
+
+    <!-- Brand Slideshow Section -->
+    <section class="brand-slideshow-section">
         <div class="container">
-            <h2>Our Portfolio</h2>
-            <div class="product-counter" id="productCounter">Showing 95 portfolio items</div>
-            <div class="products-grid" id="productsGrid">
-                <!-- Portfolio items will be loaded here -->
+            <h2 class="section-title">Our Premium Brands</h2>
+            <div class="brand-slideshow-container">
+                <!-- Formula 1 Brand Slide -->
+                <div class="brand-slide active">
+                    <div class="brand-header">
+                        <h3 class="brand-title">Formula 1</h3>
+                    </div>
+                    <div class="product-slideshow">
+                        <div class="product-slide active">
+                            <h4 class="product-name">Formula 1 Car Shampoo</h4>
+                            <p class="product-desc">Professional car wash shampoo with advanced cleaning technology</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">Formula 1 Car Wax</h4>
+                            <p class="product-desc">Premium wax protection for long-lasting shine and protection</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">Formula 1 Detailer</h4>
+                            <p class="product-desc">Quick detailer spray for showroom finish maintenance</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">Formula 1 Tire Shine</h4>
+                            <p class="product-desc">Professional tire dressing for enhanced appearance</p>
+                        </div>
+                        <button class="product-nav prev" onclick="changeProductSlide(-1, 0)">&#10094;</button>
+                        <button class="product-nav next" onclick="changeProductSlide(1, 0)">&#10095;</button>
+                        <div class="product-dots">
+                            <span class="product-dot active" onclick="currentProductSlide(1, 0)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(2, 0)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(3, 0)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(4, 0)"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AIM Car Care Brand Slide -->
+                <div class="brand-slide">
+                    <div class="brand-header">
+                        <h3 class="brand-title">AIM Car Care</h3>
+                    </div>
+                    <div class="product-slideshow">
+                        <div class="product-slide active">
+                            <h4 class="product-name">AIM Interior Cleaner</h4>
+                            <p class="product-desc">Safe and effective interior cleaning solution</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">AIM Glass Cleaner</h4>
+                            <p class="product-desc">Streak-free glass cleaning for crystal clear visibility</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">AIM Leather Conditioner</h4>
+                            <p class="product-desc">Premium leather care and conditioning treatment</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">AIM Dashboard Protectant</h4>
+                            <p class="product-desc">UV protection and shine for dashboard surfaces</p>
+                        </div>
+                        <button class="product-nav prev" onclick="changeProductSlide(-1, 1)">&#10094;</button>
+                        <button class="product-nav next" onclick="changeProductSlide(1, 1)">&#10095;</button>
+                        <div class="product-dots">
+                            <span class="product-dot active" onclick="currentProductSlide(1, 1)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(2, 1)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(3, 1)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(4, 1)"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- WD-40 Brand Slide -->
+                <div class="brand-slide">
+                    <div class="brand-header">
+                        <h3 class="brand-title">WD-40 Products</h3>
+                    </div>
+                    <div class="product-slideshow">
+                        <div class="product-slide active">
+                            <h4 class="product-name">WD-40 Multi Use</h4>
+                            <p class="product-desc">Versatile lubricant for multiple automotive applications</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">WD-40 Contact Cleaner</h4>
+                            <p class="product-desc">Electrical contact cleaner for optimal performance</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">WD-40 Specialist Grease</h4>
+                            <p class="product-desc">High-performance grease for automotive components</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">WD-40 Penetrant</h4>
+                            <p class="product-desc">Deep penetrating oil for rusted and stuck parts</p>
+                        </div>
+                        <button class="product-nav prev" onclick="changeProductSlide(-1, 2)">&#10094;</button>
+                        <button class="product-nav next" onclick="changeProductSlide(1, 2)">&#10095;</button>
+                        <div class="product-dots">
+                            <span class="product-dot active" onclick="currentProductSlide(1, 2)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(2, 2)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(3, 2)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(4, 2)"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- DTR Products Brand Slide -->
+                <div class="brand-slide">
+                    <div class="brand-header">
+                        <h3 class="brand-title">DTR Products</h3>
+                    </div>
+                    <div class="product-slideshow">
+                        <div class="product-slide active">
+                            <h4 class="product-name">DTR Professional Wax</h4>
+                            <p class="product-desc">Professional-grade wax for commercial detailing</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">DTR Clay Bar</h4>
+                            <p class="product-desc">Detailing clay for surface contamination removal</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">DTR Compound</h4>
+                            <p class="product-desc">Heavy-duty compound for paint correction</p>
+                        </div>
+                        <div class="product-slide">
+                            <h4 class="product-name">DTR Polish</h4>
+                            <p class="product-desc">Fine polish for ultimate paint finish</p>
+                        </div>
+                        <button class="product-nav prev" onclick="changeProductSlide(-1, 3)">&#10094;</button>
+                        <button class="product-nav next" onclick="changeProductSlide(1, 3)">&#10095;</button>
+                        <div class="product-dots">
+                            <span class="product-dot active" onclick="currentProductSlide(1, 3)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(2, 3)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(3, 3)"></span>
+                            <span class="product-dot" onclick="currentProductSlide(4, 3)"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="brand-nav prev" onclick="changeBrandSlide(-1)">&#10094;</button>
+                <button class="brand-nav next" onclick="changeBrandSlide(1)">&#10095;</button>
+                
+                <div class="brand-dots">
+                    <span class="brand-dot active" onclick="currentBrandSlide(1)"></span>
+                    <span class="brand-dot" onclick="currentBrandSlide(2)"></span>
+                    <span class="brand-dot" onclick="currentBrandSlide(3)"></span>
+                    <span class="brand-dot" onclick="currentBrandSlide(4)"></span>
+                </div>
             </div>
         </div>
     </section>
@@ -48,7 +376,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>KSM Enterprises</h3>
+                    <h3>KSM ENTERPRISES</h3>
                     <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -60,7 +388,7 @@
                 <div class="footer-section">
                     <h4>Contact Info</h4>
                     <p><i class="fas fa-phone"></i> Sales: 04237103750 - 1</p>
-                    <p><i class="fas fa-headset"></i> 24/7 Helpline: 03234890184</p>
+                    <p><i class="fas fa-headset"></i> 24/7 Helpline: +923234890184</p>
                     <p><i class="fas fa-envelope"></i> ksmenterprises22@gmail.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Badami Bagh Centre, Badami Bagh, Lahore</p>
                 </div>
@@ -70,6 +398,7 @@
                         <li><a href="#">Formula 1</a></li>
                         <li><a href="#">AIM Car Care</a></li>
                         <li><a href="#">WD-40 Products</a></li>
+                        <li><a href="#">DTR Products</a></li>
                     </ul>
                 </div>
             </div>
@@ -81,12 +410,103 @@
 
     <script src="app.js"></script>
     <script>
+        // Brand Slideshow Logic
+        let currentBrandSlideIndex = 1;
+        let currentProductSlideIndexes = [1, 1, 1, 1]; // Track product slides for each brand
+        const brandSlides = document.querySelectorAll('.brand-slide');
+        const brandDots = document.querySelectorAll('.brand-dot');
+        
+        function showBrandSlide(n) {
+            if (n > brandSlides.length) currentBrandSlideIndex = 1;
+            if (n < 1) currentBrandSlideIndex = brandSlides.length;
+            
+            // Hide all slides
+            brandSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            brandDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current slide and activate corresponding dot
+            brandSlides[currentBrandSlideIndex - 1].classList.add('active');
+            brandDots[currentBrandSlideIndex - 1].classList.add('active');
+            
+            // Reset product slideshow for the new brand
+            resetProductSlideshow(currentBrandSlideIndex - 1);
+        }
+        
+        function changeBrandSlide(n) {
+            showBrandSlide(currentBrandSlideIndex += n);
+        }
+        
+        function currentBrandSlide(n) {
+            showBrandSlide(currentBrandSlideIndex = n);
+        }
+        
+        // Product Slideshow Logic
+        function showProductSlide(brandIndex, productIndex) {
+            const brandSlide = brandSlides[brandIndex];
+            const productSlides = brandSlide.querySelectorAll('.product-slide');
+            const productDots = brandSlide.querySelectorAll('.product-dot');
+            
+            if (productIndex > productSlides.length) currentProductSlideIndexes[brandIndex] = 1;
+            if (productIndex < 1) currentProductSlideIndexes[brandIndex] = productSlides.length;
+            
+            // Hide all product slides
+            productSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all product dots
+            productDots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current product slide and activate corresponding dot
+            productSlides[currentProductSlideIndexes[brandIndex] - 1].classList.add('active');
+            productDots[currentProductSlideIndexes[brandIndex] - 1].classList.add('active');
+        }
+        
+        function changeProductSlide(n, brandIndex) {
+            currentProductSlideIndexes[brandIndex] += n;
+            showProductSlide(brandIndex, currentProductSlideIndexes[brandIndex]);
+        }
+        
+        function currentProductSlide(n, brandIndex) {
+            currentProductSlideIndexes[brandIndex] = n;
+            showProductSlide(brandIndex, n);
+        }
+        
+        function resetProductSlideshow(brandIndex) {
+            currentProductSlideIndexes[brandIndex] = 1;
+            showProductSlide(brandIndex, 1);
+        }
+        
+        // Auto-advance brand slideshow
+        setInterval(() => {
+            changeBrandSlide(1);
+        }, 8000);
+        
+        // Auto-advance product slideshow for current brand
+        setInterval(() => {
+            const activeBrandIndex = currentBrandSlideIndex - 1;
+            changeProductSlide(1, activeBrandIndex);
+        }, 4000);
+        
         // Initialize cart count
-        document.addEventListener('DOMContentLoaded', function() {
+        function updateCartCount() {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
             const cartCount = document.getElementById('cartCount');
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             cartCount.textContent = totalItems;
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
         });
     </script>
 </body>
