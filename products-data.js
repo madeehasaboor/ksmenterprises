@@ -10,7 +10,7 @@ const productsDatabase = {
             price: 1200,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Premium",
             description: "Premium car polish and shine for professional results"
         },
         {
@@ -19,7 +19,7 @@ const productsDatabase = {
             price: 1350,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Advanced",
             description: "Advanced car polish and shine formula for deep shine"
         },
         {
@@ -28,7 +28,7 @@ const productsDatabase = {
             price: 1100,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Professional",
             description: "Professional grade car polish and shine solution"
         },
         {
@@ -37,7 +37,7 @@ const productsDatabase = {
             price: 1400,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Ultra",
             description: "Ultra premium car polish and shine for maximum shine"
         },
         {
@@ -46,7 +46,7 @@ const productsDatabase = {
             price: 1250,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Elite",
             description: "Elite car polish and shine for showroom finish"
         },
         {
@@ -55,7 +55,7 @@ const productsDatabase = {
             price: 1300,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Supreme",
             description: "Supreme car polish and shine for ultimate protection"
         },
         {
@@ -64,7 +64,7 @@ const productsDatabase = {
             price: 1150,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (7).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Master",
             description: "Master car polish and shine for expert detailing"
         },
         {
@@ -73,7 +73,7 @@ const productsDatabase = {
             price: 1050,
             category: "car_polish_shine",
             brand: "KSM",
-            image: "products/CAR POLISH & SHINNERS/1 (8).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Classic",
             description: "Classic car polish and shine for traditional shine"
         }
     ],
@@ -85,7 +85,7 @@ const productsDatabase = {
             price: 950,
             category: "car_protecting_sprays",
             brand: "KSM",
-            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Premium",
             description: "Premium car protecting spray for ultimate protection"
         },
         {
@@ -94,7 +94,7 @@ const productsDatabase = {
             price: 1000,
             category: "car_protecting_sprays",
             brand: "KSM",
-            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Advanced",
             description: "Advanced car protecting spray formula for long-lasting protection"
         },
         {
@@ -103,7 +103,7 @@ const productsDatabase = {
             price: 975,
             category: "car_protecting_sprays",
             brand: "KSM",
-            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Professional",
             description: "Professional grade car protecting spray solution"
         },
         {
@@ -112,7 +112,7 @@ const productsDatabase = {
             price: 1050,
             category: "car_protecting_sprays",
             brand: "KSM",
-            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Ultra",
             description: "Ultra premium car protecting spray for maximum protection"
         },
         {
@@ -121,7 +121,7 @@ const productsDatabase = {
             price: 900,
             category: "car_protecting_sprays",
             brand: "KSM",
-            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Elite",
             description: "Elite car protecting spray for showroom finish protection"
         },
         {
@@ -130,7 +130,7 @@ const productsDatabase = {
             price: 1100,
             category: "car_protecting_sprays",
             brand: "KSM",
-            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Supreme",
             description: "Supreme car protecting spray for ultimate vehicle protection"
         }
     ],
@@ -142,7 +142,7 @@ const productsDatabase = {
             price: 750,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Premium",
             description: "Premium car spray paint for professional touch-ups"
         },
         {
@@ -151,7 +151,7 @@ const productsDatabase = {
             price: 800,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Advanced",
             description: "Advanced car spray paint formula for perfect color matching"
         },
         {
@@ -160,7 +160,7 @@ const productsDatabase = {
             price: 775,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Professional",
             description: "Professional grade car spray paint solution"
         },
         {
@@ -169,7 +169,7 @@ const productsDatabase = {
             price: 825,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Ultra",
             description: "Ultra premium car spray paint for maximum coverage"
         },
         {
@@ -178,7 +178,7 @@ const productsDatabase = {
             price: 700,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Elite",
             description: "Elite car spray paint for showroom finish"
         },
         {
@@ -187,7 +187,7 @@ const productsDatabase = {
             price: 850,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Supreme",
             description: "Supreme car spray paint for ultimate color restoration"
         },
         {
@@ -196,7 +196,7 @@ const productsDatabase = {
             price: 725,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (7).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Master",
             description: "Master car spray paint for expert touch-ups"
         },
         {
@@ -205,7 +205,7 @@ const productsDatabase = {
             price: 675,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (8).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Classic",
             description: "Classic car spray paint for traditional repairs"
         },
         {
@@ -214,7 +214,7 @@ const productsDatabase = {
             price: 875,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (9).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Premium+Plus",
             description: "Premium plus car spray paint for superior finish"
         },
         {
@@ -223,7 +223,7 @@ const productsDatabase = {
             price: 900,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (10).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Advanced+Plus",
             description: "Advanced plus car spray paint for perfect matching"
         },
         {
@@ -232,7 +232,7 @@ const productsDatabase = {
             price: 825,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (11).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Professional+Plus",
             description: "Professional plus car spray paint solution"
         },
         {
@@ -241,7 +241,7 @@ const productsDatabase = {
             price: 925,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (12).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Ultra+Plus",
             description: "Ultra plus car spray paint for maximum coverage"
         },
         {
@@ -250,7 +250,7 @@ const productsDatabase = {
             price: 750,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (13).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Elite+Plus",
             description: "Elite plus car spray paint for showroom finish"
         },
         {
@@ -259,7 +259,7 @@ const productsDatabase = {
             price: 950,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (14).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Supreme+Plus",
             description: "Supreme plus car spray paint for ultimate restoration"
         },
         {
@@ -268,7 +268,7 @@ const productsDatabase = {
             price: 775,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (15).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Master+Plus",
             description: "Master plus car spray paint for expert repairs"
         },
         {
@@ -277,7 +277,7 @@ const productsDatabase = {
             price: 725,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (16).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Classic+Plus",
             description: "Classic plus car spray paint for traditional touch-ups"
         },
         {
@@ -286,7 +286,7 @@ const productsDatabase = {
             price: 1000,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (17).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Premium+Pro",
             description: "Premium pro car spray paint for professional results"
         },
         {
@@ -295,7 +295,7 @@ const productsDatabase = {
             price: 1050,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (18).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Advanced+Pro",
             description: "Advanced pro car spray paint for perfect matching"
         },
         {
@@ -304,7 +304,7 @@ const productsDatabase = {
             price: 975,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (19).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Professional+Pro",
             description: "Professional pro car spray paint solution"
         },
         {
@@ -313,7 +313,7 @@ const productsDatabase = {
             price: 1100,
             category: "car_spray_paints",
             brand: "KSM",
-            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (20).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Ultra+Pro",
             description: "Ultra pro car spray paint for maximum coverage"
         }
     ],
@@ -325,7 +325,7 @@ const productsDatabase = {
             price: 1200,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Premium",
             description: "Premium car wash and wax for professional results"
         },
         {
@@ -334,7 +334,7 @@ const productsDatabase = {
             price: 1350,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Advanced",
             description: "Advanced car wash and wax formula for deep cleaning"
         },
         {
@@ -343,7 +343,7 @@ const productsDatabase = {
             price: 1100,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Professional",
             description: "Professional grade car wash and wax solution"
         },
         {
@@ -352,7 +352,7 @@ const productsDatabase = {
             price: 1400,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Ultra",
             description: "Ultra premium car wash and wax for maximum shine"
         },
         {
@@ -361,7 +361,7 @@ const productsDatabase = {
             price: 1250,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Elite",
             description: "Elite car wash and wax for showroom finish"
         },
         {
@@ -370,7 +370,7 @@ const productsDatabase = {
             price: 1300,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Supreme",
             description: "Supreme car wash and wax for ultimate protection"
         },
         {
@@ -379,7 +379,7 @@ const productsDatabase = {
             price: 1150,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (7).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Master",
             description: "Master car wash and wax for expert detailing"
         },
         {
@@ -388,7 +388,7 @@ const productsDatabase = {
             price: 1050,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (8).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Classic",
             description: "Classic car wash and wax for traditional cleaning"
         },
         {
@@ -397,7 +397,7 @@ const productsDatabase = {
             price: 1450,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (9).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Premium+Plus",
             description: "Premium plus car wash and wax for superior results"
         },
         {
@@ -406,7 +406,7 @@ const productsDatabase = {
             price: 1500,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (10).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Advanced+Plus",
             description: "Advanced plus car wash and wax for deep cleaning"
         },
         {
@@ -415,7 +415,7 @@ const productsDatabase = {
             price: 1250,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (11).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Professional+Plus",
             description: "Professional plus car wash and wax solution"
         },
         {
@@ -424,7 +424,7 @@ const productsDatabase = {
             price: 1550,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (12).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Ultra+Plus",
             description: "Ultra plus car wash and wax for maximum shine"
         },
         {
@@ -433,7 +433,7 @@ const productsDatabase = {
             price: 1400,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (13).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Elite+Plus",
             description: "Elite plus car wash and wax for showroom finish"
         },
         {
@@ -442,7 +442,7 @@ const productsDatabase = {
             price: 1450,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (14).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Supreme+Plus",
             description: "Supreme plus car wash and wax for ultimate protection"
         },
         {
@@ -451,7 +451,7 @@ const productsDatabase = {
             price: 1300,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (15).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Master+Plus",
             description: "Master plus car wash and wax for expert detailing"
         },
         {
@@ -460,7 +460,7 @@ const productsDatabase = {
             price: 1200,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (16).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Classic+Plus",
             description: "Classic plus car wash and wax for traditional cleaning"
         },
         {
@@ -469,7 +469,7 @@ const productsDatabase = {
             price: 1600,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (17).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Premium+Pro",
             description: "Premium pro car wash and wax for professional results"
         },
         {
@@ -478,7 +478,7 @@ const productsDatabase = {
             price: 1650,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (18).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Advanced+Pro",
             description: "Advanced pro car wash and wax for deep cleaning"
         },
         {
@@ -487,7 +487,7 @@ const productsDatabase = {
             price: 1500,
             category: "car_wash_wax",
             brand: "KSM",
-            image: "products/CAR WASH & WAX/CAR WASH & WAX (19).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Professional+Pro",
             description: "Professional pro car wash and wax solution"
         }
     ],
@@ -499,7 +499,7 @@ const productsDatabase = {
             price: 850,
             category: "car_wash_shampoos",
             brand: "KSM",
-            image: "products/CAR WASH SHAMPOOS/CAR CASH SHAMPOO.jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Shampoo+Premium",
             description: "Premium car wash shampoo for professional cleaning"
         }
     ],
@@ -511,7 +511,7 @@ const productsDatabase = {
             price: 650,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Premium",
             description: "Premium car cleaner for professional cleaning"
         },
         {
@@ -520,7 +520,7 @@ const productsDatabase = {
             price: 700,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Advanced",
             description: "Advanced car cleaner formula for deep cleaning"
         },
         {
@@ -529,7 +529,7 @@ const productsDatabase = {
             price: 675,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Professional",
             description: "Professional grade car cleaner solution"
         },
         {
@@ -538,7 +538,7 @@ const productsDatabase = {
             price: 725,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Ultra",
             description: "Ultra premium car cleaner for maximum cleaning"
         },
         {
@@ -547,7 +547,7 @@ const productsDatabase = {
             price: 600,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Elite",
             description: "Elite car cleaner for showroom finish"
         },
         {
@@ -556,7 +556,7 @@ const productsDatabase = {
             price: 750,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Supreme",
             description: "Supreme car cleaner for ultimate cleaning"
         },
         {
@@ -565,7 +565,7 @@ const productsDatabase = {
             price: 625,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (7).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Master",
             description: "Master car cleaner for expert cleaning"
         },
         {
@@ -574,7 +574,7 @@ const productsDatabase = {
             price: 575,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (8).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Classic",
             description: "Classic car cleaner for traditional cleaning"
         },
         {
@@ -583,7 +583,7 @@ const productsDatabase = {
             price: 775,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (9).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Premium+Plus",
             description: "Premium plus car cleaner for superior cleaning"
         },
         {
@@ -592,7 +592,7 @@ const productsDatabase = {
             price: 800,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (10).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Advanced+Plus",
             description: "Advanced plus car cleaner for deep cleaning"
         },
         {
@@ -601,7 +601,7 @@ const productsDatabase = {
             price: 725,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (11).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Professional+Plus",
             description: "Professional plus car cleaner solution"
         },
         {
@@ -610,7 +610,7 @@ const productsDatabase = {
             price: 825,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (12).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Ultra+Plus",
             description: "Ultra plus car cleaner for maximum cleaning"
         },
         {
@@ -619,7 +619,7 @@ const productsDatabase = {
             price: 650,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (13).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Elite+Plus",
             description: "Elite plus car cleaner for showroom finish"
         },
         {
@@ -628,7 +628,7 @@ const productsDatabase = {
             price: 850,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (14).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Supreme+Plus",
             description: "Supreme plus car cleaner for ultimate cleaning"
         },
         {
@@ -637,7 +637,7 @@ const productsDatabase = {
             price: 675,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (15).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Master+Plus",
             description: "Master plus car cleaner for expert cleaning"
         },
         {
@@ -646,7 +646,7 @@ const productsDatabase = {
             price: 625,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (16).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Classic+Plus",
             description: "Classic plus car cleaner for traditional cleaning"
         },
         {
@@ -655,7 +655,7 @@ const productsDatabase = {
             price: 875,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (17).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Premium+Pro",
             description: "Premium pro car cleaner for professional cleaning"
         },
         {
@@ -664,7 +664,7 @@ const productsDatabase = {
             price: 900,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (18).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Advanced+Pro",
             description: "Advanced pro car cleaner for deep cleaning"
         },
         {
@@ -673,7 +673,7 @@ const productsDatabase = {
             price: 825,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (19).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Professional+Pro",
             description: "Professional pro car cleaner solution"
         },
         {
@@ -682,7 +682,7 @@ const productsDatabase = {
             price: 925,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (20).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Ultra+Pro",
             description: "Ultra pro car cleaner for maximum cleaning"
         },
         {
@@ -691,7 +691,7 @@ const productsDatabase = {
             price: 750,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (21).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Elite+Pro",
             description: "Elite pro car cleaner for showroom finish"
         },
         {
@@ -700,7 +700,7 @@ const productsDatabase = {
             price: 950,
             category: "cleaners",
             brand: "KSM",
-            image: "products/CLEANERS/CAR CLEANNERS (22).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Supreme+Pro",
             description: "Supreme pro car cleaner for ultimate cleaning"
         }
     ],
@@ -712,7 +712,7 @@ const productsDatabase = {
             price: 450,
             category: "micro_fiber_clothes",
             brand: "KSM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Premium",
             description: "Premium microfiber towel for professional cleaning"
         },
         {
@@ -721,7 +721,7 @@ const productsDatabase = {
             price: 500,
             category: "micro_fiber_clothes",
             brand: "KSM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Advanced",
             description: "Advanced microfiber towel for deep cleaning"
         },
         {
@@ -730,7 +730,7 @@ const productsDatabase = {
             price: 475,
             category: "micro_fiber_clothes",
             brand: "KSM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Professional",
             description: "Professional grade microfiber towel solution"
         },
         {
@@ -739,7 +739,7 @@ const productsDatabase = {
             price: 525,
             category: "micro_fiber_clothes",
             brand: "KSM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Ultra",
             description: "Ultra premium microfiber towel for maximum cleaning"
         },
         {
@@ -748,7 +748,7 @@ const productsDatabase = {
             price: 400,
             category: "micro_fiber_clothes",
             brand: "KSM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Elite",
             description: "Elite microfiber towel for showroom finish"
         }
     ],
@@ -760,7 +760,7 @@ const productsDatabase = {
             price: 550,
             category: "others",
             brand: "KSM",
-            image: "products/OTHERS/OTHERS (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Premium",
             description: "Premium automotive product for professional use"
         },
         {
@@ -769,7 +769,7 @@ const productsDatabase = {
             price: 600,
             category: "others",
             brand: "KSM",
-            image: "products/OTHERS/OTHERS (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Advanced",
             description: "Advanced automotive product for enhanced performance"
         },
         {
@@ -778,7 +778,7 @@ const productsDatabase = {
             price: 575,
             category: "others",
             brand: "KSM",
-            image: "products/OTHERS/OTHERS (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Professional",
             description: "Professional grade automotive product solution"
         },
         {
@@ -787,7 +787,7 @@ const productsDatabase = {
             price: 625,
             category: "others",
             brand: "KSM",
-            image: "products/OTHERS/OTHERS (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Ultra",
             description: "Ultra premium automotive product for maximum results"
         },
         {
@@ -796,7 +796,7 @@ const productsDatabase = {
             price: 500,
             category: "others",
             brand: "KSM",
-            image: "products/OTHERS/OTHERS (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Elite",
             description: "Elite automotive product for showroom finish"
         },
         {
@@ -805,7 +805,7 @@ const productsDatabase = {
             price: 650,
             category: "others",
             brand: "KSM",
-            image: "products/OTHERS/OTHERS (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Supreme",
             description: "Supreme automotive product for ultimate performance"
         }
     ],
@@ -817,7 +817,7 @@ const productsDatabase = {
             price: 650,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (1).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Premium",
             description: "Premium radiator cooler for professional cooling"
         },
         {
@@ -826,7 +826,7 @@ const productsDatabase = {
             price: 700,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (2).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Advanced",
             description: "Advanced radiator cooler formula for enhanced cooling"
         },
         {
@@ -835,7 +835,7 @@ const productsDatabase = {
             price: 675,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (3).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Professional",
             description: "Professional grade radiator cooler solution"
         },
         {
@@ -844,7 +844,7 @@ const productsDatabase = {
             price: 725,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (4).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Ultra",
             description: "Ultra premium radiator cooler for maximum cooling"
         },
         {
@@ -853,7 +853,7 @@ const productsDatabase = {
             price: 600,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (5).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Elite",
             description: "Elite radiator cooler for optimal performance"
         },
         {
@@ -862,7 +862,7 @@ const productsDatabase = {
             price: 750,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (6).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Supreme",
             description: "Supreme radiator cooler for ultimate cooling"
         },
         {
@@ -871,7 +871,7 @@ const productsDatabase = {
             price: 625,
             category: "radiator_cooler",
             brand: "KSM",
-            image: "products/RADIATOR COOLER/RADIATOR COOLER (7).jpeg",
+            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Master",
             description: "Master radiator cooler for expert cooling"
         }
     ]
