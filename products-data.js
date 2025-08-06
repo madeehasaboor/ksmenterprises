@@ -10,7 +10,7 @@ const productsDatabase = {
             price: 400,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
             description: "Extra large microfiber cloth for professional cleaning"
         },
         {
@@ -19,7 +19,7 @@ const productsDatabase = {
             price: 600,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg",
             description: "Extra large microfiber towel for superior drying"
         },
         {
@@ -28,7 +28,7 @@ const productsDatabase = {
             price: 350,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
             description: "Specialized microfiber for streak-free glass cleaning"
         },
         {
@@ -37,7 +37,7 @@ const productsDatabase = {
             price: 550,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
             description: "Designer microfiber cloth mix for various surfaces"
         },
         {
@@ -46,7 +46,7 @@ const productsDatabase = {
             price: 250,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
             description: "Light quality microfiber cloth"
         },
         {
@@ -55,7 +55,7 @@ const productsDatabase = {
             price: 250,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
             description: "Small light quality microfiber towel"
         },
         {
@@ -64,7 +64,7 @@ const productsDatabase = {
             price: 300,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
             description: "Large light quality microfiber towel"
         },
         {
@@ -73,7 +73,7 @@ const productsDatabase = {
             price: 350,
             category: "microfibre",
             brand: "AIM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
             description: "AIM brand microfiber cloth for professional use"
         },
         {
@@ -82,7 +82,7 @@ const productsDatabase = {
             price: 500,
             category: "microfibre",
             brand: "AIM",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
             description: "AIM brand large microfiber towel"
         },
         {
@@ -91,7 +91,7 @@ const productsDatabase = {
             price: 400,
             category: "microfibre",
             brand: "AIM",
-            image: "products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
             description: "AIM brand small microfiber towel"
         },
         {
@@ -100,7 +100,7 @@ const productsDatabase = {
             price: 700,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
             description: "Pack of 2 microfiber cloths for value"
         },
         {
@@ -109,7 +109,7 @@ const productsDatabase = {
             price: 1050,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg",
             description: "Pack of 2 microfiber towels for value"
         },
         {
@@ -118,56 +118,8 @@ const productsDatabase = {
             price: 1350,
             category: "microfibre",
             brand: "AUTO SHINE",
-            image: "products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
+            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
             description: "Pack of 4 microfiber cloths for maximum value"
-        }
-    ],
-    // WD-40 Products
-    wd40: [
-        {
-            id: "wd40_50ml",
-            name: "WD-40 50ML",
-            price: 375,
-            category: "wd40",
-            brand: "WD-40",
-            image: "https://via.placeholder.com/300x300?text=WD-40+50ML",
-            description: "WD-40 multi-purpose lubricant 50ml"
-        },
-        {
-            id: "wd40_100ml",
-            name: "WD-40 100ML",
-            price: 600,
-            category: "wd40",
-            brand: "WD-40",
-            image: "https://via.placeholder.com/300x300?text=WD-40+100ML",
-            description: "WD-40 multi-purpose lubricant 100ml"
-        },
-        {
-            id: "wd40_200ml",
-            name: "WD-40 200ML",
-            price: 800,
-            category: "wd40",
-            brand: "WD-40",
-            image: "https://via.placeholder.com/300x300?text=WD-40+200ML",
-            description: "WD-40 multi-purpose lubricant 200ml"
-        },
-        {
-            id: "wd40_330ml",
-            name: "WD-40 330ML",
-            price: 1100,
-            category: "wd40",
-            brand: "WD-40",
-            image: "https://via.placeholder.com/300x300?text=WD-40+330ML",
-            description: "WD-40 multi-purpose lubricant 330ml"
-        },
-        {
-            id: "wd40_440ml",
-            name: "WD-40 440ML",
-            price: 1250,
-            category: "wd40",
-            brand: "WD-40",
-            image: "https://via.placeholder.com/300x300?text=WD-40+440ML",
-            description: "WD-40 multi-purpose lubricant 440ml"
         }
     ],
     // Waxes & Protectants
@@ -178,7 +130,7 @@ const productsDatabase = {
             price: 1400,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-107 CARNAUBA WAX PASTE.jpeg",
+            image: "./products/CAR WASH & WAX/F1-107 CARNAUBA WAX PASTE.jpeg",
             description: "Soft Carnauba wax 230g for ultimate shine"
         },
         {
@@ -187,7 +139,7 @@ const productsDatabase = {
             price: 1850,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-106 CARNABUNA WAX PASTE.jpeg",
+            image: "./products/CAR WASH & WAX/F1-106 CARNABUNA WAX PASTE.jpeg",
             description: "Soft Carnauba wax 340g for professional use"
         },
         {
@@ -196,7 +148,7 @@ const productsDatabase = {
             price: 1400,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-104 CARNAUBA LIQUID WAX.jpeg",
+            image: "./products/CAR WASH & WAX/F1-104 CARNAUBA LIQUID WAX.jpeg",
             description: "Liquid Carnauba wax for easy application"
         },
         {
@@ -205,7 +157,7 @@ const productsDatabase = {
             price: 1500,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-114 CERAMIC SPRAY WAX.jpeg",
+            image: "./products/CAR WASH & WAX/F1-114 CERAMIC SPRAY WAX.jpeg",
             description: "Quick spray wax for fast application"
         },
         {
@@ -214,7 +166,7 @@ const productsDatabase = {
             price: 1500,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/A-121 LEATHER TYRE WAX.jpeg",
+            image: "./products/CAR WASH & WAX/A-121 LEATHER TYRE WAX.jpeg",
             description: "Professional upholstery cleaner"
         },
         {
@@ -223,7 +175,7 @@ const productsDatabase = {
             price: 1625,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/A-118 LEATHER AND TYPRE WAX.jpeg",
+            image: "./products/CAR WASH & WAX/A-118 LEATHER AND TYPRE WAX.jpeg",
             description: "Professional leather conditioner"
         },
         {
@@ -232,7 +184,7 @@ const productsDatabase = {
             price: 1400,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/A-115 LEATHER AND TYRE WAX.jpeg",
+            image: "./products/CAR WASH & WAX/A-115 LEATHER AND TYRE WAX.jpeg",
             description: "Small size leather conditioner"
         },
         {
@@ -241,7 +193,7 @@ const productsDatabase = {
             price: 1950,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/A-120 LEATHER AND TYRE WAX.jpeg",
+            image: "./products/CAR WASH & WAX/A-120 LEATHER AND TYRE WAX.jpeg",
             description: "Effective bug and tar removal solution"
         },
         {
@@ -250,7 +202,7 @@ const productsDatabase = {
             price: 1750,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-117 GLASS CLEANER.jpeg",
+            image: "./products/CAR WASH & WAX/F1-117 GLASS CLEANER.jpeg",
             description: "Glass cleaner with rain repellent properties"
         },
         {
@@ -259,7 +211,7 @@ const productsDatabase = {
             price: 1750,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-117 GLASS CLEANER.jpeg",
+            image: "./products/CAR WASH & WAX/F1-117 GLASS CLEANER.jpeg",
             description: "Professional glass cleaner"
         },
         {
@@ -268,7 +220,7 @@ const productsDatabase = {
             price: 1750,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg",
+            image: "./products/CAR WASH & WAX/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg",
             description: "Specialized wheel and tire cleaner"
         },
         {
@@ -277,7 +229,7 @@ const productsDatabase = {
             price: 1750,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg",
+            image: "./products/CAR WASH & WAX/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg",
             description: "Professional wheel rim cleaner"
         },
         {
@@ -286,7 +238,7 @@ const productsDatabase = {
             price: 1750,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/black and gold tire shine.jpeg",
+            image: "./products/CAR WASH & WAX/black and gold tire shine.jpeg",
             description: "Premium tire cleaning solution"
         },
         {
@@ -295,7 +247,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR PROCTING SPRAYS/formulla 1 protectant spray f1-123.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/formulla 1 protectant spray f1-123.jpeg",
             description: "Protectant specifically for new cars"
         },
         {
@@ -304,7 +256,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR PROCTING SPRAYS/f1-120 formulla 1 protectant spray.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/f1-120 formulla 1 protectant spray.jpeg",
             description: "Citrus scented protectant"
         },
         {
@@ -313,7 +265,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR PROCTING SPRAYS/formulla 1 protectant spray.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/formulla 1 protectant spray.jpeg",
             description: "Strawberry scented protectant"
         },
         {
@@ -322,7 +274,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO SHINE",
-            image: "products/CAR PROCTING SPRAYS/protectant spray 295ml.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/protectant spray 295ml.jpeg",
             description: "Vanilla scented protectant"
         }
     ],
@@ -334,7 +286,7 @@ const productsDatabase = {
             price: 450,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CAR SPRAY PAINTS/AIM SPRAY PAINT A-149 YELLOW.jpeg",
+            image: "./products/CAR SPRAY PAINTS/AIM SPRAY PAINT A-149 YELLOW.jpeg",
             description: "Bright gold spray paint for automotive use"
         },
         {
@@ -343,7 +295,7 @@ const productsDatabase = {
             price: 450,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CAR SPRAY PAINTS/A-150 SPRAY PAINT.jpeg",
+            image: "./products/CAR SPRAY PAINTS/A-150 SPRAY PAINT.jpeg",
             description: "Bright chrome spray paint for automotive use"
         },
         {
@@ -352,7 +304,7 @@ const productsDatabase = {
             price: 375,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
+            image: "./products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
             description: "Dashboard cleaner 450ml"
         },
         {
@@ -361,7 +313,7 @@ const productsDatabase = {
             price: 400,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-128 AIM FOAMY CLEANER.jpeg",
+            image: "./products/CLEANERS/A-128 AIM FOAMY CLEANER.jpeg",
             description: "Brown dashboard cleaner 450ml"
         },
         {
@@ -370,7 +322,7 @@ const productsDatabase = {
             price: 350,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-112 AIM CARB CLEANER.jpeg",
+            image: "./products/CLEANERS/A-112 AIM CARB CLEANER.jpeg",
             description: "Medium carburetor cleaner 450ml"
         },
         {
@@ -379,7 +331,7 @@ const productsDatabase = {
             price: 275,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
+            image: "./products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
             description: "Small dashboard cleaner"
         },
         {
@@ -388,7 +340,7 @@ const productsDatabase = {
             price: 425,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
+            image: "./products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
             description: "Foamy cleaning solution"
         },
         {
@@ -397,7 +349,7 @@ const productsDatabase = {
             price: 425,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-127 AIM TIRE FOAM.jpeg",
+            image: "./products/CLEANERS/A-127 AIM TIRE FOAM.jpeg",
             description: "Foam cleaner for tires"
         },
         {
@@ -406,7 +358,7 @@ const productsDatabase = {
             price: 425,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-125 AIM ENGINE CLEANER.jpeg",
+            image: "./products/CLEANERS/A-125 AIM ENGINE CLEANER.jpeg",
             description: "Professional engine degreaser"
         },
         {
@@ -415,7 +367,7 @@ const productsDatabase = {
             price: 425,
             category: "sprayPaints",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-131 AIM GLASS CLEANER.jpeg",
+            image: "./products/CLEANERS/A-131 AIM GLASS CLEANER.jpeg",
             description: "Glass cleaner 450ml"
         }
     ],
@@ -427,7 +379,7 @@ const productsDatabase = {
             price: 550,
             category: "otherProducts",
             brand: "AUTO SHINE",
-            image: "products/CAR POLISH & SHINNERS/aim tire gel 500ml.jpeg",
+            image: "./products/CAR POLISH & SHINNERS/aim tire gel 500ml.jpeg",
             description: "Professional tire gel for shine and protection"
         },
         {
@@ -436,7 +388,7 @@ const productsDatabase = {
             price: 500,
             category: "otherProducts",
             brand: "AUTO SHINE",
-            image: "products/OTHERS/A-137 AIM OCTANE BOOSTER.jpeg",
+            image: "./products/OTHERS/A-137 AIM OCTANE BOOSTER.jpeg",
             description: "Fuel octane booster for improved performance"
         },
         {
@@ -445,7 +397,7 @@ const productsDatabase = {
             price: 500,
             category: "otherProducts",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH SHAMPOOS/AW-157 AIM WASH & SHAMPOO.jpeg",
+            image: "./products/CAR WASH SHAMPOOS/AW-157 AIM WASH & SHAMPOO.jpeg",
             description: "Car wash shampoo 16oz"
         },
         {
@@ -454,7 +406,7 @@ const productsDatabase = {
             price: 425,
             category: "otherProducts",
             brand: "AUTO SHINE",
-            image: "products/CAR POLISH & SHINNERS/aim furtinure polish.jpeg",
+            image: "./products/CAR POLISH & SHINNERS/aim furtinure polish.jpeg",
             description: "Professional furniture polish"
         },
         {
@@ -463,7 +415,7 @@ const productsDatabase = {
             price: 550,
             category: "otherProducts",
             brand: "AUTO SHINE",
-            image: "products/CAR WASH & WAX/A-121 LEATHER TYRE WAX.jpeg",
+            image: "./products/CAR WASH & WAX/A-121 LEATHER TYRE WAX.jpeg",
             description: "Leather conditioning spray"
         },
         {
@@ -472,17 +424,8 @@ const productsDatabase = {
             price: 550,
             category: "otherProducts",
             brand: "AUTO SHINE",
-            image: "products/CAR POLISH & SHINNERS/scratchout paste.jpeg",
+            image: "./products/CAR POLISH & SHINNERS/scratchout paste.jpeg",
             description: "Professional scratch removal solution"
-        },
-        {
-            id: "fire_stop_extinguisher",
-            name: "Fire Stop (Extinguisher)",
-            price: 425,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "https://via.placeholder.com/300x300?text=Fire+Extinguisher",
-            description: "Fire extinguisher for vehicle safety"
         }
     ],
     // Coolants
@@ -493,7 +436,7 @@ const productsDatabase = {
             price: 225,
             category: "coolants",
             brand: "AUTO SHINE",
-            image: "products/RADIATOR COOLER/A-103 AIM RADIATOR COOLANT.jpeg",
+            image: "./products/RADIATOR COOLER/A-103 AIM RADIATOR COOLANT.jpeg",
             description: "Engine coolant 500ml"
         },
         {
@@ -502,7 +445,7 @@ const productsDatabase = {
             price: 300,
             category: "coolants",
             brand: "AUTO SHINE",
-            image: "products/RADIATOR COOLER/A-102 AIM RADIATOR COOLANT.jpeg",
+            image: "./products/RADIATOR COOLER/A-102 AIM RADIATOR COOLANT.jpeg",
             description: "Engine coolant 1 litre"
         },
         {
@@ -511,7 +454,7 @@ const productsDatabase = {
             price: 500,
             category: "coolants",
             brand: "AUTO SHINE",
-            image: "products/RADIATOR COOLER/A-105 AIM RADIATOR COOLANT.jpeg",
+            image: "./products/RADIATOR COOLER/A-105 AIM RADIATOR COOLANT.jpeg",
             description: "Engine coolant 2 litre"
         },
         {
@@ -520,7 +463,7 @@ const productsDatabase = {
             price: 850,
             category: "coolants",
             brand: "AUTO SHINE",
-            image: "products/RADIATOR COOLER/A-106 AIM RADIATOR COOLANT.jpeg",
+            image: "./products/RADIATOR COOLER/A-106 AIM RADIATOR COOLANT.jpeg",
             description: "Engine coolant 4 litre"
         }
     ],
@@ -532,7 +475,7 @@ const productsDatabase = {
             price: 250,
             category: "antiRust",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/A-124 AIM ANTI-RUST.jpeg",
+            image: "./products/CLEANERS/A-124 AIM ANTI-RUST.jpeg",
             description: "Anti-rust protection spray 100ml"
         },
         {
@@ -541,7 +484,7 @@ const productsDatabase = {
             price: 300,
             category: "antiRust",
             brand: "AUTO SHINE",
-            image: "products/CLEANERS/AIM ANTI-RUST 300ML.jpeg",
+            image: "./products/CLEANERS/AIM ANTI-RUST 300ML.jpeg",
             description: "Anti-rust protection spray 220ml"
         }
     ]
