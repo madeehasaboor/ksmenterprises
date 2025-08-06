@@ -487,6 +487,73 @@ const productsDatabase = {
             image: "./products/CLEANERS/AIM ANTI-RUST 300ML.jpeg",
             description: "Anti-rust protection spray 220ml"
         }
+    ],
+    // New Products Added
+    // Glass Cleaners
+    glassCleaners: [
+        {
+            id: "glass_cleaner",
+            name: "Glass Cleaner",
+            price: 450,
+            category: "sprayPaints",
+            brand: "AUTO SHINE",
+            image: "./products/Glass Cleaner with Rain Repellent.jpg",
+            description: "Professional glass cleaner for streak-free cleaning"
+        },
+        {
+            id: "glass_cleaner_rain_repellent",
+            name: "Glass Cleaner with Rain Repellent",
+            price: 550,
+            category: "sprayPaints",
+            brand: "AUTO SHINE",
+            image: "./products/Glass Cleaner with Rain Repellent.jpg",
+            description: "Glass cleaner with rain repellent technology"
+        }
+    ],
+    // Wheel Care Products
+    wheelCare: [
+        {
+            id: "wheel_tyre_clean",
+            name: "Wheel Tyre Clean",
+            price: 400,
+            category: "otherProducts",
+            brand: "AUTO SHINE",
+            image: "./products/Wheel tyre clean.jpg",
+            description: "Professional wheel and tyre cleaning solution"
+        },
+        {
+            id: "wheel_rim_clean",
+            name: "Wheel Rim Clean",
+            price: 450,
+            category: "otherProducts",
+            brand: "AUTO SHINE",
+            image: "./products/Wheel rim cleaner.jpg",
+            description: "Specialized wheel rim cleaning solution"
+        }
+    ],
+    // WD-40 Products
+    wd40Products: [
+        {
+            id: "wd_400",
+            name: "WD-40 400ML",
+            price: 800,
+            category: "otherProducts",
+            brand: "WD-40",
+            image: "./products/WD-40.jpg",
+            description: "WD-40 multi-purpose lubricant 400ml"
+        }
+    ],
+    // Auto Shine Wax
+    autoShineWax: [
+        {
+            id: "auto_shine_wax_230",
+            name: "Auto Shine Wax 230g",
+            price: 1400,
+            category: "waxes",
+            brand: "AUTO SHINE",
+            image: "./products/auto shine wax.jpg",
+            description: "Auto Shine premium wax 230g for ultimate shine"
+        }
     ]
 };
 
