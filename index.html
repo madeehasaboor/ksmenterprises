@@ -7,6 +7,144 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Hero Section with Full Background */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.8) 100%);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        .hero-btn {
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #ffffff;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .hero-btn:hover {
+            background: #ffffff;
+            color: #000000;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .hero-btn.primary {
+            background: #ff0000;
+            border-color: #ff0000;
+        }
+        
+        .hero-btn.primary:hover {
+            background: #cc0000;
+            border-color: #cc0000;
+            color: #ffffff;
+        }
+        
+        /* Diagonal Stripes Animation */
+        .diagonal-stripe {
+            position: absolute;
+            background: #ff0000;
+            z-index: 1;
+            animation: slideIn 1.5s ease-out;
+        }
+        
+        .stripe-1 {
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 200px;
+            transform: rotate(45deg);
+            transform-origin: top left;
+        }
+        
+        .stripe-2 {
+            bottom: 0;
+            right: 0;
+            width: 4px;
+            height: 200px;
+            transform: rotate(-45deg);
+            transform-origin: bottom right;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+        
         /* Logo Image Styles */
         .logo-image {
             height: 50px;
@@ -22,6 +160,19 @@
         }
         
         @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
             .logo-image {
                 height: 40px;
                 margin-right: 10px;
@@ -53,6 +204,21 @@
             </div>
         </div>
     </header>
+
+    <!-- Hero Section with Full Background -->
+    <section class="hero-section">
+        <div class="diagonal-stripe stripe-1"></div>
+        <div class="diagonal-stripe stripe-2"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">AUTO SHINE</h1>
+            <p class="hero-subtitle">Pakistan's Premium Car Care Distribution</p>
+            <div class="hero-buttons">
+                <a href="shop.html" class="hero-btn primary">Shop Now</a>
+                <a href="portfolio.html" class="hero-btn">View Portfolio</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
