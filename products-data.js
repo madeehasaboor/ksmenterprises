@@ -196,42 +196,7 @@ const productsDatabase = {
             image: "./products/CAR WASH & WAX/A-120 LEATHER AND TYRE WAX.jpeg",
             description: "Effective bug and tar removal solution"
         },
-        {
-            id: "glass_cleaner_rain_repellent",
-            name: "Glass Cleaner with Rain Repellent",
-            price: 1750,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-117 GLASS CLEANER.jpeg",
-            description: "Glass cleaner with rain repellent properties"
-        },
-        {
-            id: "glass_cleaner",
-            name: "Glass Cleaner",
-            price: 1750,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-117 GLASS CLEANER.jpeg",
-            description: "Professional glass cleaner"
-        },
-        {
-            id: "wheel_tyre_clean",
-            name: "Wheel Tyre Clean",
-            price: 1750,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg",
-            description: "Specialized wheel and tire cleaner"
-        },
-        {
-            id: "wheel_rim_cleaner",
-            name: "Wheel Rim Cleaner",
-            price: 1750,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg",
-            description: "Professional wheel rim cleaner"
-        },
+
         {
             id: "black_gold_tyre_cleaner",
             name: "Black Gold Tyre Cleaner",
