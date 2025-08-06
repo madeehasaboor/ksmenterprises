@@ -208,6 +208,26 @@
                 padding: 0 20px;
             }
         }
+        
+        /* Additional Products Section Styling */
+        #products {
+            padding: 2rem;
+            background: #111;
+        }
+        
+        #products .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        #products .product-card {
+            background: #1e1e1e;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #333;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -246,15 +266,13 @@
                     <label for="categoryFilter">Category:</label>
                     <select id="categoryFilter">
                         <option value="">All Categories</option>
-                        <option value="car_polish_shine">Car Polish & Shine</option>
-                        <option value="car_protecting_sprays">Car Protecting Sprays</option>
-                        <option value="car_spray_paints">Car Spray Paints</option>
-                        <option value="car_wash_wax">Car Wash & Wax</option>
-                        <option value="car_wash_shampoos">Car Wash Shampoos</option>
-                        <option value="cleaners">Cleaners</option>
-                        <option value="micro_fiber_clothes">Micro Fiber Clothes</option>
-                        <option value="others">Others</option>
-                        <option value="radiator_cooler">Radiator Cooler</option>
+                        <option value="microfibre">Microfibre Products</option>
+                        <option value="wd40">WD-40 Products</option>
+                        <option value="waxes">Waxes & Protectants</option>
+                        <option value="sprayPaints">Spray Paints & Cleaners</option>
+                        <option value="otherProducts">Other Car Products</option>
+                        <option value="coolants">Coolants</option>
+                        <option value="antiRust">Anti Rust Sprays</option>
                     </select>
                 </div>
                 <div class="filter-group">
@@ -267,6 +285,55 @@
             <div class="products-grid" id="shopProducts">
                 <!-- Products will be loaded here -->
             </div>
+            
+            <!-- Featured Products Section -->
+            <section id="products" style="margin-top: 60px;">
+                <h2 style="color:white; text-align: center; margin-bottom: 40px; font-size: 2.5em; font-weight: 300; letter-spacing: 2px;">Featured Products</h2>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WASH & WAX/CAR WASH & WAX (1).jpeg" alt="Wax 230g (Soft Carnauba USA)">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">KSM</div>
+                            <h3>Wax 230g (Soft Carnauba USA)</h3>
+                            <p class="product-description">Soft Carnauba wax 230g for ultimate shine</p>
+                            <p class="product-price">PKR 1400</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('wax_230g_soft_carnauba')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/CAR CLEANNERS (2).jpeg" alt="WD-40 100ML">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">WD-40</div>
+                            <h3>WD-40 100ML</h3>
+                            <p class="product-description">WD-40 multi-purpose lubricant 100ml</p>
+                            <p class="product-price">PKR 600</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('wd40_100ml')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (1).jpeg" alt="MICROFIBRE CLOTH X LARGE">
+                        </div>
+                        <div class="product-info">
+                            <div class="product-brand">KSM</div>
+                            <h3>MICROFIBRE CLOTH X LARGE</h3>
+                            <p class="product-description">Extra large microfiber cloth for professional cleaning</p>
+                            <p class="product-price">PKR 400</p>
+                            <button class="add-to-cart-btn" onclick="addToCart('microfibre_cloth_xlarge')">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
 
