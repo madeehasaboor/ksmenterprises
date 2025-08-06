@@ -158,7 +158,7 @@ body {
 
             /* Hero Section */
     .hero {
-        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%), url('../background.jpg?v=autoshine2024');
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%), url('../index/background.jpg?v=autoshine2024');
         background-size: cover !important;
         background-position: center !important;
         background-attachment: fixed !important;
