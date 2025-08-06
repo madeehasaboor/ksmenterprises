@@ -232,6 +232,86 @@
              line-height: 1.4;
              font-weight: 300;
          }
+         
+         /* Director Section Styling */
+         .director-section {
+             margin-top: 60px;
+             padding: 40px;
+             background: rgba(255, 255, 255, 0.03);
+             border: 1px solid rgba(255, 255, 255, 0.1);
+             border-radius: 20px;
+         }
+         
+         .director-title {
+             color: #ff0000;
+             font-size: 2rem;
+             font-weight: 600;
+             margin-bottom: 30px;
+             text-transform: uppercase;
+             letter-spacing: 2px;
+             text-align: center;
+         }
+         
+         .director-content {
+             display: flex;
+             align-items: center;
+             gap: 40px;
+             max-width: 800px;
+             margin: 0 auto;
+         }
+         
+         .director-image {
+             flex-shrink: 0;
+             width: 200px;
+             height: 250px;
+             border-radius: 15px;
+             overflow: hidden;
+             border: 3px solid rgba(255, 0, 0, 0.3);
+             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+         }
+         
+         .director-image img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+             transition: transform 0.3s ease;
+         }
+         
+         .director-image:hover img {
+             transform: scale(1.05);
+         }
+         
+         .director-info {
+             flex: 1;
+             text-align: left;
+         }
+         
+         .director-name {
+             color: #ffffff;
+             font-size: 1.8rem;
+             font-weight: 700;
+             margin-bottom: 10px;
+             text-transform: uppercase;
+             letter-spacing: 2px;
+             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+         }
+         
+         .director-role {
+             color: #ff0000;
+             font-size: 1.2rem;
+             font-weight: 600;
+             margin-bottom: 20px;
+             text-transform: uppercase;
+             letter-spacing: 1px;
+         }
+         
+         .director-description {
+             color: #ffffff;
+             font-size: 1.1rem;
+             line-height: 1.6;
+             font-weight: 300;
+             letter-spacing: 1px;
+         }
         
         @media (max-width: 768px) {
             .about-content {
@@ -271,6 +351,29 @@
              
              .brands-title {
                  font-size: 1.5rem;
+             }
+             
+             .director-content {
+                 flex-direction: column;
+                 text-align: center;
+                 gap: 30px;
+             }
+             
+             .director-image {
+                 width: 150px;
+                 height: 180px;
+             }
+             
+             .director-name {
+                 font-size: 1.4rem;
+             }
+             
+             .director-role {
+                 font-size: 1rem;
+             }
+             
+             .director-description {
+                 font-size: 1rem;
              }
         }
         
@@ -357,6 +460,24 @@
                     <p class="mission-text">
                         To be the leading distributor of premium car care products across Pakistan, delivering exceptional quality and service to every customer while maintaining our commitment to innovation and excellence in the automotive care industry.
                     </p>
+                </div>
+                
+                <!-- Director Section -->
+                <div class="director-section">
+                    <h3 class="director-title">Our Director</h3>
+                    <div class="director-content">
+                        <div class="director-image">
+                            <img src="director-image.jpg" alt="Muhammad Arslan Ayub Saigol" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDIwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRpcmVjdG9yPC90ZXh0Pgo8L3N2Zz4K'">
+                        </div>
+                        <div class="director-info">
+                            <h4 class="director-name">MUHAMMAD ARSLAN AYUB SAIGOL</h4>
+                            <p class="director-role">Director & Founder</p>
+                            <p class="director-description">
+                                Leading AUTO SHINE with over 40 years of experience in the automotive care industry. 
+                                Committed to delivering excellence and building lasting relationships with customers across Pakistan.
+                            </p>
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- Our Brands Section -->
