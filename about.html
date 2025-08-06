@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - AUTO SHINE</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="auto shine logo.jpg" alt="AUTO SHINE Logo" class="logo-image">
+                <img src="Auto shine Logo.jpg" alt="AUTO SHINE Logo" class="logo-image" onerror="this.style.display='none'; console.log('Logo failed to load');">
                 <h1>AUTO SHINE</h1>
             </div>
             <nav class="nav">
@@ -34,11 +34,13 @@
     </header>
 
     <!-- About Section -->
-            <section id="about" class="about-autoshine-section">
+    <section id="about" class="about-autoshine-section">
+        <div class="about-background-overlay"></div>
         <div class="container">
-            <h2>About Us</h2>
-            <div class="about-autoshine-content">
-                <div class="about-autoshine-text">
+            <div class="about-content-wrapper">
+                <h2>About Us</h2>
+                <div class="about-autoshine-content">
+                    <div class="about-autoshine-text">
                     <h3>Car Care Distribution Excellence</h3>
                     <p>OUR COMPANY ARE DISTRIBUTORS OF RENOWNED BRANDS OF CAR CARE PRODUCTS THROUGHOUT PAKISTAN WHICH ARE EVERY HOUSEHOLD NEED TODAY. OUR BRANDS INCLUDE FORMULA 1, AIM CAR CARE, DTR CAR CARE, WD-40 PRODUCTS AND MANY OTHER BRANDS WE ARE WORKING WITH ON DEMAND TO OUR CUSTOMERS IN ORDER TO FACILITATE THEIR EVERYDAY DEMANDS.</p>
                     
@@ -73,6 +75,7 @@
                                 <p class="brand-description">Trusted Lubrication & Protection</p>
                             </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
