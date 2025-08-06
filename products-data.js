@@ -1,878 +1,548 @@
 // Comprehensive Product Database for KSM Enterprises
-// Shop items have been removed
+// Complete product catalog with all categories
 
 const productsDatabase = {
-    // Car Polish & Shine Products
-    carPolishShine: [
-        {
-            id: "car_polish_shine_1",
-            name: "KSM Car Polish & Shine Premium",
-            price: 1200,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Premium",
-            description: "Premium car polish and shine for professional results"
-        },
-        {
-            id: "car_polish_shine_2",
-            name: "KSM Car Polish & Shine Advanced",
-            price: 1350,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Advanced",
-            description: "Advanced car polish and shine formula for deep shine"
-        },
-        {
-            id: "car_polish_shine_3",
-            name: "KSM Car Polish & Shine Professional",
-            price: 1100,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Professional",
-            description: "Professional grade car polish and shine solution"
-        },
-        {
-            id: "car_polish_shine_4",
-            name: "KSM Car Polish & Shine Ultra",
-            price: 1400,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Ultra",
-            description: "Ultra premium car polish and shine for maximum shine"
-        },
-        {
-            id: "car_polish_shine_5",
-            name: "KSM Car Polish & Shine Elite",
-            price: 1250,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Elite",
-            description: "Elite car polish and shine for showroom finish"
-        },
-        {
-            id: "car_polish_shine_6",
-            name: "KSM Car Polish & Shine Supreme",
-            price: 1300,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Supreme",
-            description: "Supreme car polish and shine for ultimate protection"
-        },
-        {
-            id: "car_polish_shine_7",
-            name: "KSM Car Polish & Shine Master",
-            price: 1150,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Master",
-            description: "Master car polish and shine for expert detailing"
-        },
-        {
-            id: "car_polish_shine_8",
-            name: "KSM Car Polish & Shine Classic",
-            price: 1050,
-            category: "car_polish_shine",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Polish+Shine+Classic",
-            description: "Classic car polish and shine for traditional shine"
-        }
-    ],
-    // Car Protecting Sprays Products
-    carProtectingSprays: [
-        {
-            id: "car_protecting_sprays_1",
-            name: "KSM Car Protecting Spray Premium",
-            price: 950,
-            category: "car_protecting_sprays",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Premium",
-            description: "Premium car protecting spray for ultimate protection"
-        },
-        {
-            id: "car_protecting_sprays_2",
-            name: "KSM Car Protecting Spray Advanced",
-            price: 1000,
-            category: "car_protecting_sprays",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Advanced",
-            description: "Advanced car protecting spray formula for long-lasting protection"
-        },
-        {
-            id: "car_protecting_sprays_3",
-            name: "KSM Car Protecting Spray Professional",
-            price: 975,
-            category: "car_protecting_sprays",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Professional",
-            description: "Professional grade car protecting spray solution"
-        },
-        {
-            id: "car_protecting_sprays_4",
-            name: "KSM Car Protecting Spray Ultra",
-            price: 1050,
-            category: "car_protecting_sprays",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Ultra",
-            description: "Ultra premium car protecting spray for maximum protection"
-        },
-        {
-            id: "car_protecting_sprays_5",
-            name: "KSM Car Protecting Spray Elite",
-            price: 900,
-            category: "car_protecting_sprays",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Elite",
-            description: "Elite car protecting spray for showroom finish protection"
-        },
-        {
-            id: "car_protecting_sprays_6",
-            name: "KSM Car Protecting Spray Supreme",
-            price: 1100,
-            category: "car_protecting_sprays",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Protecting+Spray+Supreme",
-            description: "Supreme car protecting spray for ultimate vehicle protection"
-        }
-    ],
-    // Car Spray Paints Products
-    carSprayPaints: [
-        {
-            id: "car_spray_paints_1",
-            name: "KSM Car Spray Paint Premium",
-            price: 750,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Premium",
-            description: "Premium car spray paint for professional touch-ups"
-        },
-        {
-            id: "car_spray_paints_2",
-            name: "KSM Car Spray Paint Advanced",
-            price: 800,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Advanced",
-            description: "Advanced car spray paint formula for perfect color matching"
-        },
-        {
-            id: "car_spray_paints_3",
-            name: "KSM Car Spray Paint Professional",
-            price: 775,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Professional",
-            description: "Professional grade car spray paint solution"
-        },
-        {
-            id: "car_spray_paints_4",
-            name: "KSM Car Spray Paint Ultra",
-            price: 825,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Ultra",
-            description: "Ultra premium car spray paint for maximum coverage"
-        },
-        {
-            id: "car_spray_paints_5",
-            name: "KSM Car Spray Paint Elite",
-            price: 700,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Elite",
-            description: "Elite car spray paint for showroom finish"
-        },
-        {
-            id: "car_spray_paints_6",
-            name: "KSM Car Spray Paint Supreme",
-            price: 850,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Supreme",
-            description: "Supreme car spray paint for ultimate color restoration"
-        },
-        {
-            id: "car_spray_paints_7",
-            name: "KSM Car Spray Paint Master",
-            price: 725,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Master",
-            description: "Master car spray paint for expert touch-ups"
-        },
-        {
-            id: "car_spray_paints_8",
-            name: "KSM Car Spray Paint Classic",
-            price: 675,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Classic",
-            description: "Classic car spray paint for traditional repairs"
-        },
-        {
-            id: "car_spray_paints_9",
-            name: "KSM Car Spray Paint Premium Plus",
-            price: 875,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Premium+Plus",
-            description: "Premium plus car spray paint for superior finish"
-        },
-        {
-            id: "car_spray_paints_10",
-            name: "KSM Car Spray Paint Advanced Plus",
-            price: 900,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Advanced+Plus",
-            description: "Advanced plus car spray paint for perfect matching"
-        },
-        {
-            id: "car_spray_paints_11",
-            name: "KSM Car Spray Paint Professional Plus",
-            price: 825,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Professional+Plus",
-            description: "Professional plus car spray paint solution"
-        },
-        {
-            id: "car_spray_paints_12",
-            name: "KSM Car Spray Paint Ultra Plus",
-            price: 925,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Ultra+Plus",
-            description: "Ultra plus car spray paint for maximum coverage"
-        },
-        {
-            id: "car_spray_paints_13",
-            name: "KSM Car Spray Paint Elite Plus",
-            price: 750,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Elite+Plus",
-            description: "Elite plus car spray paint for showroom finish"
-        },
-        {
-            id: "car_spray_paints_14",
-            name: "KSM Car Spray Paint Supreme Plus",
-            price: 950,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Supreme+Plus",
-            description: "Supreme plus car spray paint for ultimate restoration"
-        },
-        {
-            id: "car_spray_paints_15",
-            name: "KSM Car Spray Paint Master Plus",
-            price: 775,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Master+Plus",
-            description: "Master plus car spray paint for expert repairs"
-        },
-        {
-            id: "car_spray_paints_16",
-            name: "KSM Car Spray Paint Classic Plus",
-            price: 725,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Classic+Plus",
-            description: "Classic plus car spray paint for traditional touch-ups"
-        },
-        {
-            id: "car_spray_paints_17",
-            name: "KSM Car Spray Paint Premium Pro",
-            price: 1000,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Premium+Pro",
-            description: "Premium pro car spray paint for professional results"
-        },
-        {
-            id: "car_spray_paints_18",
-            name: "KSM Car Spray Paint Advanced Pro",
-            price: 1050,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Advanced+Pro",
-            description: "Advanced pro car spray paint for perfect matching"
-        },
-        {
-            id: "car_spray_paints_19",
-            name: "KSM Car Spray Paint Professional Pro",
-            price: 975,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Professional+Pro",
-            description: "Professional pro car spray paint solution"
-        },
-        {
-            id: "car_spray_paints_20",
-            name: "KSM Car Spray Paint Ultra Pro",
-            price: 1100,
-            category: "car_spray_paints",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Spray+Paint+Ultra+Pro",
-            description: "Ultra pro car spray paint for maximum coverage"
-        }
-    ],
-    // Car Wash & Wax Products
-    carWashWax: [
-        {
-            id: "car_wash_wax_1",
-            name: "KSM Car Wash & Wax Premium",
-            price: 1200,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Premium",
-            description: "Premium car wash and wax for professional results"
-        },
-        {
-            id: "car_wash_wax_2",
-            name: "KSM Car Wash & Wax Advanced",
-            price: 1350,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Advanced",
-            description: "Advanced car wash and wax formula for deep cleaning"
-        },
-        {
-            id: "car_wash_wax_3",
-            name: "KSM Car Wash & Wax Professional",
-            price: 1100,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Professional",
-            description: "Professional grade car wash and wax solution"
-        },
-        {
-            id: "car_wash_wax_4",
-            name: "KSM Car Wash & Wax Ultra",
-            price: 1400,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Ultra",
-            description: "Ultra premium car wash and wax for maximum shine"
-        },
-        {
-            id: "car_wash_wax_5",
-            name: "KSM Car Wash & Wax Elite",
-            price: 1250,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Elite",
-            description: "Elite car wash and wax for showroom finish"
-        },
-        {
-            id: "car_wash_wax_6",
-            name: "KSM Car Wash & Wax Supreme",
-            price: 1300,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Supreme",
-            description: "Supreme car wash and wax for ultimate protection"
-        },
-        {
-            id: "car_wash_wax_7",
-            name: "KSM Car Wash & Wax Master",
-            price: 1150,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Master",
-            description: "Master car wash and wax for expert detailing"
-        },
-        {
-            id: "car_wash_wax_8",
-            name: "KSM Car Wash & Wax Classic",
-            price: 1050,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Classic",
-            description: "Classic car wash and wax for traditional cleaning"
-        },
-        {
-            id: "car_wash_wax_9",
-            name: "KSM Car Wash & Wax Premium Plus",
-            price: 1450,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Premium+Plus",
-            description: "Premium plus car wash and wax for superior results"
-        },
-        {
-            id: "car_wash_wax_10",
-            name: "KSM Car Wash & Wax Advanced Plus",
-            price: 1500,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Advanced+Plus",
-            description: "Advanced plus car wash and wax for deep cleaning"
-        },
-        {
-            id: "car_wash_wax_11",
-            name: "KSM Car Wash & Wax Professional Plus",
-            price: 1250,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Professional+Plus",
-            description: "Professional plus car wash and wax solution"
-        },
-        {
-            id: "car_wash_wax_12",
-            name: "KSM Car Wash & Wax Ultra Plus",
-            price: 1550,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Ultra+Plus",
-            description: "Ultra plus car wash and wax for maximum shine"
-        },
-        {
-            id: "car_wash_wax_13",
-            name: "KSM Car Wash & Wax Elite Plus",
-            price: 1400,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Elite+Plus",
-            description: "Elite plus car wash and wax for showroom finish"
-        },
-        {
-            id: "car_wash_wax_14",
-            name: "KSM Car Wash & Wax Supreme Plus",
-            price: 1450,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Supreme+Plus",
-            description: "Supreme plus car wash and wax for ultimate protection"
-        },
-        {
-            id: "car_wash_wax_15",
-            name: "KSM Car Wash & Wax Master Plus",
-            price: 1300,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Master+Plus",
-            description: "Master plus car wash and wax for expert detailing"
-        },
-        {
-            id: "car_wash_wax_16",
-            name: "KSM Car Wash & Wax Classic Plus",
-            price: 1200,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Classic+Plus",
-            description: "Classic plus car wash and wax for traditional cleaning"
-        },
-        {
-            id: "car_wash_wax_17",
-            name: "KSM Car Wash & Wax Premium Pro",
-            price: 1600,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Premium+Pro",
-            description: "Premium pro car wash and wax for professional results"
-        },
-        {
-            id: "car_wash_wax_18",
-            name: "KSM Car Wash & Wax Advanced Pro",
-            price: 1650,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Advanced+Pro",
-            description: "Advanced pro car wash and wax for deep cleaning"
-        },
-        {
-            id: "car_wash_wax_19",
-            name: "KSM Car Wash & Wax Professional Pro",
-            price: 1500,
-            category: "car_wash_wax",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Wax+Professional+Pro",
-            description: "Professional pro car wash and wax solution"
-        }
-    ],
-    // Car Wash Shampoos Products
-    carWashShampoos: [
-        {
-            id: "car_wash_shampoos_1",
-            name: "KSM Car Wash Shampoo Premium",
-            price: 850,
-            category: "car_wash_shampoos",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Wash+Shampoo+Premium",
-            description: "Premium car wash shampoo for professional cleaning"
-        }
-    ],
-    // Cleaners Products
-    cleaners: [
-        {
-            id: "cleaners_1",
-            name: "KSM Car Cleaner Premium",
-            price: 650,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Premium",
-            description: "Premium car cleaner for professional cleaning"
-        },
-        {
-            id: "cleaners_2",
-            name: "KSM Car Cleaner Advanced",
-            price: 700,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Advanced",
-            description: "Advanced car cleaner formula for deep cleaning"
-        },
-        {
-            id: "cleaners_3",
-            name: "KSM Car Cleaner Professional",
-            price: 675,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Professional",
-            description: "Professional grade car cleaner solution"
-        },
-        {
-            id: "cleaners_4",
-            name: "KSM Car Cleaner Ultra",
-            price: 725,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Ultra",
-            description: "Ultra premium car cleaner for maximum cleaning"
-        },
-        {
-            id: "cleaners_5",
-            name: "KSM Car Cleaner Elite",
-            price: 600,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Elite",
-            description: "Elite car cleaner for showroom finish"
-        },
-        {
-            id: "cleaners_6",
-            name: "KSM Car Cleaner Supreme",
-            price: 750,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Supreme",
-            description: "Supreme car cleaner for ultimate cleaning"
-        },
-        {
-            id: "cleaners_7",
-            name: "KSM Car Cleaner Master",
-            price: 625,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Master",
-            description: "Master car cleaner for expert cleaning"
-        },
-        {
-            id: "cleaners_8",
-            name: "KSM Car Cleaner Classic",
-            price: 575,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Classic",
-            description: "Classic car cleaner for traditional cleaning"
-        },
-        {
-            id: "cleaners_9",
-            name: "KSM Car Cleaner Premium Plus",
-            price: 775,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Premium+Plus",
-            description: "Premium plus car cleaner for superior cleaning"
-        },
-        {
-            id: "cleaners_10",
-            name: "KSM Car Cleaner Advanced Plus",
-            price: 800,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Advanced+Plus",
-            description: "Advanced plus car cleaner for deep cleaning"
-        },
-        {
-            id: "cleaners_11",
-            name: "KSM Car Cleaner Professional Plus",
-            price: 725,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Professional+Plus",
-            description: "Professional plus car cleaner solution"
-        },
-        {
-            id: "cleaners_12",
-            name: "KSM Car Cleaner Ultra Plus",
-            price: 825,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Ultra+Plus",
-            description: "Ultra plus car cleaner for maximum cleaning"
-        },
-        {
-            id: "cleaners_13",
-            name: "KSM Car Cleaner Elite Plus",
-            price: 650,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Elite+Plus",
-            description: "Elite plus car cleaner for showroom finish"
-        },
-        {
-            id: "cleaners_14",
-            name: "KSM Car Cleaner Supreme Plus",
-            price: 850,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Supreme+Plus",
-            description: "Supreme plus car cleaner for ultimate cleaning"
-        },
-        {
-            id: "cleaners_15",
-            name: "KSM Car Cleaner Master Plus",
-            price: 675,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Master+Plus",
-            description: "Master plus car cleaner for expert cleaning"
-        },
-        {
-            id: "cleaners_16",
-            name: "KSM Car Cleaner Classic Plus",
-            price: 625,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Classic+Plus",
-            description: "Classic plus car cleaner for traditional cleaning"
-        },
-        {
-            id: "cleaners_17",
-            name: "KSM Car Cleaner Premium Pro",
-            price: 875,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Premium+Pro",
-            description: "Premium pro car cleaner for professional cleaning"
-        },
-        {
-            id: "cleaners_18",
-            name: "KSM Car Cleaner Advanced Pro",
-            price: 900,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Advanced+Pro",
-            description: "Advanced pro car cleaner for deep cleaning"
-        },
-        {
-            id: "cleaners_19",
-            name: "KSM Car Cleaner Professional Pro",
-            price: 825,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Professional+Pro",
-            description: "Professional pro car cleaner solution"
-        },
-        {
-            id: "cleaners_20",
-            name: "KSM Car Cleaner Ultra Pro",
-            price: 925,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Ultra+Pro",
-            description: "Ultra pro car cleaner for maximum cleaning"
-        },
-        {
-            id: "cleaners_21",
-            name: "KSM Car Cleaner Elite Pro",
-            price: 750,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Elite+Pro",
-            description: "Elite pro car cleaner for showroom finish"
-        },
-        {
-            id: "cleaners_22",
-            name: "KSM Car Cleaner Supreme Pro",
-            price: 950,
-            category: "cleaners",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Car+Cleaner+Supreme+Pro",
-            description: "Supreme pro car cleaner for ultimate cleaning"
-        }
-    ],
-    // Micro Fiber Clothes Products
-    microFiberClothes: [
-        {
-            id: "microfiber_clothes_1",
-            name: "KSM Microfiber Towel Premium",
-            price: 450,
-            category: "micro_fiber_clothes",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Premium",
-            description: "Premium microfiber towel for professional cleaning"
-        },
-        {
-            id: "microfiber_clothes_2",
-            name: "KSM Microfiber Towel Advanced",
-            price: 500,
-            category: "micro_fiber_clothes",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Advanced",
-            description: "Advanced microfiber towel for deep cleaning"
-        },
-        {
-            id: "microfiber_clothes_3",
-            name: "KSM Microfiber Towel Professional",
-            price: 475,
-            category: "micro_fiber_clothes",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Professional",
-            description: "Professional grade microfiber towel solution"
-        },
-        {
-            id: "microfiber_clothes_4",
-            name: "KSM Microfiber Towel Ultra",
-            price: 525,
-            category: "micro_fiber_clothes",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Ultra",
-            description: "Ultra premium microfiber towel for maximum cleaning"
-        },
-        {
-            id: "microfiber_clothes_5",
-            name: "KSM Microfiber Towel Elite",
+    // Microfibre Products
+    microfibre: [
+        {
+            id: "microfibre_cloth_xlarge",
+            name: "MICROFIBRE CLOTH X LARGE",
             price: 400,
-            category: "micro_fiber_clothes",
+            category: "microfibre",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Microfiber+Towel+Elite",
-            description: "Elite microfiber towel for showroom finish"
-        }
-    ],
-    // Others Products
-    others: [
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (1).jpeg",
+            description: "Extra large microfiber cloth for professional cleaning"
+        },
         {
-            id: "others_1",
-            name: "KSM Other Product Premium",
+            id: "microfibre_towel_xlarge",
+            name: "MICROFIBRE TOWEL X LARGE",
+            price: 600,
+            category: "microfibre",
+            brand: "KSM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (2).jpeg",
+            description: "Extra large microfiber towel for superior drying"
+        },
+        {
+            id: "microfibre_glass_cleaner",
+            name: "MICROFIBRE GLASS CLEANER",
+            price: 350,
+            category: "microfibre",
+            brand: "KSM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (3).jpeg",
+            description: "Specialized microfiber for streak-free glass cleaning"
+        },
+        {
+            id: "microfibre_designed_cloth_mix",
+            name: "MICROFIBRE DESIGNED CLOTH MIX",
             price: 550,
-            category: "others",
+            category: "microfibre",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Premium",
-            description: "Premium automotive product for professional use"
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (4).jpeg",
+            description: "Designer microfiber cloth mix for various surfaces"
         },
         {
-            id: "others_2",
-            name: "KSM Other Product Advanced",
-            price: 600,
-            category: "others",
+            id: "microfibre_cloth_lq",
+            name: "MICROFIBRE CLOTH (LQ)",
+            price: 250,
+            category: "microfibre",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Advanced",
-            description: "Advanced automotive product for enhanced performance"
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
+            description: "Light quality microfiber cloth"
         },
         {
-            id: "others_3",
-            name: "KSM Other Product Professional",
-            price: 575,
-            category: "others",
+            id: "microfibre_towel_small_lq",
+            name: "MICROFIBRE TOWEL SMALL (LQ)",
+            price: 250,
+            category: "microfibre",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Professional",
-            description: "Professional grade automotive product solution"
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (1).jpeg",
+            description: "Small light quality microfiber towel"
         },
         {
-            id: "others_4",
-            name: "KSM Other Product Ultra",
-            price: 625,
-            category: "others",
+            id: "microfibre_towel_large_lq",
+            name: "MICROFIBRE TOWEL LARGE (LQ)",
+            price: 300,
+            category: "microfibre",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Ultra",
-            description: "Ultra premium automotive product for maximum results"
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (2).jpeg",
+            description: "Large light quality microfiber towel"
         },
         {
-            id: "others_5",
-            name: "KSM Other Product Elite",
+            id: "aim_microfibre_cloth",
+            name: "AIM MICROFIBRE CLOTH",
+            price: 350,
+            category: "microfibre",
+            brand: "AIM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (3).jpeg",
+            description: "AIM brand microfiber cloth for professional use"
+        },
+        {
+            id: "aim_microfibre_towel_large",
+            name: "AIM MICROFIBRE TOWEL LARGE",
             price: 500,
-            category: "others",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Elite",
-            description: "Elite automotive product for showroom finish"
+            category: "microfibre",
+            brand: "AIM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (4).jpeg",
+            description: "AIM brand large microfiber towel"
         },
         {
-            id: "others_6",
-            name: "KSM Other Product Supreme",
-            price: 650,
-            category: "others",
+            id: "aim_microfibre_towel_small",
+            name: "AIM MICROFIBRE TOWEL SMALL",
+            price: 400,
+            category: "microfibre",
+            brand: "AIM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
+            description: "AIM brand small microfiber towel"
+        },
+        {
+            id: "microfibre_cloth_pack_2",
+            name: "MICROFIBRE CLOTH PACK OF 2",
+            price: 700,
+            category: "microfibre",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Other+Product+Supreme",
-            description: "Supreme automotive product for ultimate performance"
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (1).jpeg",
+            description: "Pack of 2 microfiber cloths for value"
+        },
+        {
+            id: "microfibre_towel_pack_2",
+            name: "MICROFIBRE TOWEL PACK OF 2",
+            price: 1050,
+            category: "microfibre",
+            brand: "KSM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (2).jpeg",
+            description: "Pack of 2 microfiber towels for value"
+        },
+        {
+            id: "microfibre_cloth_pack_4",
+            name: "MICROFIBRE CLOTH PACK OF 4",
+            price: 1350,
+            category: "microfibre",
+            brand: "KSM",
+            image: "products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (3).jpeg",
+            description: "Pack of 4 microfiber cloths for maximum value"
         }
     ],
-    // Radiator Cooler Products
-    radiatorCooler: [
+    // WD-40 Products
+    wd40: [
         {
-            id: "radiator_cooler_1",
-            name: "KSM Radiator Cooler Premium",
-            price: 650,
-            category: "radiator_cooler",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Premium",
-            description: "Premium radiator cooler for professional cooling"
+            id: "wd40_50ml",
+            name: "WD-40 50ML",
+            price: 375,
+            category: "wd40",
+            brand: "WD-40",
+            image: "products/CLEANERS/CAR CLEANNERS (1).jpeg",
+            description: "WD-40 multi-purpose lubricant 50ml"
         },
         {
-            id: "radiator_cooler_2",
-            name: "KSM Radiator Cooler Advanced",
-            price: 700,
-            category: "radiator_cooler",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Advanced",
-            description: "Advanced radiator cooler formula for enhanced cooling"
-        },
-        {
-            id: "radiator_cooler_3",
-            name: "KSM Radiator Cooler Professional",
-            price: 675,
-            category: "radiator_cooler",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Professional",
-            description: "Professional grade radiator cooler solution"
-        },
-        {
-            id: "radiator_cooler_4",
-            name: "KSM Radiator Cooler Ultra",
-            price: 725,
-            category: "radiator_cooler",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Ultra",
-            description: "Ultra premium radiator cooler for maximum cooling"
-        },
-        {
-            id: "radiator_cooler_5",
-            name: "KSM Radiator Cooler Elite",
+            id: "wd40_100ml",
+            name: "WD-40 100ML",
             price: 600,
-            category: "radiator_cooler",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Elite",
-            description: "Elite radiator cooler for optimal performance"
+            category: "wd40",
+            brand: "WD-40",
+            image: "products/CLEANERS/CAR CLEANNERS (2).jpeg",
+            description: "WD-40 multi-purpose lubricant 100ml"
         },
         {
-            id: "radiator_cooler_6",
-            name: "KSM Radiator Cooler Supreme",
-            price: 750,
-            category: "radiator_cooler",
-            brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Supreme",
-            description: "Supreme radiator cooler for ultimate cooling"
+            id: "wd40_200ml",
+            name: "WD-40 200ML",
+            price: 800,
+            category: "wd40",
+            brand: "WD-40",
+            image: "products/CLEANERS/CAR CLEANNERS (3).jpeg",
+            description: "WD-40 multi-purpose lubricant 200ml"
         },
         {
-            id: "radiator_cooler_7",
-            name: "KSM Radiator Cooler Master",
-            price: 625,
-            category: "radiator_cooler",
+            id: "wd40_330ml",
+            name: "WD-40 330ML",
+            price: 1100,
+            category: "wd40",
+            brand: "WD-40",
+            image: "products/CLEANERS/CAR CLEANNERS (4).jpeg",
+            description: "WD-40 multi-purpose lubricant 330ml"
+        },
+        {
+            id: "wd40_440ml",
+            name: "WD-40 440ML",
+            price: 1250,
+            category: "wd40",
+            brand: "WD-40",
+            image: "products/CLEANERS/CAR CLEANNERS (5).jpeg",
+            description: "WD-40 multi-purpose lubricant 440ml"
+        }
+    ],
+    // Waxes & Protectants
+    waxes: [
+        {
+            id: "wax_230g_soft_carnauba",
+            name: "Wax 230g (Soft Carnauba USA)",
+            price: 1400,
+            category: "waxes",
             brand: "KSM",
-            image: "https://via.placeholder.com/300x200/1a1a1a/fff?text=Radiator+Cooler+Master",
-            description: "Master radiator cooler for expert cooling"
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (1).jpeg",
+            description: "Soft Carnauba wax 230g for ultimate shine"
+        },
+        {
+            id: "wax_340g_soft_carnauba",
+            name: "Wax 340g (Soft Carnauba USA)",
+            price: 1850,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (2).jpeg",
+            description: "Soft Carnauba wax 340g for professional use"
+        },
+        {
+            id: "liquid_wax_carnauba",
+            name: "Liquid Wax (Carnauba USA)",
+            price: 1400,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (3).jpeg",
+            description: "Liquid Carnauba wax for easy application"
+        },
+        {
+            id: "fast_wax_spray",
+            name: "Fast Wax (Spray)",
+            price: 1500,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (4).jpeg",
+            description: "Quick spray wax for fast application"
+        },
+        {
+            id: "dry_clean_upholstery_cleaner",
+            name: "Dry Clean Upholstery Cleaner (USA)",
+            price: 1500,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (5).jpeg",
+            description: "Professional upholstery cleaner"
+        },
+        {
+            id: "mr_leather",
+            name: "Mr. Leather",
+            price: 1625,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (6).jpeg",
+            description: "Professional leather conditioner"
+        },
+        {
+            id: "mr_leather_small",
+            name: "Mr. Leather Small",
+            price: 1400,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (7).jpeg",
+            description: "Small size leather conditioner"
+        },
+        {
+            id: "bug_tar_remover",
+            name: "Bug and Tar Remover",
+            price: 1950,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (8).jpeg",
+            description: "Effective bug and tar removal solution"
+        },
+        {
+            id: "glass_cleaner_rain_repellent",
+            name: "Glass Cleaner with Rain Repellent",
+            price: 1750,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (9).jpeg",
+            description: "Glass cleaner with rain repellent properties"
+        },
+        {
+            id: "glass_cleaner",
+            name: "Glass Cleaner",
+            price: 1750,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (10).jpeg",
+            description: "Professional glass cleaner"
+        },
+        {
+            id: "wheel_tyre_clean",
+            name: "Wheel Tyre Clean",
+            price: 1750,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (11).jpeg",
+            description: "Specialized wheel and tire cleaner"
+        },
+        {
+            id: "wheel_rim_cleaner",
+            name: "Wheel Rim Cleaner",
+            price: 1750,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (12).jpeg",
+            description: "Professional wheel rim cleaner"
+        },
+        {
+            id: "black_gold_tyre_cleaner",
+            name: "Black Gold Tyre Cleaner",
+            price: 1750,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (13).jpeg",
+            description: "Premium tire cleaning solution"
+        },
+        {
+            id: "protectant_new_car",
+            name: "Protectant New Car",
+            price: 1125,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (14).jpeg",
+            description: "Protectant specifically for new cars"
+        },
+        {
+            id: "protectant_citrus",
+            name: "Protectant Citrus",
+            price: 1125,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (15).jpeg",
+            description: "Citrus scented protectant"
+        },
+        {
+            id: "protectant_strawberry",
+            name: "Protectant Strawberry",
+            price: 1125,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (16).jpeg",
+            description: "Strawberry scented protectant"
+        },
+        {
+            id: "protectant_vanilla",
+            name: "Protectant Vanilla",
+            price: 1125,
+            category: "waxes",
+            brand: "KSM",
+            image: "products/CAR WASH & WAX/CAR WASH & WAX (17).jpeg",
+            description: "Vanilla scented protectant"
+        }
+    ],
+    // Spray Paints & Cleaners
+    sprayPaints: [
+        {
+            id: "spray_paint_bright_gold",
+            name: "Spray Paint Bright Gold",
+            price: 450,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (1).jpeg",
+            description: "Bright gold spray paint for automotive use"
+        },
+        {
+            id: "spray_paint_bright_chrome",
+            name: "Spray Paint Bright Chrome",
+            price: 450,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (2).jpeg",
+            description: "Bright chrome spray paint for automotive use"
+        },
+        {
+            id: "dashboard_450ml",
+            name: "DashBoard 450ml",
+            price: 375,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (3).jpeg",
+            description: "Dashboard cleaner 450ml"
+        },
+        {
+            id: "dashboard_brown_450ml",
+            name: "DashBoard Brown 450ml",
+            price: 400,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (4).jpeg",
+            description: "Brown dashboard cleaner 450ml"
+        },
+        {
+            id: "carb_cleaner_medium_450ml",
+            name: "Carb Cleaner Medium 450ml",
+            price: 350,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (5).jpeg",
+            description: "Medium carburetor cleaner 450ml"
+        },
+        {
+            id: "dashboard_small",
+            name: "DASHBOARD SMALL",
+            price: 275,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (6).jpeg",
+            description: "Small dashboard cleaner"
+        },
+        {
+            id: "foamy_cleaner",
+            name: "Foamy Cleaner",
+            price: 425,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (7).jpeg",
+            description: "Foamy cleaning solution"
+        },
+        {
+            id: "tire_foam_cleaner",
+            name: "Tire Foam Cleaner",
+            price: 425,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (8).jpeg",
+            description: "Foam cleaner for tires"
+        },
+        {
+            id: "engine_degreaser",
+            name: "ENGINE DEGREASER",
+            price: 425,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (9).jpeg",
+            description: "Professional engine degreaser"
+        },
+        {
+            id: "glass_cleaner_450ml",
+            name: "Glass Cleaner 450ml",
+            price: 425,
+            category: "sprayPaints",
+            brand: "KSM",
+            image: "products/CAR SPRAY PAINTS/CAR SPRAY PAINTS (10).jpeg",
+            description: "Glass cleaner 450ml"
+        }
+    ],
+    // Other Car Products
+    otherProducts: [
+        {
+            id: "tire_gel",
+            name: "Tire Gel",
+            price: 550,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/OTHERS/OTHERS (1).jpeg",
+            description: "Professional tire gel for shine and protection"
+        },
+        {
+            id: "octane_booster",
+            name: "Octane Booster",
+            price: 500,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/OTHERS/OTHERS (2).jpeg",
+            description: "Fuel octane booster for improved performance"
+        },
+        {
+            id: "aw_shampoo_16oz",
+            name: "AW SHAMPOO 16OZ",
+            price: 500,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/OTHERS/OTHERS (3).jpeg",
+            description: "Car wash shampoo 16oz"
+        },
+        {
+            id: "furniture_polish",
+            name: "Furniture Polish",
+            price: 425,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/OTHERS/OTHERS (4).jpeg",
+            description: "Professional furniture polish"
+        },
+        {
+            id: "leather_spray",
+            name: "Leather Spray",
+            price: 550,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/OTHERS/OTHERS (5).jpeg",
+            description: "Leather conditioning spray"
+        },
+        {
+            id: "scratch_remover",
+            name: "SCRATCH REMOVER",
+            price: 550,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/OTHERS/OTHERS (6).jpeg",
+            description: "Professional scratch removal solution"
+        },
+        {
+            id: "fire_stop_extinguisher",
+            name: "Fire Stop (Extinguisher)",
+            price: 425,
+            category: "otherProducts",
+            brand: "KSM",
+            image: "products/CLEANERS/CAR CLEANNERS (6).jpeg",
+            description: "Fire extinguisher for vehicle safety"
+        }
+    ],
+    // Coolants
+    coolants: [
+        {
+            id: "coolant_500ml",
+            name: "Coolant 500ml",
+            price: 225,
+            category: "coolants",
+            brand: "KSM",
+            image: "products/RADIATOR COOLER/RADIATOR COOLER (1).jpeg",
+            description: "Engine coolant 500ml"
+        },
+        {
+            id: "coolant_1litre",
+            name: "Coolant 1 Litre",
+            price: 300,
+            category: "coolants",
+            brand: "KSM",
+            image: "products/RADIATOR COOLER/RADIATOR COOLER (2).jpeg",
+            description: "Engine coolant 1 litre"
+        },
+        {
+            id: "coolant_2litre",
+            name: "Coolant 2 Litre",
+            price: 500,
+            category: "coolants",
+            brand: "KSM",
+            image: "products/RADIATOR COOLER/RADIATOR COOLER (3).jpeg",
+            description: "Engine coolant 2 litre"
+        },
+        {
+            id: "coolant_4litre",
+            name: "Coolant 4 Litre",
+            price: 850,
+            category: "coolants",
+            brand: "KSM",
+            image: "products/RADIATOR COOLER/RADIATOR COOLER (4).jpeg",
+            description: "Engine coolant 4 litre"
+        }
+    ],
+    // Anti Rust Sprays
+    antiRust: [
+        {
+            id: "anti_rust_100ml",
+            name: "Anti Rust Spray 100ML",
+            price: 250,
+            category: "antiRust",
+            brand: "KSM",
+            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (1).jpeg",
+            description: "Anti-rust protection spray 100ml"
+        },
+        {
+            id: "anti_rust_220ml",
+            name: "Anti Rust Spray 220ML",
+            price: 300,
+            category: "antiRust",
+            brand: "KSM",
+            image: "products/CAR PROCTING SPRAYS/CAR PROTECTING SPRAYS (2).jpeg",
+            description: "Anti-rust protection spray 220ml"
         }
     ]
 };
