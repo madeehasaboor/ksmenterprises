@@ -51,6 +51,8 @@ body {
     border-bottom: 2px solid #8b0000;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+    position: relative;
+    z-index: 10;
 }
 
 .logo-image {
@@ -58,6 +60,12 @@ body {
     width: auto;
     margin-right: 20px;
     vertical-align: middle;
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 2px;
 }
 
 .logo h1 {
@@ -1747,6 +1755,9 @@ body {
     .logo-image {
         height: 35px;
         margin-right: 15px;
+        display: block;
+        object-fit: contain;
+        max-width: 100%;
     }
     
     .nav ul {
@@ -1918,6 +1929,9 @@ body {
     .logo-image {
         height: 29px;
         margin-right: 15px;
+        display: block;
+        object-fit: contain;
+        max-width: 100%;
     }
     
     .hero {
