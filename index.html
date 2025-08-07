@@ -75,45 +75,56 @@
        background: rgba(0, 0, 0, 0.5);
      }
      
-           .hero-brands {
-        position: absolute;
-        left: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 10;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
+                     .hero-brands {
+       position: absolute;
+       left: 20px;
+       top: 50%;
+       transform: translateY(-50%);
+       z-index: 10;
+       display: flex;
+       flex-direction: column;
+       gap: 15px;
+       max-width: 140px;
+     }
      
-           .hero-brands .brand {
-        background: rgba(255, 0, 0, 0.9);
-        color: white;
-        padding: 8px 15px;
-        border-radius: 6px;
-        font-weight: bold;
-        font-size: 0.9em;
-        text-align: center;
-        min-width: 100px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease;
-      }
+                     .hero-brands .brand {
+       background: linear-gradient(135deg, rgba(255, 0, 0, 0.95), rgba(220, 20, 60, 0.95));
+       color: white;
+       padding: 8px 14px;
+       border-radius: 10px;
+       font-weight: 900;
+       font-size: 0.85em;
+       text-align: center;
+       min-width: 85px;
+       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+       transition: all 0.3s ease;
+       margin-bottom: 12px;
+       border: 2px solid rgba(255, 255, 255, 0.3);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       backdrop-filter: blur(5px);
+     }
      
-           .hero-brands .brand:hover {
-        background: rgba(255, 0, 0, 1);
-        transform: translateX(5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-      }
+                     .hero-brands .brand:hover {
+       background: linear-gradient(135deg, rgba(255, 0, 0, 1), rgba(255, 107, 53, 1));
+       transform: translateX(8px) scale(1.05);
+       box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
+       border-color: rgba(255, 255, 255, 0.8);
+     }
       
       .hero-brands .brands-title {
         color: white;
-        font-size: 1.4em;
-        font-weight: bold;
+        font-size: 1.6em;
+        font-weight: 900;
         text-align: center;
-        margin: 0 0 15px 0;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        margin: 0 0 20px 0;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
+        background: linear-gradient(45deg, #ff0000, #ff6b35);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
                            .delivery-banner-section {
       text-align: center;
@@ -173,19 +184,24 @@
        .slide-overlay {
          background: rgba(0, 0, 0, 0.7);
        }
-               .hero-brands {
-          left: 15px;
-          gap: 15px;
-        }
-               .hero-brands .brands-title {
-          font-size: 1.2em;
-          margin: 0 0 12px 0;
-        }
-        .hero-brands .brand {
-          padding: 8px 15px;
-          font-size: 0.9em;
-          min-width: 100px;
-        }
+                             .hero-brands {
+         left: 10px;
+         gap: 10px;
+         max-width: 120px;
+       }
+              .hero-brands .brands-title {
+         font-size: 1.3em;
+         margin: 0 0 15px 0;
+         letter-spacing: 1px;
+       }
+       .hero-brands .brand {
+         padding: 6px 10px;
+         font-size: 0.7em;
+         min-width: 70px;
+         margin-bottom: 8px;
+         font-weight: 900;
+         letter-spacing: 0.5px;
+       }
        header {
          flex-direction: column;
          gap: 10px;
@@ -352,10 +368,10 @@
       <a href="../shop.html">Shop</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-    </nav>
-  </header>
+            </nav>
+    </header>
 
-  <section class="hero">
+    <section class="hero">
     <div class="slideshow">
       <div class="slide active" style="background-image: url('Annotation 2025-08-07 235825.png')">
         <div class="slide-overlay"></div>
@@ -390,17 +406,18 @@
       <div class="slide" style="background-image: url('Annotation 2025-08-07 232212.png')">
         <div class="slide-overlay"></div>
       </div>
-    </div>
+        </div>
     
     <!-- Brands Section on Hero Left Side -->
     <div class="hero-brands">
-      <h3 class="brands-title">Our Brands</h3>
+      <h3 class="brands-title">OUR BRANDS</h3>
       <div class="brand">WD-40</div>
-      <div class="brand">7CF</div>
-      <div class="brand">Formula 1</div>
-      <div class="brand">Areon</div>
-    </div>
-  </section>
+      <div class="brand">FORMULA 1</div>
+      <div class="brand">AIM</div>
+      <div class="brand">DTR</div>
+      <div class="brand">AREON</div>
+        </div>
+    </section>
 
   <!-- Delivery Banner Section -->
   <div style="background: #ff0000; color: white; text-align: center; padding: 8px; font-weight: bold; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; white-space: nowrap;">
@@ -417,25 +434,25 @@
       <div class="product">
         <div class="product-image">
           <img src="WD-40.jpg" alt="WD-40 Multi-Function Product" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
-        </div>
+                </div>
         <h4>WD-40 Multi-Function</h4>
         <p class="product-description">Eliminates squeaks, displaces moisture, cleans & protects</p>
         <p class="product-price">₨ 450</p>
         <p class="product-volume">200ml</p>
-      </div>
+                    </div>
       <div class="product">
         <div class="product-image">
           <img src="MICROFIBER TOWEL PACK OF 4.jpeg" alt="Aim Microfiber Towel Pack" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
-        </div>
+                    </div>
         <h4>Aim Microfiber Towel</h4>
         <p class="product-description">Value Pack! Pack of 4 - High Performance Microfiber</p>
         <p class="product-price">₨ 650</p>
         <p class="product-volume">4 Pack</p>
-      </div>
+                    </div>
       <div class="product">
         <div class="product-image">
           <img src="aim tire gel 500ml.jpeg" alt="Aim Tire Gel" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
-        </div>
+                </div>
         <h4>Aim Tire Gel</h4>
         <p class="product-description">Moistening, lustrous, durable - Creates long lasting high gloss wet look</p>
         <p class="product-price">₨ 550</p>
@@ -449,9 +466,9 @@
         <p class="product-description">Shines, protects & freshens with Cherry Fragrance</p>
         <p class="product-price">₨ 425</p>
         <p class="product-volume">295ml</p>
-      </div>
-    </div>
-  </section>
+            </div>
+        </div>
+    </section>
 
   <section class="section container">
     <h2>Shop by Category</h2>
@@ -460,40 +477,40 @@
         <div class="category-icon">🧽</div>
         <h4>Microfiber Products</h4>
         <p>Premium cleaning cloths & towels</p>
-      </div>
+                    </div>
       <div class="category">
         <div class="category-icon">✨</div>
         <h4>Wax & Protectants</h4>
         <p>Car wax, sealants & protection</p>
-      </div>
+                </div>
       <div class="category">
         <div class="category-icon">🎨</div>
         <h4>Spray Paint</h4>
         <p>Touch-up paints & refinishing</p>
-      </div>
+                </div>
       <div class="category">
         <div class="category-icon">🧴</div>
         <h4>Cleaners</h4>
         <p>All-purpose & specialized cleaners</p>
-      </div>
+                </div>
       <div class="category">
         <div class="category-icon">❄️</div>
         <h4>Coolers</h4>
         <p>Coolant & antifreeze products</p>
-      </div>
+            </div>
       <div class="category">
         <div class="category-icon">🛡️</div>
         <h4>Anti-Rust Spray</h4>
         <p>Rust prevention & treatment</p>
-      </div>
-    </div>
+            </div>
+        </div>
   </section>
 
   <footer>
     &copy; 2025 AutoShine. All rights reserved.
-  </footer>
+    </footer>
 
-  <script>
+    <script>
     // Hero slideshow functionality
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
@@ -508,7 +525,7 @@
     setInterval(nextSlide, 3000);
 
 
-  </script>
+    </script>
 
 </body>
-</html>
+</html> 
