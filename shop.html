@@ -1090,47 +1090,47 @@
             <!-- Category Navigation Bar -->
             <div class="category-nav-bar">
                 <div class="category-nav-container">
-                    <button class="category-nav-btn active" onclick="showCategory('all')">
+                    <button class="category-nav-btn active" onclick="showCategory('all', this)">
                         <i class="fas fa-th-large"></i>
                         <span>All Products</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('polish')">
+                    <button class="category-nav-btn" onclick="showCategory('polish', this)">
                         <i class="fas fa-spray-can"></i>
                         <span>Polish & Shinners</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('protecting-sprays')">
+                    <button class="category-nav-btn" onclick="showCategory('protecting-sprays', this)">
                         <i class="fas fa-shield-alt"></i>
                         <span>Protecting Sprays</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('spray-paints')">
+                    <button class="category-nav-btn" onclick="showCategory('spray-paints', this)">
                         <i class="fas fa-paint-roller"></i>
                         <span>Spray Paints</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('microfiber')">
+                    <button class="category-nav-btn" onclick="showCategory('microfiber', this)">
                         <i class="fas fa-tshirt"></i>
                         <span>Microfiber</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('wd40')">
+                    <button class="category-nav-btn" onclick="showCategory('wd40', this)">
                         <i class="fas fa-tools"></i>
                         <span>WD-40</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('waxes')">
+                    <button class="category-nav-btn" onclick="showCategory('waxes', this)">
                         <i class="fas fa-hand-sparkles"></i>
                         <span>Waxes</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('cleaners')">
+                    <button class="category-nav-btn" onclick="showCategory('cleaners', this)">
                         <i class="fas fa-broom"></i>
                         <span>Cleaners</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('other')">
+                    <button class="category-nav-btn" onclick="showCategory('other', this)">
                         <i class="fas fa-car"></i>
                         <span>Other Products</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('coolants')">
+                    <button class="category-nav-btn" onclick="showCategory('coolants', this)">
                         <i class="fas fa-thermometer-half"></i>
                         <span>Coolants</span>
                     </button>
-                    <button class="category-nav-btn" onclick="showCategory('anti-rust')">
+                    <button class="category-nav-btn" onclick="showCategory('anti-rust', this)">
                         <i class="fas fa-shield-virus"></i>
                         <span>Anti Rust</span>
                     </button>
@@ -2284,7 +2284,7 @@
         }
         
         // Category Navigation Functionality
-        function showCategory(categoryName) {
+        function showCategory(categoryName, clickedButton) {
             // Get all category sections
             const categoryElements = document.querySelectorAll('.category-section');
             const navButtons = document.querySelectorAll('.category-nav-btn');
@@ -2293,7 +2293,9 @@
             navButtons.forEach(btn => btn.classList.remove('active'));
             
             // Add active class to clicked button
-            event.target.closest('.category-nav-btn').classList.add('active');
+            if (clickedButton) {
+                clickedButton.classList.add('active');
+            }
             
             if (categoryName === 'all') {
                 // Show all categories
