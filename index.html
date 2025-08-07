@@ -114,19 +114,6 @@
             const cartCount = document.getElementById('cartCount');
             const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
             cartCount.textContent = totalItems;
-            
-            // Debug navigation links
-            const navLinks = document.querySelectorAll('.nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    console.log('Navigation link clicked:', this.href);
-                    // Add visual feedback
-                    this.style.backgroundColor = 'rgba(139, 0, 0, 0.3)';
-                    setTimeout(() => {
-                        this.style.backgroundColor = '';
-                    }, 200);
-                });
-            });
         });
     </script>
 </body>
