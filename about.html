@@ -3,414 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - AUTO SHINE</title>
+    <title>About Us - KSM Enterprises</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .about-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-        
-        .about-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .about-content {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 60px;
-            backdrop-filter: blur(10px);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .about-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ff0000, #cc0000, #ff0000);
-            animation: shimmer 3s ease-in-out infinite;
-        }
-        
-        @keyframes shimmer {
-            0%, 100% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-        }
-        
-        .about-title {
-            color: #ffffff;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-        }
-        
-        .about-subtitle {
-            color: #ff0000;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-        .about-text {
-            color: #ffffff;
-            font-size: 1.3rem;
-            line-height: 1.8;
-            margin-bottom: 40px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-        
-        .about-highlight {
-            color: #ff0000;
-            font-weight: 600;
-        }
-        
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .stat-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 30px 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 0, 0, 0.3);
-        }
-        
-        .stat-number {
-            color: #ff0000;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            display: block;
-        }
-        
-        .stat-label {
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .about-mission {
-            margin-top: 50px;
-            padding: 40px;
-            background: rgba(255, 0, 0, 0.05);
-            border: 1px solid rgba(255, 0, 0, 0.2);
-            border-radius: 15px;
-        }
-        
-        .mission-title {
-            color: #ff0000;
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        
-                 .mission-text {
-             color: #ffffff;
-             font-size: 1.1rem;
-             line-height: 1.6;
-             font-weight: 300;
-         }
-         
-         /* Brands Section Styling */
-         .brands-section {
-             margin-top: 60px;
-             padding: 40px;
-             background: rgba(255, 255, 255, 0.03);
-             border: 1px solid rgba(255, 255, 255, 0.1);
-             border-radius: 20px;
-         }
-         
-         .brands-title {
-             color: #ff0000;
-             font-size: 2rem;
-             font-weight: 600;
-             margin-bottom: 15px;
-             text-transform: uppercase;
-             letter-spacing: 2px;
-             text-align: center;
-         }
-         
-         .brands-subtitle {
-             color: #ffffff;
-             font-size: 1.1rem;
-             text-align: center;
-             margin-bottom: 40px;
-             font-weight: 300;
-             letter-spacing: 1px;
-         }
-         
-         .brands-grid {
-             display: grid;
-             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-             gap: 30px;
-             margin-top: 30px;
-         }
-         
-         .brand-card {
-             background: rgba(255, 255, 255, 0.05);
-             border: 1px solid rgba(255, 255, 255, 0.1);
-             border-radius: 15px;
-             padding: 30px 20px;
-             text-align: center;
-             transition: all 0.3s ease;
-             backdrop-filter: blur(10px);
-         }
-         
-         .brand-card:hover {
-             transform: translateY(-8px);
-             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-             border-color: rgba(255, 0, 0, 0.3);
-             background: rgba(255, 255, 255, 0.08);
-         }
-         
-         .brand-logo {
-             width: 120px;
-             height: 80px;
-             margin: 0 auto 20px;
-             display: flex;
-             align-items: center;
-             justify-content: center;
-             background: rgba(255, 255, 255, 0.1);
-             border-radius: 10px;
-             padding: 10px;
-         }
-         
-         .brand-logo img {
-             max-width: 100%;
-             max-height: 100%;
-             object-fit: contain;
-             border-radius: 5px;
-         }
-         
-         .brand-card h4 {
-             color: #ffffff;
-             font-size: 1.3rem;
-             font-weight: 600;
-             margin-bottom: 10px;
-             text-transform: uppercase;
-             letter-spacing: 1px;
-         }
-         
-         .brand-card p {
-             color: #cccccc;
-             font-size: 0.95rem;
-             line-height: 1.4;
-             font-weight: 300;
-         }
-         
-         /* Director Section Styling */
-         .director-section {
-             margin-top: 60px;
-             padding: 40px;
-             background: rgba(255, 255, 255, 0.03);
-             border: 1px solid rgba(255, 255, 255, 0.1);
-             border-radius: 20px;
-         }
-         
-         .director-title {
-             color: #ff0000;
-             font-size: 2rem;
-             font-weight: 600;
-             margin-bottom: 30px;
-             text-transform: uppercase;
-             letter-spacing: 2px;
-             text-align: center;
-         }
-         
-         .director-content {
-             display: flex;
-             align-items: center;
-             gap: 40px;
-             max-width: 800px;
-             margin: 0 auto;
-         }
-         
-         .director-image {
-             flex-shrink: 0;
-             width: 200px;
-             height: 250px;
-             border-radius: 15px;
-             overflow: hidden;
-             border: 3px solid rgba(255, 0, 0, 0.3);
-             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-         }
-         
-         .director-image img {
-             width: 100%;
-             height: 100%;
-             object-fit: cover;
-             transition: transform 0.3s ease;
-         }
-         
-         .director-image:hover img {
-             transform: scale(1.05);
-         }
-         
-         .director-info {
-             flex: 1;
-             text-align: left;
-         }
-         
-         .director-name {
-             color: #ffffff;
-             font-size: 1.8rem;
-             font-weight: 700;
-             margin-bottom: 10px;
-             text-transform: uppercase;
-             letter-spacing: 2px;
-             text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-         }
-         
-         .director-role {
-             color: #ff0000;
-             font-size: 1.2rem;
-             font-weight: 600;
-             margin-bottom: 20px;
-             text-transform: uppercase;
-             letter-spacing: 1px;
-         }
-         
-         .director-description {
-             color: #ffffff;
-             font-size: 1.1rem;
-             line-height: 1.6;
-             font-weight: 300;
-             letter-spacing: 1px;
-         }
-        
-        @media (max-width: 768px) {
-            .about-content {
-                padding: 40px 20px;
-            }
-            
-            .about-title {
-                font-size: 2.5rem;
-            }
-            
-            .about-text {
-                font-size: 1.1rem;
-            }
-            
-            .about-stats {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-                         .stat-item {
-                 padding: 20px 15px;
-             }
-             
-             .brands-grid {
-                 grid-template-columns: 1fr;
-                 gap: 20px;
-             }
-             
-             .brand-card {
-                 padding: 20px 15px;
-             }
-             
-             .brand-logo {
-                 width: 100px;
-                 height: 60px;
-             }
-             
-             .brands-title {
-                 font-size: 1.5rem;
-             }
-             
-             .director-content {
-                 flex-direction: column;
-                 text-align: center;
-                 gap: 30px;
-             }
-             
-             .director-image {
-                 width: 150px;
-                 height: 180px;
-             }
-             
-             .director-name {
-                 font-size: 1.4rem;
-             }
-             
-             .director-role {
-                 font-size: 1rem;
-             }
-             
-             .director-description {
-                 font-size: 1rem;
-             }
-        }
-        
-        /* Logo Image Styles */
-        .logo-image {
-            height: 50px;
-            width: auto;
-            margin-right: 15px;
-            vertical-align: middle;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        @media (max-width: 768px) {
-            .logo-image {
-                height: 40px;
-                margin-right: 10px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <img src="Auto shine Logo.jpg" alt="AUTO SHINE Logo" class="logo-image">
-                <h1>AUTO SHINE</h1>
+                <h1>KSM ENTERPRISES</h1>
             </div>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -426,97 +33,45 @@
     </header>
 
     <!-- About Section -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="about-content">
-                <h1 class="about-title">About Us</h1>
-                <p class="about-subtitle">Pakistan's Premier Car Care Distribution</p>
-                
-                <p class="about-text">
-                    <span class="about-highlight">OUR COMPANY</span> has been providing services throughout Pakistan since the past <span class="about-highlight">40 YEARS</span> to all sectors of the market. Our focus remains on providing <span class="about-highlight">HIGH QUALITY PRODUCTS</span> to our clients via our well established product range.
-                </p>
-                
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">40</span>
-                        <div class="stat-label">Years of Excellence</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">1000+</span>
-                        <div class="stat-label">Happy Customers</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">50+</span>
-                        <div class="stat-label">Product Categories</div>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">All</span>
-                        <div class="stat-label">Pakistan Coverage</div>
-                    </div>
-                </div>
-                
-                <div class="about-mission">
-                    <h3 class="mission-title">Our Mission</h3>
-                    <p class="mission-text">
-                        To be the leading distributor of premium car care products across Pakistan, delivering exceptional quality and service to every customer while maintaining our commitment to innovation and excellence in the automotive care industry.
-                    </p>
-                </div>
-                
-                <!-- Director Section -->
-                <div class="director-section">
-                    <h3 class="director-title">Our Director</h3>
-                    <div class="director-content">
-                                                 <div class="director-image">
-                             <img src="director-image.jp.jpg.jpg" alt="Muhammad Arslan Ayub Saigol" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDIwMCAyNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjUwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iMTMwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiMwMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkRpcmVjdG9yPC90ZXh0Pgo8L3N2Zz4K'">
-                         </div>
-                        <div class="director-info">
-                            <h4 class="director-name">MUHAMMAD ARSLAN AYUB SAIGOL</h4>
-                            <p class="director-role">Director & Founder</p>
-                                                         <p class="director-description">
-                                 Leading AUTO SHINE with over many years of experience in the automotive care industry. 
-                                 Committed to delivering excellence and building lasting relationships with customers across Pakistan.
-                             </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Our Brands Section -->
-                <div class="brands-section">
-                    <h3 class="brands-title">Our Premium Brands</h3>
-                    <p class="brands-subtitle">Distributing world-class car care products across Pakistan</p>
+    <section id="about" class="about-ksm-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-ksm-content">
+                <div class="about-ksm-text">
+                    <h3>Car Care Distribution Excellence</h3>
+                    <p>OUR COMPANY ARE DISTRIBUTORS OF RENOWNED BRANDS OF CAR CARE PRODUCTS THROUGHOUT PAKISTAN WHICH ARE EVERY HOUSEHOLD NEED TODAY. OUR BRANDS INCLUDE FORMULA 1, AIM CAR CARE, DTR CAR CARE, WD-40 PRODUCTS AND MANY OTHER BRANDS WE ARE WORKING WITH ON DEMAND TO OUR CUSTOMERS IN ORDER TO FACILITATE THEIR EVERYDAY DEMANDS.</p>
                     
-                    <div class="brands-grid">
-                                                 <div class="brand-card">
-                             <div class="brand-logo">
-                                 <img src="Auto shine Logo.jpg" alt="Formula 1" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDIwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+Rm9ybXVsYSAxPC90ZXh0Pgo8L3N2Zz4K'">
-                             </div>
-                             <h4>Formula 1</h4>
-                             <p>Premium car care products made in USA</p>
-                         </div>
-                         
-                         <div class="brand-card">
-                             <div class="brand-logo">
-                                 <img src="Auto shine Logo.jpg" alt="AIM Car Care" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDIwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+QUlNPC90ZXh0Pgo8L3N2Zz4K'">
-                             </div>
-                             <h4>AIM Car Care</h4>
-                             <p>Professional automotive care solutions</p>
-                         </div>
-                         
-                         <div class="brand-card">
-                             <div class="brand-logo">
-                                 <img src="Auto shine Logo.jpg" alt="WD-40" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDIwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+V0QtNDA8L3RleHQ+Cjwvc3ZnPgo='">
-                             </div>
-                             <h4>WD-40</h4>
-                             <p>Multi-purpose lubricant and cleaner</p>
-                         </div>
-                         
-                         <div class="brand-card">
-                             <div class="brand-logo">
-                                 <img src="Auto shine Logo.jpg" alt="DTR" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDIwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjRkZGRkZGIi8+Cjx0ZXh0IHg9IjEwMCIgeT0iNTUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RFRSPC90ZXh0Pgo8L3N2Zz4K'">
-                             </div>
-                             <h4>DTR</h4>
-                             <p>Make Better - Quality automotive products</p>
-                         </div>
+                    <div class="director-info">
+                        <h4>Leadership</h4>
+                        <p class="director-name">M. ARSLAN AYUB SAIGOL</p>
+                        <p>Leading KSM Enterprises with passion and dedication since many years, ensuring the highest standards of quality and customer satisfaction across Pakistan.</p>
+                    </div>
+                    
+                    <div class="director-image">
+                        <img src="director-image.jp.jpg.jpg" alt="M. Arslan Ayub Saigol" class="director-photo">
+                        <p class="image-caption">M. Arslan Ayub Saigol - Leading KSM Enterprises with passion and dedication</p>
+                    </div>
+                    
+                    <div class="brands-section">
+                        <h3>Our Trusted Brands</h3>
+                        <p>We proudly distribute premium car care brands that are trusted by professionals and enthusiasts alike.</p>
+                        <div class="brands-grid">
+                            <div class="brand-item">
+                                <img src="brand logos/frontendformula1-logo.jpg.jpg" alt="Formula 1 Car Care" class="brand-logo" onerror="this.style.display='none'">
+                                <h4>Formula 1</h4>
+                                <p class="brand-description">Premium Car Care Products</p>
+                            </div>
+                            <div class="brand-item">
+                                <img src="brand logos/frontendaim-logo.jpg.jpg" alt="AIM Car Care" class="brand-logo" onerror="this.style.display='none'">
+                                <h4>AIM Car Care</h4>
+                                <p class="brand-description">Professional Auto Care</p>
+                            </div>
+                            <div class="brand-item">
+                                <img src="brand logos/frontendwd40-logo.jpg.jpg" alt="WD-40 Products" class="brand-logo" onerror="this.style.display='none'">
+                                <h4>WD-40 Products</h4>
+                                <p class="brand-description">Trusted Lubrication & Protection</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -528,7 +83,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>AUTO SHINE</h3>
+                    <h3>KSM Enterprises</h3>
                     <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -541,7 +96,7 @@
                     <h4>Contact Info</h4>
                     <p><i class="fas fa-phone"></i> Sales: 04237103750 - 1</p>
                     <p><i class="fas fa-headset"></i> 24/7 Helpline: +923234890184</p>
-                    <p><i class="fas fa-envelope"></i> autoshine22@gmail.com</p>
+                    <p><i class="fas fa-envelope"></i> ksmenterprises22@gmail.com</p>
                     <p><i class="fas fa-map-marker-alt"></i> Badami Bagh Centre, Badami Bagh, Lahore</p>
                 </div>
                 <div class="footer-section">
@@ -550,16 +105,14 @@
                         <li><a href="#">Formula 1</a></li>
                         <li><a href="#">AIM Car Care</a></li>
                         <li><a href="#">WD-40 Products</a></li>
-                        <li><a href="#">DTR Products</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AUTO SHINE. All rights reserved.</p>
+                <p>&copy; 2024 KSM Enterprises. All rights reserved.</p>
             </div>
         </div>
     </footer>
-
     <script>
         // Initialize cart count
         document.addEventListener('DOMContentLoaded', function() {
