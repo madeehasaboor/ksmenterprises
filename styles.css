@@ -44,15 +44,13 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    width: 100vw;
     justify-content: center;
     background: linear-gradient(135deg, #1a0000 0%, #000000 100%);
-    padding: 20px 0;
+    padding: 10px 20px;
     border-bottom: 2px solid #8b0000;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
     position: relative;
     z-index: 10;
+    flex-shrink: 0;
 }
 
 .logo-image {
@@ -87,6 +85,8 @@ body {
     display: flex;
     list-style: none;
     gap: 35px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav a {
@@ -96,7 +96,13 @@ body {
     font-size: 1.1rem;
     transition: all 0.3s ease;
     position: relative;
-    padding: 5px 0;
+    padding: 8px 12px;
+    cursor: pointer;
+    display: block;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav a::after {
@@ -118,6 +124,14 @@ body {
 .nav a:hover,
 .nav a.active {
     color: #dc143c;
+}
+
+/* Debug styles to ensure navigation is visible */
+.nav {
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    align-items: center;
 }
 
 .header-actions {
@@ -1919,7 +1933,10 @@ body {
     }
     
     .header .container {
+        flex-direction: column;
+        height: auto;
         padding: 15px;
+        gap: 15px;
     }
     
     .logo h1 {
@@ -1932,6 +1949,16 @@ body {
         display: block;
         object-fit: contain;
         max-width: 100%;
+    }
+    
+    .nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav a {
+        font-size: 0.9rem;
     }
     
     .hero {
