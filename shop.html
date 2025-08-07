@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Shop - KSM Enterprises</title>
+    <title>Shop - AutoShine</title>
     <link rel="stylesheet" href="css/styles.css?v=1.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -131,8 +131,8 @@
             max-width: 280px;
         }
         
-        /* Hide products beyond the 6th one initially */
-        .products-grid .product-card:nth-child(n+7) {
+        /* Hide products beyond the 4th one initially */
+        .products-grid .product-card:nth-child(n+5) {
             display: none;
         }
         
@@ -624,6 +624,10 @@
                 font-size: 2rem !important;
             }
             
+            .category-section {
+                margin-bottom: 50px !important;
+            }
+            
             .category-section h3 {
                 font-size: 1.3rem !important;
             }
@@ -631,6 +635,7 @@
             .products-grid {
                 grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
                 gap: 15px !important;
+                margin-bottom: 20px !important;
             }
             
             .product-card {
@@ -639,6 +644,12 @@
             
             .product-image img {
                 height: 100px !important;
+            }
+            
+            .view-all-btn {
+                padding: 16px 28px !important;
+                font-size: 0.9rem !important;
+                margin: 30px auto 40px auto !important;
             }
         }
         
@@ -649,6 +660,10 @@
                 margin-bottom: 30px !important;
             }
             
+            .category-section {
+                margin-bottom: 60px !important;
+            }
+            
             .category-section h3 {
                 font-size: 1.5rem !important;
                 margin-bottom: 20px !important;
@@ -657,6 +672,7 @@
             .products-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
                 gap: 18px !important;
+                margin-bottom: 25px !important;
             }
             
             .product-card {
@@ -665,6 +681,12 @@
             
             .product-image img {
                 height: 120px !important;
+            }
+            
+            .view-all-btn {
+                padding: 18px 32px !important;
+                font-size: 1rem !important;
+                margin: 35px auto 50px auto !important;
             }
             
             .header .container {
@@ -693,9 +715,14 @@
                 padding: 0 20px !important;
             }
             
+            .category-section {
+                margin-bottom: 70px !important;
+            }
+            
             .products-grid {
                 grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
                 gap: 20px !important;
+                margin-bottom: 30px !important;
             }
             
             .shop-section h2 {
@@ -706,6 +733,12 @@
             .category-section h3 {
                 font-size: 1.8rem !important;
                 margin-bottom: 25px !important;
+            }
+            
+            .view-all-btn {
+                padding: 20px 36px !important;
+                font-size: 1.1rem !important;
+                margin: 40px auto 60px auto !important;
             }
         }
         
@@ -920,6 +953,108 @@
         .category-title {
             flex: 1;
         }
+        
+        /* Category Navigation Bar */
+        .category-nav-bar {
+            background: linear-gradient(135deg, #1a0000 0%, #000000 50%, #1a0000 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+            border: 2px solid #8b0000;
+            position: sticky;
+            top: 90px;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        
+        .category-nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .category-nav-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #2a0000, #1a0000);
+            color: white;
+            border: 2px solid #8b0000;
+            border-radius: 12px;
+            padding: 12px 8px;
+            min-width: 80px;
+            height: 70px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        
+        .category-nav-btn i {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            color: #ff6b35;
+        }
+        
+        .category-nav-btn span {
+            font-size: 0.6rem;
+            text-align: center;
+            line-height: 1.1;
+        }
+        
+        .category-nav-btn:hover {
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            border-color: #ff6b35;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.4);
+        }
+        
+        .category-nav-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .category-nav-btn.active {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            border-color: #fff;
+            color: #000;
+            font-weight: 700;
+        }
+        
+        .category-nav-btn.active i {
+            color: #000;
+        }
+        
+        /* Category Nav Mobile Styles */
+        @media (max-width: 768px) {
+            .category-nav-bar {
+                padding: 15px 10px !important;
+                margin: 20px 0 !important;
+                top: 70px !important;
+            }
+            
+            .category-nav-btn {
+                min-width: 70px !important;
+                height: 60px !important;
+                padding: 8px 6px !important;
+            }
+            
+            .category-nav-btn i {
+                font-size: 1rem !important;
+                margin-bottom: 3px !important;
+            }
+            
+            .category-nav-btn span {
+                font-size: 0.55rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -927,7 +1062,7 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>KSM ENTERPRISES</h1>
+                <h1>AUTOSHINE</h1>
             </div>
             <nav class="nav">
                 <ul>
@@ -952,10 +1087,59 @@
         <div class="container">
             <h2>Shop Our Products</h2>
             
+            <!-- Category Navigation Bar -->
+            <div class="category-nav-bar">
+                <div class="category-nav-container">
+                    <button class="category-nav-btn active" onclick="showCategory('all')">
+                        <i class="fas fa-th-large"></i>
+                        <span>All Products</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('polish')">
+                        <i class="fas fa-spray-can"></i>
+                        <span>Polish & Shinners</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('protecting-sprays')">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Protecting Sprays</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('spray-paints')">
+                        <i class="fas fa-paint-roller"></i>
+                        <span>Spray Paints</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('microfiber')">
+                        <i class="fas fa-tshirt"></i>
+                        <span>Microfiber</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('wd40')">
+                        <i class="fas fa-tools"></i>
+                        <span>WD-40</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('waxes')">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <span>Waxes</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('cleaners')">
+                        <i class="fas fa-broom"></i>
+                        <span>Cleaners</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('other')">
+                        <i class="fas fa-car"></i>
+                        <span>Other Products</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('coolants')">
+                        <i class="fas fa-thermometer-half"></i>
+                        <span>Coolants</span>
+                    </button>
+                    <button class="category-nav-btn" onclick="showCategory('anti-rust')">
+                        <i class="fas fa-shield-virus"></i>
+                        <span>Anti Rust</span>
+                    </button>
+                </div>
+            </div>
 
             
             <!-- CAR POLISH & SHINNERS -->
-            <div class="category-section">
+            <div class="category-section" id="category-polish" data-category="polish">
                 <h3>CAR POLISH & SHINNERS</h3>
                 <div class="products-grid" id="polish-products">
                     <div class="product-card">
@@ -978,6 +1162,7 @@
                             <h4>AIM Hard Wax</h4>
                             <p class="product-description">Long-lasting protection wax</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -989,6 +1174,7 @@
                             <h4>AIM Tire Gel 500ml</h4>
                             <p class="product-description">High gloss tire shine gel</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1000,6 +1186,7 @@
                             <h4>Black and Gold Tire Shine</h4>
                             <p class="product-description">Premium tire shine formula</p>
                             <p class="product-price">₨ 400</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1011,6 +1198,7 @@
                             <h4>Leather and Tyre Wax Lemon</h4>
                             <p class="product-description">Lemon scented leather and tire care</p>
                             <p class="product-price">₨ 380</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1022,6 +1210,7 @@
                             <h4>Leather and Tyre Wax</h4>
                             <p class="product-description">Dual purpose leather and tire protection</p>
                             <p class="product-price">₨ 380</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1033,6 +1222,7 @@
                             <h4>Scratch Out Liquid</h4>
                             <p class="product-description">Remove scratches from paint surface</p>
                             <p class="product-price">₨ 420</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1044,18 +1234,19 @@
                             <h4>Scratchout Paste</h4>
                             <p class="product-description">Paste formula for deep scratch removal</p>
                             <p class="product-price">₨ 480</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 <button class="view-all-btn" onclick="viewAllProducts('polish')">
-                    <i class="fas fa-th"></i> View All Products
+                    <i class="fas fa-plus"></i> View More
                 </button>
             </div>
             
             <!-- CAR PROTECTING SPRAYS -->
-            <div class="category-section">
+            <div class="category-section" id="category-protecting-sprays" data-category="protecting-sprays">
                 <h3>CAR PROTECTING SPRAYS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="protecting-sprays-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/CAR PROCTING SPRAYS/f1-120 formulla 1 protectant spray.jpeg" alt="Formula 1 Protectant Spray F1-120">
@@ -1064,6 +1255,7 @@
                             <h4>Formula 1 Protectant Spray F1-120</h4>
                             <p class="product-description">Advanced protection formula</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1075,6 +1267,7 @@
                             <h4>Formula 1 Protectant Spray</h4>
                             <p class="product-description">Professional protection spray</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1086,6 +1279,7 @@
                             <h4>Formula 1 Protectant Spray 295ml</h4>
                             <p class="product-description">Large size protection spray</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1097,6 +1291,7 @@
                             <h4>Formula 1 Protectant Spray F1-123</h4>
                             <p class="product-description">Premium protection formula</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1108,6 +1303,7 @@
                             <h4>Formula 1 Protectant Spray</h4>
                             <p class="product-description">Standard protection spray</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1119,15 +1315,19 @@
                             <h4>Protectant Spray 295ml</h4>
                             <p class="product-description">Large volume protection spray</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('protecting-sprays')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- CAR SPRAY PAINTS -->
-            <div class="category-section">
+            <div class="category-section" id="category-spray-paints" data-category="spray-paints">
                 <h3>CAR SPRAY PAINTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="spray-paints-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/CAR SPRAY PAINTS/A-142 AIM SPRAY PAINTS.jpeg" alt="AIM Spray Paints A-142">
@@ -1136,6 +1336,7 @@
                             <h4>AIM Spray Paints A-142</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1147,6 +1348,7 @@
                             <h4>AIM Spray Paint Red A-143</h4>
                             <p class="product-description">Red color spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1158,6 +1360,7 @@
                             <h4>AIM Spray Paint A-145</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1169,6 +1372,7 @@
                             <h4>AIM Spray Paint A-146</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1180,6 +1384,7 @@
                             <h4>AIM Spray Paints A-147</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1191,6 +1396,7 @@
                             <h4>AIM Spray Paint A-148</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1202,6 +1408,7 @@
                             <h4>Spray Paint A-150</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1213,6 +1420,7 @@
                             <h4>AIM Spray Paint A-151</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1224,6 +1432,7 @@
                             <h4>AIM Spray Paint A-152</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1235,6 +1444,7 @@
                             <h4>AIM Spray Paint A-153</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1246,6 +1456,7 @@
                             <h4>Spray Paint A-154</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1257,6 +1468,7 @@
                             <h4>AIM Spray Paint Gray A-155</h4>
                             <p class="product-description">Gray color spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1268,6 +1480,7 @@
                             <h4>AIM Spray Paint Green A-141</h4>
                             <p class="product-description">Green color spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1279,6 +1492,7 @@
                             <h4>AIM Spray Paint A-144</h4>
                             <p class="product-description">Professional spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1290,6 +1504,7 @@
                             <h4>AIM Spray Paint Yellow A-149</h4>
                             <p class="product-description">Yellow color spray paint</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1301,6 +1516,7 @@
                             <h4>F1-108 Colour Wax Ceramic Spray</h4>
                             <p class="product-description">Ceramic wax spray formula</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1312,6 +1528,7 @@
                             <h4>F1-109 Color Wax Ceramic Spray</h4>
                             <p class="product-description">Advanced ceramic wax spray</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1323,6 +1540,7 @@
                             <h4>F1-111 Color Wax Ceramic Spray</h4>
                             <p class="product-description">Premium ceramic wax spray</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1334,6 +1552,7 @@
                             <h4>F1-112 Color Wax Ceramic Spray</h4>
                             <p class="product-description">High-performance ceramic spray</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1345,18 +1564,19 @@
                             <h4>F1-111O Color Wax Ceramic Spray</h4>
                             <p class="product-description">Professional ceramic wax spray</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
                 <button class="view-all-btn" onclick="viewAllProducts('spray-paints')">
-                    <i class="fas fa-th"></i> View All Products
+                    <i class="fas fa-plus"></i> View More
                 </button>
             </div>
             
             <!-- MICROFIBER PRODUCTS -->
-            <div class="category-section">
+            <div class="category-section" id="category-microfiber" data-category="microfiber">
                 <h3>🧽 MICROFIBER PRODUCTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="microfiber-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfiber Towel Pack of 4">
@@ -1365,6 +1585,7 @@
                             <h4>MICROFIBER TOWEL PACK OF 4</h4>
                             <p class="product-description">Premium quality microfiber towels</p>
                             <p class="product-price">₨ 1,350</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1376,6 +1597,7 @@
                             <h4>MICROFIBER TOWEL PACK OF 2</h4>
                             <p class="product-description">High quality microfiber towels</p>
                             <p class="product-price">₨ 1,050</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1387,6 +1609,7 @@
                             <h4>MICROFIBER CLOTH PACK OF 2</h4>
                             <p class="product-description">Dual pack microfiber cloths</p>
                             <p class="product-price">₨ 700</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1398,6 +1621,7 @@
                             <h4>MICROFIBER TOWEL X LARGE</h4>
                             <p class="product-description">Extra large microfiber towel</p>
                             <p class="product-price">₨ 600</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1409,6 +1633,7 @@
                             <h4>MICROFIBER DESIGNED CLOTH MIX</h4>
                             <p class="product-description">Designer pattern microfiber cloth</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1420,6 +1645,7 @@
                             <h4>AIM MICROFIBER TOWEL LARGE</h4>
                             <p class="product-description">Large AIM brand microfiber towel</p>
                             <p class="product-price">₨ 500</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1431,6 +1657,7 @@
                             <h4>MICROFIBER CLOTH X LARGE</h4>
                             <p class="product-description">Extra large microfiber cloth</p>
                             <p class="product-price">₨ 400</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1442,6 +1669,7 @@
                             <h4>AIM MICROFIBER TOWEL SMALL</h4>
                             <p class="product-description">Small AIM brand microfiber towel</p>
                             <p class="product-price">₨ 400</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1453,6 +1681,7 @@
                             <h4>MICROFIBER GLASS CLEANER</h4>
                             <p class="product-description">Specialized glass cleaning cloth</p>
                             <p class="product-price">₨ 350</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1464,15 +1693,19 @@
                             <h4>AIM MICROFIBER CLOTH</h4>
                             <p class="product-description">AIM brand microfiber cloth</p>
                             <p class="product-price">₨ 350</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('microfiber')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- WD-40 PRODUCTS -->
-            <div class="category-section">
+            <div class="category-section" id="category-wd40" data-category="wd40">
                 <h3>🛢 WD-40 PRODUCTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="wd40-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/OTHERS/WD-40.jpg" alt="WD-40 440ML">
@@ -1481,6 +1714,7 @@
                             <h4>WD-40 440ML</h4>
                             <p class="product-description">Multi-purpose penetrating oil</p>
                             <p class="product-price">₨ 1,250</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1492,6 +1726,7 @@
                             <h4>WD-40 330ML</h4>
                             <p class="product-description">Multi-purpose penetrating oil</p>
                             <p class="product-price">₨ 1,100</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1503,6 +1738,7 @@
                             <h4>WD-40 200ML</h4>
                             <p class="product-description">Multi-purpose penetrating oil</p>
                             <p class="product-price">₨ 800</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1514,6 +1750,7 @@
                             <h4>WD-40 100ML</h4>
                             <p class="product-description">Multi-purpose penetrating oil</p>
                             <p class="product-price">₨ 600</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1525,15 +1762,19 @@
                             <h4>WD-40 50ML</h4>
                             <p class="product-description">Multi-purpose penetrating oil</p>
                             <p class="product-price">₨ 375</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('wd40')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- WAXES & PROTECTANTS -->
-            <div class="category-section">
+            <div class="category-section" id="category-waxes" data-category="waxes">
                 <h3>🧴 WAXES & PROTECTANTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="waxes-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/CAR WAX/bug and tar remover.jpeg" alt="Bug and Tar Remover">
@@ -1542,6 +1783,7 @@
                             <h4>Bug and Tar Remover</h4>
                             <p class="product-description">Removes stubborn bugs and tar</p>
                             <p class="product-price">₨ 1,950</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1553,6 +1795,7 @@
                             <h4>Wax 340g (Soft Carnauba USA)</h4>
                             <p class="product-description">Premium carnauba wax large size</p>
                             <p class="product-price">₨ 1,850</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1564,6 +1807,7 @@
                             <h4>Glass Cleaner with Rain Repellent</h4>
                             <p class="product-description">Advanced glass cleaning formula</p>
                             <p class="product-price">₨ 1,750</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1575,6 +1819,7 @@
                             <h4>Glass Cleaner</h4>
                             <p class="product-description">Professional glass cleaner</p>
                             <p class="product-price">₨ 1,750</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1586,6 +1831,7 @@
                             <h4>Wheel Tyre Clean</h4>
                             <p class="product-description">Complete wheel and tire cleaner</p>
                             <p class="product-price">₨ 1,750</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1597,6 +1843,7 @@
                             <h4>Mr. Leather</h4>
                             <p class="product-description">Premium leather care product</p>
                             <p class="product-price">₨ 1,625</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1608,6 +1855,7 @@
                             <h4>Fast Wax (Spray)</h4>
                             <p class="product-description">Quick application spray wax</p>
                             <p class="product-price">₨ 1,500</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1619,15 +1867,19 @@
                             <h4>Wax 230g (Soft Carnauba USA)</h4>
                             <p class="product-description">Premium carnauba wax</p>
                             <p class="product-price">₨ 1,400</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('waxes')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- CLEANERS -->
-            <div class="category-section">
+            <div class="category-section" id="category-cleaners" data-category="cleaners">
                 <h3>🎨 CLEANERS & SPRAY PAINTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="cleaners-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/CLEANERS/spray paint bright gold.jpeg" alt="Spray Paint Bright Gold">
@@ -1636,6 +1888,7 @@
                             <h4>Spray Paint Bright Gold</h4>
                             <p class="product-description">High quality gold spray paint</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1647,6 +1900,7 @@
                             <h4>Spray Paint Bright Chrome</h4>
                             <p class="product-description">Chrome finish spray paint</p>
                             <p class="product-price">₨ 450</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1658,6 +1912,7 @@
                             <h4>Tire Foam Cleaner</h4>
                             <p class="product-description">Foaming tire cleaning formula</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1669,6 +1924,7 @@
                             <h4>Glass Cleaner 450ml</h4>
                             <p class="product-description">Large size glass cleaner</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1680,6 +1936,7 @@
                             <h4>Foamy Cleaner</h4>
                             <p class="product-description">Multi-purpose foam cleaner</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1691,6 +1948,7 @@
                             <h4>ENGINE DEGREASER</h4>
                             <p class="product-description">Heavy duty engine degreaser</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1702,6 +1960,7 @@
                             <h4>Dashboard Brown 450ml</h4>
                             <p class="product-description">Brown dashboard cleaner</p>
                             <p class="product-price">₨ 400</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1713,15 +1972,19 @@
                             <h4>Dashboard 450ml</h4>
                             <p class="product-description">Dashboard cleaner and protectant</p>
                             <p class="product-price">₨ 375</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('cleaners')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- OTHER CAR PRODUCTS -->
-            <div class="category-section">
+            <div class="category-section" id="category-other" data-category="other">
                 <h3>🧪 OTHER CAR PRODUCTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="other-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/OTHERS/tire gel.jpeg" alt="Tire Gel">
@@ -1730,6 +1993,7 @@
                             <h4>Tire Gel</h4>
                             <p class="product-description">High gloss tire shine gel</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1741,6 +2005,7 @@
                             <h4>Leather Spray</h4>
                             <p class="product-description">Leather care and protection spray</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1752,6 +2017,7 @@
                             <h4>SCRATCH REMOVER</h4>
                             <p class="product-description">Effective scratch removal formula</p>
                             <p class="product-price">₨ 550</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1763,6 +2029,7 @@
                             <h4>Octane Booster</h4>
                             <p class="product-description">Fuel performance enhancer</p>
                             <p class="product-price">₨ 500</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1774,6 +2041,7 @@
                             <h4>AW SHAMPOO 16OZ</h4>
                             <p class="product-description">Professional car wash shampoo</p>
                             <p class="product-price">₨ 500</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1785,6 +2053,7 @@
                             <h4>Furniture Polish</h4>
                             <p class="product-description">Interior furniture polish</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1796,15 +2065,19 @@
                             <h4>Fire Stop (Extinguisher)</h4>
                             <p class="product-description">Portable fire extinguisher</p>
                             <p class="product-price">₨ 425</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('other')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- RADIATOR COOLANTS -->
-            <div class="category-section">
+            <div class="category-section" id="category-coolants" data-category="coolants">
                 <h3>🌡 RADIATOR COOLANTS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="coolants-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/RADIATOR COOLER/radiator coolant 4 litre.jpeg" alt="Radiator Coolant 4 Litre">
@@ -1813,6 +2086,7 @@
                             <h4>Radiator Coolant 4 Litre</h4>
                             <p class="product-description">Large capacity coolant</p>
                             <p class="product-price">₨ 850</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1824,6 +2098,7 @@
                             <h4>Radiator Coolant 2 Litre</h4>
                             <p class="product-description">Medium capacity coolant</p>
                             <p class="product-price">₨ 500</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1835,6 +2110,7 @@
                             <h4>Radiator Coolant 1 Litre</h4>
                             <p class="product-description">Standard size coolant</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1846,15 +2122,19 @@
                             <h4>Radiator Coolant 500ml</h4>
                             <p class="product-description">Small size coolant</p>
                             <p class="product-price">₨ 225</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('coolants')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
             
             <!-- ANTI RUST SPRAYS -->
-            <div class="category-section">
+            <div class="category-section" id="category-anti-rust" data-category="anti-rust">
                 <h3>🛡 ANTI RUST SPRAYS</h3>
-                <div class="products-grid">
+                <div class="products-grid" id="anti-rust-products">
                     <div class="product-card">
                         <div class="product-image">
                             <img src="products/OTHERS/anti rust spray 220ml.jpeg" alt="Anti Rust Spray 220ml">
@@ -1863,6 +2143,7 @@
                             <h4>Anti Rust Spray 220ML</h4>
                             <p class="product-description">Large size rust prevention spray</p>
                             <p class="product-price">₨ 300</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                     
@@ -1874,9 +2155,13 @@
                             <h4>Anti Rust Spray 100ML</h4>
                             <p class="product-description">Compact rust prevention spray</p>
                             <p class="product-price">₨ 250</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
                         </div>
                     </div>
                 </div>
+                <button class="view-all-btn" onclick="viewAllProducts('anti-rust')">
+                    <i class="fas fa-plus"></i> View More
+                </button>
             </div>
         </div>
     </section>
@@ -1886,7 +2171,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>KSM Enterprises</h3>
+                    <h3>AutoShine</h3>
                     <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -1912,7 +2197,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 KSM Enterprises. All rights reserved.</p>
+                <p>&copy; 2024 AutoShine. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -1928,7 +2213,7 @@
             if (grid.classList.contains('show-all')) {
                 // Hide extra products
                 grid.classList.remove('show-all');
-                btn.innerHTML = '<i class="fas fa-th"></i> View All Products';
+                btn.innerHTML = '<i class="fas fa-plus"></i> View More';
             } else {
                 // Show all products
                 grid.classList.add('show-all');
@@ -1937,10 +2222,120 @@
         }
 
         
+        // Cart functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Add to cart function
+        function addToCart(button) {
+            const productCard = button.closest('.product-card');
+            const productImage = productCard.querySelector('.product-image img');
+            const productName = productCard.querySelector('.product-info h4').textContent;
+            const productDescription = productCard.querySelector('.product-description').textContent;
+            const productPrice = productCard.querySelector('.product-price').textContent.replace('₨ ', '').replace(',', '');
+            
+            // Create product object
+            const product = {
+                id: Date.now() + Math.random(), // Simple unique ID
+                name: productName,
+                description: productDescription,
+                price: parseInt(productPrice),
+                image: productImage.src,
+                quantity: 1
+            };
+            
+            // Check if product already exists in cart
+            const existingProduct = cart.find(item => item.name === product.name);
+            
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push(product);
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Show feedback
+            showAddToCartFeedback(button);
+        }
+        
+        // Update cart count in header
+        function updateCartCount() {
+            const cartCount = document.getElementById('cartCount');
+            if (cartCount) {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = totalItems;
+            }
+        }
+        
+        // Show add to cart feedback
+        function showAddToCartFeedback(button) {
+            const originalText = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-check"></i> Added!';
+            button.style.backgroundColor = '#28a745';
+            
+            setTimeout(() => {
+                button.innerHTML = originalText;
+                button.style.backgroundColor = '';
+            }, 1500);
+        }
+        
+        // Category Navigation Functionality
+        function showCategory(categoryName) {
+            // Get all category sections
+            const categoryElements = document.querySelectorAll('.category-section');
+            const navButtons = document.querySelectorAll('.category-nav-btn');
+            
+            // Remove active class from all buttons
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.closest('.category-nav-btn').classList.add('active');
+            
+            if (categoryName === 'all') {
+                // Show all categories
+                categoryElements.forEach(section => {
+                    section.style.display = 'block';
+                });
+            } else {
+                // Hide all categories first
+                categoryElements.forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show only the selected category
+                const selectedCategory = document.getElementById('category-' + categoryName);
+                if (selectedCategory) {
+                    selectedCategory.style.display = 'block';
+                    
+                    // Smooth scroll to the category
+                    selectedCategory.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            }
+        }
+        
         // Simple initialization - no complex animations
         document.addEventListener('DOMContentLoaded', function() {
             // Add simple hover effects and interactions
             console.log('Shop page loaded with static grid layout');
+            
+            // Update cart count on page load
+            updateCartCount();
+            
+            // Add click event listeners to all add-to-cart buttons
+            const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    addToCart(this);
+                });
+            });
         });
 
     </script>
