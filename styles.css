@@ -99,10 +99,6 @@ body {
     padding: 8px 12px;
     cursor: pointer;
     display: block;
-    min-height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .nav a::after {
@@ -126,12 +122,9 @@ body {
     color: #dc143c;
 }
 
-/* Debug styles to ensure navigation is visible */
 .nav {
     position: relative;
     z-index: 1001;
-    display: flex;
-    align-items: center;
 }
 
 .header-actions {
@@ -1935,8 +1928,8 @@ body {
     .header .container {
         flex-direction: column;
         height: auto;
-        padding: 15px;
-        gap: 15px;
+        padding: 20px;
+        gap: 20px;
     }
     
     .logo h1 {
@@ -1952,13 +1945,13 @@ body {
     }
     
     .nav ul {
-        gap: 15px;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
     
     .nav a {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .hero {
