@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - KSM Enterprises</title>
+    <title>Shopping Cart - KSM Enterprises</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -32,44 +32,44 @@
         </div>
     </header>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
+    <!-- Cart Section -->
+    <section class="cart-section">
         <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>Ready to experience the best in car care? Contact us today for all your automotive care needs.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>SALES CONTACT</h4>
-                                <p>04237103750 - 1</p>
-                            </div>
+            <h2>Shopping Cart</h2>
+            <div class="cart-content">
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded here -->
+                </div>
+                <div class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="cart-total">
+                        <p>Total Items: <span id="totalItems">0</span></p>
+                        <p>Total Amount: <span id="totalAmount">Rs. 0</span></p>
+                    </div>
+                    
+                    <!-- Customer Information Form -->
+                    <div class="customer-form" id="customerForm" style="display: none;">
+                        <h4>Customer Information</h4>
+                        <div class="form-group">
+                            <label for="customerName">Full Name *</label>
+                            <input type="text" id="customerName" required>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-headset"></i>
-                            <div>
-                                <h4>24/7 HELPLINE</h4>
-                                <p>+923234890184</p>
-                            </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" required>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>EMAIL</h4>
-                                <p>ksmenterprises22@gmail.com</p>
-                            </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Delivery Address *</label>
+                            <textarea id="customerAddress" rows="3" required></textarea>
                         </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>ADDRESS</h4>
-                                <p>Badami Bagh Centre, Badami Bagh, Lahore</p>
-                            </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Email (Optional)</label>
+                            <input type="email" id="customerEmail">
                         </div>
                     </div>
+                    
+                    <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+                    <button class="continue-shopping" onclick="window.location.href='shop.html'">Continue Shopping</button>
                 </div>
             </div>
         </div>
@@ -110,14 +110,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Initialize cart count
-        document.addEventListener('DOMContentLoaded', function() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartCount = document.getElementById('cartCount');
-            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-            cartCount.textContent = totalItems;
-        });
-    </script>
+
+    <script src="cart.js"></script>
 </body>
 </html> 
