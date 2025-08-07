@@ -1,0 +1,1948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Shop - KSM Enterprises</title>
+    <link rel="stylesheet" href="css/styles.css?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Enhanced Shop Styling */
+        .shop-section {
+            background: linear-gradient(135deg, #000000 0%, #1a0000 50%, #000000 100%);
+            min-height: 100vh;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shop-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(139, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(220, 20, 60, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .shop-section h2 {
+            text-align: center;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff0000, #dc143c, #8b0000, #ff4500);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 60px;
+            text-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+            animation: gradientShift 3s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+        
+        .category-section {
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Compact view - show only 3 products initially */
+        .products-grid.compact {
+            max-height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .products-grid.compact::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, #000000);
+            pointer-events: none;
+        }
+        
+        .category-section h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            padding: 15px 0;
+            background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.3), transparent);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 0, 0, 0.3);
+        }
+        
+        .category-section h3::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #8b0000, transparent);
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+            max-width: 100%;
+        }
+        
+        .product-card {
+            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 
+                0 8px 20px rgba(0, 0, 0, 0.4),
+                0 3px 10px rgba(139, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(139, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            width: 100%;
+            max-width: 280px;
+        }
+        
+        /* Hide products beyond the 6th one initially */
+        .products-grid .product-card:nth-child(n+7) {
+            display: none;
+        }
+        
+        .products-grid.show-all .product-card {
+            display: block;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.1), transparent);
+            transition: left 0.5s;
+        }
+        
+        .product-card:hover::before {
+            left: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.7),
+                0 10px 25px rgba(139, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            border-color: rgba(139, 0, 0, 0.5);
+        }
+        
+        .product-image {
+            position: relative;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+            padding: 10px;
+            box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            filter: brightness(0.9) contrast(1.1);
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+            filter: brightness(1.1) contrast(1.2);
+        }
+        
+        .product-info {
+            text-align: center;
+            position: relative;
+        }
+        
+        .product-info h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(45deg, #ffffff, #f0f0f0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            transition: all 0.3s ease;
+            line-height: 1.2;
+        }
+        
+        .product-card:hover .product-info h4 {
+            background: linear-gradient(45deg, #ff4444, #ff0000);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+        }
+        
+        .product-description {
+            color: #cccccc;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+            font-style: italic;
+        }
+        
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff0000, #dc143c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 8px rgba(255, 0, 0, 0.3);
+            margin-bottom: 10px;
+            padding: 6px;
+            border-radius: 8px;
+            background-color: rgba(139, 0, 0, 0.1);
+            border: 1px solid rgba(139, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Add to Cart Button */
+        .add-to-cart-btn {
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 3px 10px rgba(139, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            font-size: 0.8rem;
+        }
+        
+        .add-to-cart-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+        
+        .add-to-cart-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .add-to-cart-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5);
+        }
+        
+        /* Static grid - no animations */
+        
+        /* Mobile-friendly touch interactions */
+        .product-card {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        
+        .product-card:hover,
+        .product-card:active,
+        .product-card:focus {
+            transform: translateY(-3px) !important;
+            box-shadow: 0 6px 20px rgba(139, 0, 0, 0.3) !important;
+        }
+        
+        /* Touch-friendly buttons */
+        .add-to-cart-btn,
+        .view-all-btn {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+            min-height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .add-to-cart-btn:active,
+        .view-all-btn:active {
+            transform: scale(0.95);
+        }
+        
+        /* View All Button Styling */
+        .view-all-btn {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+            margin: 20px auto;
+            display: block;
+            font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .view-all-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+        
+        .view-all-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .view-all-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.5);
+        }
+        
+        /* Compact Grid Layout */
+        .compact-grid {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-height: 350px;
+            overflow: hidden;
+            animation: none !important;
+            transform: none !important;
+        }
+        
+        .compact-grid .product-card {
+            min-width: auto;
+            animation: none;
+            transform: none;
+        }
+        
+        /* Show only first 3 products initially */
+        .compact-grid .product-card:nth-child(n+4) {
+            display: none;
+        }
+        
+        .compact-grid.expanded .product-card {
+            display: block;
+        }
+        
+        .compact-grid.expanded {
+            max-height: none;
+        }
+        
+        /* Collapsible sections */
+        .category-section.collapsed .products-grid {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+        
+        .category-section:not(.collapsed) .products-grid {
+            max-height: 500px;
+            opacity: 1;
+            transition: all 0.5s ease;
+        }
+        
+        /* Toggle button for categories */
+        .category-toggle {
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .category-toggle.collapsed {
+            transform: rotate(-90deg);
+        }
+        
+        /* Compact product cards */
+        .product-card.compact {
+            padding: 12px;
+            min-width: 200px;
+            max-width: 220px;
+        }
+        
+        .product-card.compact .product-image {
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        
+        .product-card.compact .product-image img {
+            height: 100px;
+        }
+        
+        .product-card.compact .product-info h4 {
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .product-card.compact .product-description {
+            font-size: 0.7rem;
+            margin-bottom: 6px;
+        }
+        
+        .product-card.compact .product-price {
+            font-size: 1rem;
+            margin-bottom: 6px;
+            padding: 4px;
+        }
+        
+        .product-card.compact .add-to-cart-btn {
+            padding: 6px 12px;
+            font-size: 0.7rem;
+        }
+        
+        /* Mobile-First Responsive Design */
+        
+        /* Base mobile styles (default) */
+        .shop-section h2 {
+            font-size: 1.8rem !important;
+            margin-bottom: 20px !important;
+            padding: 0 15px;
+            text-align: center;
+        }
+        
+        .category-section {
+            margin-bottom: 40px !important;
+            clear: both !important;
+            overflow: hidden !important;
+            position: relative !important;
+        }
+        
+        .category-section h3 {
+            font-size: 1.2rem !important;
+            margin-bottom: 15px !important;
+            padding: 10px 15px !important;
+        }
+        
+        .products-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)) !important;
+            gap: 10px !important;
+            padding: 10px !important;
+            margin-bottom: 15px !important;
+            position: relative !important;
+            z-index: 1 !important;
+        }
+        
+        .product-card {
+            padding: 10px !important;
+            border-radius: 10px !important;
+            max-width: none !important;
+            width: 100% !important;
+        }
+        
+        .product-image {
+            padding: 6px !important;
+            margin-bottom: 8px !important;
+        }
+        
+        .product-image img {
+            height: 80px !important;
+        }
+        
+        .product-info h4 {
+            font-size: 0.8rem !important;
+            margin-bottom: 5px !important;
+            line-height: 1.1 !important;
+        }
+        
+        .product-description {
+            font-size: 0.65rem !important;
+            margin-bottom: 6px !important;
+            line-height: 1.2 !important;
+        }
+        
+        .product-price {
+            font-size: 0.9rem !important;
+            padding: 3px !important;
+            margin-bottom: 6px !important;
+        }
+        
+        .add-to-cart-btn {
+            padding: 4px 8px !important;
+            font-size: 0.6rem !important;
+            border-radius: 15px !important;
+        }
+        
+        .view-all-btn {
+            padding: 12px 20px !important;
+            font-size: 0.8rem !important;
+            margin: 20px auto 30px auto !important;
+            display: block !important;
+            width: fit-content !important;
+            min-height: 44px !important;
+            border-radius: 25px !important;
+            position: relative !important;
+            z-index: 10 !important;
+        }
+        
+        .container {
+            padding: 0 10px !important;
+            max-width: 100% !important;
+        }
+        
+        /* Header mobile optimization */
+        .header .container {
+            flex-direction: column !important;
+            height: auto !important;
+            padding: 10px !important;
+            gap: 10px !important;
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem !important;
+            letter-spacing: 1px !important;
+        }
+        
+        .nav ul {
+            gap: 15px !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+        }
+        
+        .nav a {
+            font-size: 0.8rem !important;
+            padding: 6px 10px !important;
+        }
+        
+        /* Small mobile screens (320px and below) */
+        @media (max-width: 320px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 8px !important;
+            }
+            
+            .product-card {
+                padding: 8px !important;
+            }
+            
+            .product-image img {
+                height: 70px !important;
+            }
+            
+            .product-info h4 {
+                font-size: 0.7rem !important;
+            }
+            
+            .product-description {
+                font-size: 0.6rem !important;
+            }
+            
+            .product-price {
+                font-size: 0.8rem !important;
+            }
+        }
+        
+        /* Medium mobile screens */
+        @media (min-width: 400px) {
+            .category-section {
+                margin-bottom: 45px !important;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+                gap: 12px !important;
+            }
+            
+            .product-image img {
+                height: 90px !important;
+            }
+            
+            .product-info h4 {
+                font-size: 0.85rem !important;
+            }
+            
+            .view-all-btn {
+                padding: 14px 24px !important;
+                font-size: 0.85rem !important;
+                margin: 25px auto 35px auto !important;
+            }
+        }
+        
+        /* Large mobile screens */
+        @media (min-width: 480px) {
+            .shop-section h2 {
+                font-size: 2rem !important;
+            }
+            
+            .category-section h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+                gap: 15px !important;
+            }
+            
+            .product-card {
+                padding: 12px !important;
+            }
+            
+            .product-image img {
+                height: 100px !important;
+            }
+        }
+        
+        /* Tablet screens */
+        @media (min-width: 768px) {
+            .shop-section h2 {
+                font-size: 2.5rem !important;
+                margin-bottom: 30px !important;
+            }
+            
+            .category-section h3 {
+                font-size: 1.5rem !important;
+                margin-bottom: 20px !important;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+                gap: 18px !important;
+            }
+            
+            .product-card {
+                padding: 15px !important;
+            }
+            
+            .product-image img {
+                height: 120px !important;
+            }
+            
+            .header .container {
+                flex-direction: row !important;
+                height: 80px !important;
+                padding: 0 20px !important;
+            }
+            
+            .logo h1 {
+                font-size: 2rem !important;
+            }
+            
+            .nav ul {
+                gap: 25px !important;
+            }
+            
+            .nav a {
+                font-size: 1rem !important;
+            }
+        }
+        
+        /* Desktop screens */
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1200px !important;
+                padding: 0 20px !important;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+                gap: 20px !important;
+            }
+            
+            .shop-section h2 {
+                font-size: 3rem !important;
+                margin-bottom: 40px !important;
+            }
+            
+            .category-section h3 {
+                font-size: 1.8rem !important;
+                margin-bottom: 25px !important;
+            }
+        }
+        
+        /* Mobile Footer Optimization */
+        .footer {
+            padding: 15px 10px !important;
+        }
+        
+        .footer-content {
+            flex-direction: column !important;
+            gap: 15px !important;
+        }
+        
+        .footer-section {
+            text-align: center !important;
+            padding: 0 !important;
+        }
+        
+        .footer-section h3,
+        .footer-section h4 {
+            font-size: 1rem !important;
+            margin-bottom: 8px !important;
+        }
+        
+        .footer-section p,
+        .footer-section li {
+            font-size: 0.8rem !important;
+            line-height: 1.3 !important;
+        }
+        
+        .social-links {
+            justify-content: center !important;
+            gap: 15px !important;
+        }
+        
+        .social-links a {
+            width: 35px !important;
+            height: 35px !important;
+            font-size: 1rem !important;
+        }
+        
+        @media (min-width: 768px) {
+            .footer {
+                padding: 20px !important;
+            }
+            
+            .footer-content {
+                flex-direction: row !important;
+                gap: 30px !important;
+            }
+            
+            .footer-section {
+                text-align: left !important;
+            }
+        }
+        
+        /* Scroll Animation */
+        .category-section {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideInUp 0.8s ease forwards;
+        }
+        
+        .category-section:nth-child(2) { animation-delay: 0.1s; }
+        .category-section:nth-child(3) { animation-delay: 0.2s; }
+        .category-section:nth-child(4) { animation-delay: 0.3s; }
+        .category-section:nth-child(5) { animation-delay: 0.4s; }
+        .category-section:nth-child(6) { animation-delay: 0.5s; }
+        .category-section:nth-child(7) { animation-delay: 0.6s; }
+        .category-section:nth-child(8) { animation-delay: 0.7s; }
+        
+        @keyframes slideInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Sparkle Effect */
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ff0000;
+            border-radius: 50%;
+            animation: sparkle 2s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        /* Slideshow Controls */
+        .slideshow-container {
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .slideshow-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .slide-btn {
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5);
+        }
+        
+        .slide-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .see-more-btn {
+            background: linear-gradient(45deg, #ff4500, #ff6347);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 69, 0, 0.3);
+            margin: 20px auto;
+            display: block;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .see-more-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+        }
+        
+        .see-more-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .see-more-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 69, 0, 0.5);
+        }
+        
+        .category-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .slide-indicators {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .slide-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(139, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slide-indicator.active {
+            background: linear-gradient(45deg, #8b0000, #dc143c);
+            transform: scale(1.2);
+        }
+        
+        /* Category Header Enhancement */
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .category-title {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>KSM ENTERPRISES</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index/index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="shop-section">
+        <div class="container">
+            <h2>Shop Our Products</h2>
+            
+
+            
+            <!-- CAR POLISH & SHINNERS -->
+            <div class="category-section">
+                <h3>CAR POLISH & SHINNERS</h3>
+                <div class="products-grid" id="polish-products">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/aim furtinure polish.jpeg" alt="AIM Furniture Polish">
+            </div>
+                        <div class="product-info">
+                            <h4>AIM Furniture Polish</h4>
+                            <p class="product-description">Professional furniture polish for cars</p>
+                            <p class="product-price">₨ 350</p>
+                            <button class="add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="AIM Hard Wax">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Hard Wax</h4>
+                            <p class="product-description">Long-lasting protection wax</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/aim tire gel 500ml.jpeg" alt="AIM Tire Gel 500ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Tire Gel 500ml</h4>
+                            <p class="product-description">High gloss tire shine gel</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/black and gold tire shine.jpeg" alt="Black and Gold Tire Shine">
+                        </div>
+                        <div class="product-info">
+                            <h4>Black and Gold Tire Shine</h4>
+                            <p class="product-description">Premium tire shine formula</p>
+                            <p class="product-price">₨ 400</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/leather and tyre wax lemon.jpeg" alt="Leather and Tyre Wax Lemon">
+                        </div>
+                        <div class="product-info">
+                            <h4>Leather and Tyre Wax Lemon</h4>
+                            <p class="product-description">Lemon scented leather and tire care</p>
+                            <p class="product-price">₨ 380</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/leather and tyre wax.jpeg" alt="Leather and Tyre Wax">
+                        </div>
+                        <div class="product-info">
+                            <h4>Leather and Tyre Wax</h4>
+                            <p class="product-description">Dual purpose leather and tire protection</p>
+                            <p class="product-price">₨ 380</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/scratch out liquid.jpeg" alt="Scratch Out Liquid">
+                        </div>
+                        <div class="product-info">
+                            <h4>Scratch Out Liquid</h4>
+                            <p class="product-description">Remove scratches from paint surface</p>
+                            <p class="product-price">₨ 420</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="Scratchout Paste">
+                        </div>
+                        <div class="product-info">
+                            <h4>Scratchout Paste</h4>
+                            <p class="product-description">Paste formula for deep scratch removal</p>
+                            <p class="product-price">₨ 480</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn" onclick="viewAllProducts('polish')">
+                    <i class="fas fa-th"></i> View All Products
+                </button>
+            </div>
+            
+            <!-- CAR PROTECTING SPRAYS -->
+            <div class="category-section">
+                <h3>CAR PROTECTING SPRAYS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR PROCTING SPRAYS/f1-120 formulla 1 protectant spray.jpeg" alt="Formula 1 Protectant Spray F1-120">
+                        </div>
+                        <div class="product-info">
+                            <h4>Formula 1 Protectant Spray F1-120</h4>
+                            <p class="product-description">Advanced protection formula</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR PROCTING SPRAYS/formula 1 protectant spray.jpeg" alt="Formula 1 Protectant Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>Formula 1 Protectant Spray</h4>
+                            <p class="product-description">Professional protection spray</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR PROCTING SPRAYS/formulla 1 protectant spray 295ml.jpeg" alt="Formula 1 Protectant Spray 295ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Formula 1 Protectant Spray 295ml</h4>
+                            <p class="product-description">Large size protection spray</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR PROCTING SPRAYS/formulla 1 protectant spray f1-123.jpeg" alt="Formula 1 Protectant Spray F1-123">
+                        </div>
+                        <div class="product-info">
+                            <h4>Formula 1 Protectant Spray F1-123</h4>
+                            <p class="product-description">Premium protection formula</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR PROCTING SPRAYS/formulla 1 protectant spray.jpeg" alt="Formula 1 Protectant Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>Formula 1 Protectant Spray</h4>
+                            <p class="product-description">Standard protection spray</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR PROCTING SPRAYS/protectant spray 295ml.jpeg" alt="Protectant Spray 295ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Protectant Spray 295ml</h4>
+                            <p class="product-description">Large volume protection spray</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CAR SPRAY PAINTS -->
+            <div class="category-section">
+                <h3>CAR SPRAY PAINTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-142 AIM SPRAY PAINTS.jpeg" alt="AIM Spray Paints A-142">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paints A-142</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-143 AIM SPRAY PAINT RED.jpeg" alt="AIM Spray Paint Red A-143">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint Red A-143</h4>
+                            <p class="product-description">Red color spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-145 AIM SPRAY PAINT.jpeg" alt="AIM Spray Paint A-145">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-145</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-146 AIM SPRAY PAINT.jpeg" alt="AIM Spray Paint A-146">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-146</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-147 AIM SPRAY PAINTS.jpeg" alt="AIM Spray Paints A-147">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paints A-147</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-148 AIM SPARY PAINT.jpeg" alt="AIM Spray Paint A-148">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-148</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-150 SPRAY PAINT.jpeg" alt="Spray Paint A-150">
+                        </div>
+                        <div class="product-info">
+                            <h4>Spray Paint A-150</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-151 AIM SPRAY PAINT.jpeg" alt="AIM Spray Paint A-151">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-151</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-152 AIM SPRAY PAINT.jpeg" alt="AIM Spray Paint A-152">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-152</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-153 AIM SPRAY PAINT.jpeg" alt="AIM Spray Paint A-153">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-153</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/A-154 SPRAY PAINT.jpeg" alt="Spray Paint A-154">
+                        </div>
+                        <div class="product-info">
+                            <h4>Spray Paint A-154</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/AIM SPRAY PAINT GRAY A-155.jpeg" alt="AIM Spray Paint Gray A-155">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint Gray A-155</h4>
+                            <p class="product-description">Gray color spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/AIM SPRAY PAINT A-141 GREEN.jpeg" alt="AIM Spray Paint Green A-141">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint Green A-141</h4>
+                            <p class="product-description">Green color spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/AIM SPRAY PAINT A-144.jpeg" alt="AIM Spray Paint A-144">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint A-144</h4>
+                            <p class="product-description">Professional spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/AIM SPRAY PAINT A-149 YELLOW.jpeg" alt="AIM Spray Paint Yellow A-149">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM Spray Paint Yellow A-149</h4>
+                            <p class="product-description">Yellow color spray paint</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/F1-108 COLOUR WAX CERAMIC SPRAY.jpeg" alt="F1-108 Colour Wax Ceramic Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>F1-108 Colour Wax Ceramic Spray</h4>
+                            <p class="product-description">Ceramic wax spray formula</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/F1-109 COLOR WAX CERAMIC SPRAY.jpeg" alt="F1-109 Color Wax Ceramic Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>F1-109 Color Wax Ceramic Spray</h4>
+                            <p class="product-description">Advanced ceramic wax spray</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/F1-111 COLOR WAX CERAMIC SPRAY.jpeg" alt="F1-111 Color Wax Ceramic Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>F1-111 Color Wax Ceramic Spray</h4>
+                            <p class="product-description">Premium ceramic wax spray</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/F1--112 COLOR WAX CERAMIC SPRAY.jpeg" alt="F1-112 Color Wax Ceramic Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>F1-112 Color Wax Ceramic Spray</h4>
+                            <p class="product-description">High-performance ceramic spray</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR SPRAY PAINTS/F1-111O COLOR WAX CERAMIC SPRAY.jpeg" alt="F1-111O Color Wax Ceramic Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>F1-111O Color Wax Ceramic Spray</h4>
+                            <p class="product-description">Professional ceramic wax spray</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn" onclick="viewAllProducts('spray-paints')">
+                    <i class="fas fa-th"></i> View All Products
+                </button>
+            </div>
+            
+            <!-- MICROFIBER PRODUCTS -->
+            <div class="category-section">
+                <h3>🧽 MICROFIBER PRODUCTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfiber Towel Pack of 4">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER TOWEL PACK OF 4</h4>
+                            <p class="product-description">Premium quality microfiber towels</p>
+                            <p class="product-price">₨ 1,350</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/microfibre towel pack of 2.jpeg" alt="Microfiber Towel Pack of 2">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER TOWEL PACK OF 2</h4>
+                            <p class="product-description">High quality microfiber towels</p>
+                            <p class="product-price">₨ 1,050</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/microfibre cloth pack of 2.jpeg" alt="Microfiber Cloth Pack of 2">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER CLOTH PACK OF 2</h4>
+                            <p class="product-description">Dual pack microfiber cloths</p>
+                            <p class="product-price">₨ 700</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBRE TOWEL X LARGE.jpeg" alt="Microfiber Towel X Large">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER TOWEL X LARGE</h4>
+                            <p class="product-description">Extra large microfiber towel</p>
+                            <p class="product-price">₨ 600</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBRE DESIGNED CLOTH MIX.jpeg" alt="Microfiber Designed Cloth Mix">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER DESIGNED CLOTH MIX</h4>
+                            <p class="product-description">Designer pattern microfiber cloth</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/AIM MICROFIBRE TOWEL LARGE.jpeg" alt="AIM Microfiber Towel Large">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM MICROFIBER TOWEL LARGE</h4>
+                            <p class="product-description">Large AIM brand microfiber towel</p>
+                            <p class="product-price">₨ 500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBRE CLOTH X LARGE.jpeg" alt="Microfiber Cloth X Large">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER CLOTH X LARGE</h4>
+                            <p class="product-description">Extra large microfiber cloth</p>
+                            <p class="product-price">₨ 400</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/AIM MICROFIBRE TOWEL SMALL.jpeg" alt="AIM Microfiber Towel Small">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM MICROFIBER TOWEL SMALL</h4>
+                            <p class="product-description">Small AIM brand microfiber towel</p>
+                            <p class="product-price">₨ 400</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBRE GLASS CLEANER.jpeg" alt="Microfiber Glass Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h4>MICROFIBER GLASS CLEANER</h4>
+                            <p class="product-description">Specialized glass cleaning cloth</p>
+                            <p class="product-price">₨ 350</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/MICRO FIBER CLOTHES/AIM MICROFIBRE CLOTH.jpeg" alt="AIM Microfiber Cloth">
+                        </div>
+                        <div class="product-info">
+                            <h4>AIM MICROFIBER CLOTH</h4>
+                            <p class="product-description">AIM brand microfiber cloth</p>
+                            <p class="product-price">₨ 350</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WD-40 PRODUCTS -->
+            <div class="category-section">
+                <h3>🛢 WD-40 PRODUCTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/WD-40.jpg" alt="WD-40 440ML">
+                        </div>
+                        <div class="product-info">
+                            <h4>WD-40 440ML</h4>
+                            <p class="product-description">Multi-purpose penetrating oil</p>
+                            <p class="product-price">₨ 1,250</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/wd-40 330ml.jpeg" alt="WD-40 330ML">
+                        </div>
+                        <div class="product-info">
+                            <h4>WD-40 330ML</h4>
+                            <p class="product-description">Multi-purpose penetrating oil</p>
+                            <p class="product-price">₨ 1,100</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/wd-40 200ml.jpeg" alt="WD-40 200ML">
+                        </div>
+                        <div class="product-info">
+                            <h4>WD-40 200ML</h4>
+                            <p class="product-description">Multi-purpose penetrating oil</p>
+                            <p class="product-price">₨ 800</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/wd-40 100ml.jpeg" alt="WD-40 100ML">
+                        </div>
+                        <div class="product-info">
+                            <h4>WD-40 100ML</h4>
+                            <p class="product-description">Multi-purpose penetrating oil</p>
+                            <p class="product-price">₨ 600</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/wd-40 50ml.jpeg" alt="WD-40 50ML">
+                        </div>
+                        <div class="product-info">
+                            <h4>WD-40 50ML</h4>
+                            <p class="product-description">Multi-purpose penetrating oil</p>
+                            <p class="product-price">₨ 375</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- WAXES & PROTECTANTS -->
+            <div class="category-section">
+                <h3>🧴 WAXES & PROTECTANTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/bug and tar remover.jpeg" alt="Bug and Tar Remover">
+                        </div>
+                        <div class="product-info">
+                            <h4>Bug and Tar Remover</h4>
+                            <p class="product-description">Removes stubborn bugs and tar</p>
+                            <p class="product-price">₨ 1,950</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/wax 340g soft carnauba usa.jpeg" alt="Wax 340g Soft Carnauba USA">
+                        </div>
+                        <div class="product-info">
+                            <h4>Wax 340g (Soft Carnauba USA)</h4>
+                            <p class="product-description">Premium carnauba wax large size</p>
+                            <p class="product-price">₨ 1,850</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/glass cleaner with rain repellent.jpeg" alt="Glass Cleaner with Rain Repellent">
+                        </div>
+                        <div class="product-info">
+                            <h4>Glass Cleaner with Rain Repellent</h4>
+                            <p class="product-description">Advanced glass cleaning formula</p>
+                            <p class="product-price">₨ 1,750</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/glass cleaner.jpeg" alt="Glass Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h4>Glass Cleaner</h4>
+                            <p class="product-description">Professional glass cleaner</p>
+                            <p class="product-price">₨ 1,750</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/wheel tyre clean.jpeg" alt="Wheel Tyre Clean">
+                        </div>
+                        <div class="product-info">
+                            <h4>Wheel Tyre Clean</h4>
+                            <p class="product-description">Complete wheel and tire cleaner</p>
+                            <p class="product-price">₨ 1,750</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/mr leather.jpeg" alt="Mr. Leather">
+                        </div>
+                        <div class="product-info">
+                            <h4>Mr. Leather</h4>
+                            <p class="product-description">Premium leather care product</p>
+                            <p class="product-price">₨ 1,625</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/fast wax spray.jpeg" alt="Fast Wax Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>Fast Wax (Spray)</h4>
+                            <p class="product-description">Quick application spray wax</p>
+                            <p class="product-price">₨ 1,500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CAR WAX/wax 230g soft carnauba usa.jpeg" alt="Wax 230g Soft Carnauba USA">
+                        </div>
+                        <div class="product-info">
+                            <h4>Wax 230g (Soft Carnauba USA)</h4>
+                            <p class="product-description">Premium carnauba wax</p>
+                            <p class="product-price">₨ 1,400</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CLEANERS -->
+            <div class="category-section">
+                <h3>🎨 CLEANERS & SPRAY PAINTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/spray paint bright gold.jpeg" alt="Spray Paint Bright Gold">
+                        </div>
+                        <div class="product-info">
+                            <h4>Spray Paint Bright Gold</h4>
+                            <p class="product-description">High quality gold spray paint</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/spray paint bright chrome.jpeg" alt="Spray Paint Bright Chrome">
+                        </div>
+                        <div class="product-info">
+                            <h4>Spray Paint Bright Chrome</h4>
+                            <p class="product-description">Chrome finish spray paint</p>
+                            <p class="product-price">₨ 450</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/tire foam cleaner.jpeg" alt="Tire Foam Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h4>Tire Foam Cleaner</h4>
+                            <p class="product-description">Foaming tire cleaning formula</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/glass cleaner 450ml.jpeg" alt="Glass Cleaner 450ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Glass Cleaner 450ml</h4>
+                            <p class="product-description">Large size glass cleaner</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/foamy cleaner.jpeg" alt="Foamy Cleaner">
+                        </div>
+                        <div class="product-info">
+                            <h4>Foamy Cleaner</h4>
+                            <p class="product-description">Multi-purpose foam cleaner</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/engine degreaser.jpeg" alt="Engine Degreaser">
+                        </div>
+                        <div class="product-info">
+                            <h4>ENGINE DEGREASER</h4>
+                            <p class="product-description">Heavy duty engine degreaser</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/dashboard brown 450ml.jpeg" alt="Dashboard Brown 450ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Dashboard Brown 450ml</h4>
+                            <p class="product-description">Brown dashboard cleaner</p>
+                            <p class="product-price">₨ 400</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/CLEANERS/dashboard 450ml.jpeg" alt="Dashboard 450ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Dashboard 450ml</h4>
+                            <p class="product-description">Dashboard cleaner and protectant</p>
+                            <p class="product-price">₨ 375</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- OTHER CAR PRODUCTS -->
+            <div class="category-section">
+                <h3>🧪 OTHER CAR PRODUCTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/tire gel.jpeg" alt="Tire Gel">
+                        </div>
+                        <div class="product-info">
+                            <h4>Tire Gel</h4>
+                            <p class="product-description">High gloss tire shine gel</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/leather spray.jpeg" alt="Leather Spray">
+                        </div>
+                        <div class="product-info">
+                            <h4>Leather Spray</h4>
+                            <p class="product-description">Leather care and protection spray</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/scratch remover.jpeg" alt="Scratch Remover">
+                        </div>
+                        <div class="product-info">
+                            <h4>SCRATCH REMOVER</h4>
+                            <p class="product-description">Effective scratch removal formula</p>
+                            <p class="product-price">₨ 550</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/octane booster.jpeg" alt="Octane Booster">
+                        </div>
+                        <div class="product-info">
+                            <h4>Octane Booster</h4>
+                            <p class="product-description">Fuel performance enhancer</p>
+                            <p class="product-price">₨ 500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/aw shampoo 16oz.jpeg" alt="AW Shampoo 16oz">
+                        </div>
+                        <div class="product-info">
+                            <h4>AW SHAMPOO 16OZ</h4>
+                            <p class="product-description">Professional car wash shampoo</p>
+                            <p class="product-price">₨ 500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/furniture polish.jpeg" alt="Furniture Polish">
+                        </div>
+                        <div class="product-info">
+                            <h4>Furniture Polish</h4>
+                            <p class="product-description">Interior furniture polish</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/fire stop.jpeg" alt="Fire Stop">
+                        </div>
+                        <div class="product-info">
+                            <h4>Fire Stop (Extinguisher)</h4>
+                            <p class="product-description">Portable fire extinguisher</p>
+                            <p class="product-price">₨ 425</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RADIATOR COOLANTS -->
+            <div class="category-section">
+                <h3>🌡 RADIATOR COOLANTS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/RADIATOR COOLER/radiator coolant 4 litre.jpeg" alt="Radiator Coolant 4 Litre">
+                        </div>
+                        <div class="product-info">
+                            <h4>Radiator Coolant 4 Litre</h4>
+                            <p class="product-description">Large capacity coolant</p>
+                            <p class="product-price">₨ 850</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/RADIATOR COOLER/radiator coolant 2 litre.jpeg" alt="Radiator Coolant 2 Litre">
+                        </div>
+                        <div class="product-info">
+                            <h4>Radiator Coolant 2 Litre</h4>
+                            <p class="product-description">Medium capacity coolant</p>
+                            <p class="product-price">₨ 500</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/RADIATOR COOLER/radiator coolant 1 litre.jpeg" alt="Radiator Coolant 1 Litre">
+                        </div>
+                        <div class="product-info">
+                            <h4>Radiator Coolant 1 Litre</h4>
+                            <p class="product-description">Standard size coolant</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/RADIATOR COOLER/radiator coolant 500ml.jpeg" alt="Radiator Coolant 500ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Radiator Coolant 500ml</h4>
+                            <p class="product-description">Small size coolant</p>
+                            <p class="product-price">₨ 225</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ANTI RUST SPRAYS -->
+            <div class="category-section">
+                <h3>🛡 ANTI RUST SPRAYS</h3>
+                <div class="products-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/anti rust spray 220ml.jpeg" alt="Anti Rust Spray 220ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Anti Rust Spray 220ML</h4>
+                            <p class="product-description">Large size rust prevention spray</p>
+                            <p class="product-price">₨ 300</p>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="products/OTHERS/anti rust spray 100ml.jpeg" alt="Anti Rust Spray 100ml">
+                        </div>
+                        <div class="product-info">
+                            <h4>Anti Rust Spray 100ML</h4>
+                            <p class="product-description">Compact rust prevention spray</p>
+                            <p class="product-price">₨ 250</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>KSM Enterprises</h3>
+                    <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> Sales: 04237103750 - 1</p>
+                    <p><i class="fas fa-headset"></i> 24/7 Helpline: +923234890184</p>
+                    <p><i class="fas fa-envelope"></i> ksmenterprises22@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Badami Bagh Centre, Badami Bagh, Lahore</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Brands</h4>
+                    <ul>
+                        <li><a href="#">Formula 1</a></li>
+                        <li><a href="#">AIM Car Care</a></li>
+                        <li><a href="#">WD-40 Products</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KSM Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shop.js"></script>
+    
+    <script>
+        // Simple view all functionality
+        function viewAllProducts(category) {
+            const grid = document.getElementById(category + '-products');
+            const btn = event.target;
+            
+            if (grid.classList.contains('show-all')) {
+                // Hide extra products
+                grid.classList.remove('show-all');
+                btn.innerHTML = '<i class="fas fa-th"></i> View All Products';
+            } else {
+                // Show all products
+                grid.classList.add('show-all');
+                btn.innerHTML = '<i class="fas fa-th-large"></i> Show Less';
+            }
+        }
+
+        
+        // Simple initialization - no complex animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add simple hover effects and interactions
+            console.log('Shop page loaded with static grid layout');
+        });
+
+    </script>
+</body>
+</html> 
