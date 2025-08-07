@@ -178,6 +178,123 @@
                 margin-right: 10px;
             }
         }
+        
+        /* Contact Section Styling */
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
+        }
+        
+        .contact-content {
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-title {
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .contact-subtitle {
+            color: #ff0000;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .contact-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: rgba(255, 0, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(255, 0, 0, 0.3);
+        }
+        
+        .contact-icon i {
+            font-size: 2rem;
+            color: #ff0000;
+        }
+        
+        .contact-info h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .contact-info p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            line-height: 1.4;
+            font-weight: 400;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2rem;
+            }
+            
+            .contact-subtitle {
+                font-size: 1rem;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .contact-item {
+                padding: 25px 15px;
+            }
+            
+            .contact-icon {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .contact-icon i {
+                font-size: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -191,6 +308,7 @@
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -220,41 +338,59 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Contact Section -->
+    <section class="contact-section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>AUTO SHINE</h3>
-                    <p></p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+            <div class="contact-content">
+                <h2 class="contact-title">Contact Us</h2>
+                <p class="contact-subtitle">For Further Information</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>SALES CONTACT</h3>
+                            <p>04237103750 - 1</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>24/7 HELPLINE</h3>
+                            <p>03234890184</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>EMAIL</h3>
+                            <p>KSMENTERPRISES22@GMAIL.COM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info">
+                            <h3>ADDRESS</h3>
+                            <p>BADAMI BAGH CENTRE, BADAMI BAGH LAHORE</p>
+                        </div>
                     </div>
                 </div>
-                <div class="footer-section">
-                    <h4></h4>
-                    <p><i class="fas fa-phone"></i></p>
-                    <p><i class="fas fa-headset"></i></p>
-                    <p><i class="fas fa-envelope"></i></p>
-                    <p><i class="fas fa-map-marker-alt"></i></p>
-                </div>
-                <div class="footer-section">
-                    <h4></h4>
-                    <ul>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p></p>
             </div>
         </div>
-    </footer>
+    </section>
+
+
     
     <script>
         // Initialize cart count
