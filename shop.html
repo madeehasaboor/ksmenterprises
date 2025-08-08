@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Shop - AutoShine</title>
+    <title>Shop - Auto Champain</title>
     <link rel="stylesheet" href="css/styles.css?v=1.1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
@@ -17,6 +17,101 @@
             overflow: hidden;
         }
         
+        /* Logo Styling */
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 215, 0, 0.2);
+            padding: 10px 20px;
+            border-bottom: 2px solid #FFD700;
+            position: relative;
+            z-index: 10;
+            flex-shrink: 0;
+            gap: 15px;
+        }
+        
+        .logo-image {
+            height: 48px;
+            width: auto;
+            max-width: 120px;
+            object-fit: contain;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .logo-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            color: #ffffff;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin: 0;
+        }
+        
+        @media (min-width: 480px) {
+            .logo h1 {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+            .logo-image {
+                height: 56px;
+                max-width: 140px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .logo h1 {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+            .logo-image {
+                height: 64px;
+                max-width: 160px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .logo h1 {
+                font-size: 3rem;
+                letter-spacing: 4px;
+            }
+            .logo-image {
+                height: 72px;
+                max-width: 180px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo {
+                flex-direction: column;
+                gap: 8px;
+                padding: 8px 15px;
+            }
+            .logo-image {
+                height: 40px;
+                max-width: 100px;
+            }
+            .logo h1 {
+                font-size: 1.2rem;
+                letter-spacing: 1px;
+            }
+        }
+        
         .shop-section::before {
             content: '';
             position: absolute;
@@ -25,7 +120,7 @@
             right: 0;
             bottom: 0;
             background: 
-                radial-gradient(circle at 20% 80%, rgba(139, 0, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(255, 255, 0, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(220, 20, 60, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
@@ -34,7 +129,7 @@
             text-align: center;
             font-size: 3.5rem;
             font-weight: 900;
-            background: linear-gradient(45deg, #ff0000, #dc143c, #8b0000, #ff4500);
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700, #FFA500);
             background-size: 400% 400%;
             -webkit-background-clip: text;
             background-clip: text;
@@ -87,11 +182,11 @@
             letter-spacing: 2px;
             position: relative;
             padding: 15px 0;
-            background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.3), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 0, 0.3), transparent);
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 255, 0, 0.2);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 0, 0.3);
         }
         
         .category-section h3::before {
@@ -101,7 +196,7 @@
             left: 20px;
             right: 20px;
             height: 2px;
-            background: linear-gradient(90deg, transparent, #8b0000, transparent);
+            background: linear-gradient(90deg, transparent, #FFFF00, transparent);
             transform: translateY(-50%);
             z-index: -1;
         }
@@ -120,9 +215,9 @@
             padding: 15px;
             box-shadow: 
                 0 8px 20px rgba(0, 0, 0, 0.4),
-                0 3px 10px rgba(139, 0, 0, 0.1),
+                0 3px 10px rgba(255, 255, 0, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(139, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 0, 0.2);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
@@ -242,8 +337,8 @@
         
         /* Add to Cart Button */
         .add-to-cart-btn {
-            background: linear-gradient(45deg, #8b0000, #dc143c);
-            color: white;
+            background: linear-gradient(45deg, #FFFF00, #FFD700);
+            color: black;
             border: none;
             padding: 8px 16px;
             border-radius: 20px;
@@ -252,7 +347,7 @@
             letter-spacing: 0.5px;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(139, 0, 0, 0.3);
+            box-shadow: 0 3px 10px rgba(255, 255, 0, 0.3);
             position: relative;
             overflow: hidden;
             font-size: 0.8rem;
@@ -846,8 +941,8 @@
         }
         
         .slide-btn {
-            background: linear-gradient(45deg, #8b0000, #dc143c);
-            color: white;
+            background: linear-gradient(45deg, #FFFF00, #FFD700);
+            color: black;
             border: none;
             width: 50px;
             height: 50px;
@@ -855,7 +950,7 @@
             font-size: 1.2rem;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+            box-shadow: 0 5px 15px rgba(255, 255, 0, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -863,7 +958,7 @@
         
         .slide-btn:hover {
             transform: scale(1.1);
-            box-shadow: 0 8px 25px rgba(139, 0, 0, 0.5);
+            box-shadow: 0 8px 25px rgba(255, 255, 0, 0.5);
         }
         
         .slide-btn:disabled {
@@ -938,7 +1033,7 @@
         }
         
         .slide-indicator.active {
-            background: linear-gradient(45deg, #8b0000, #dc143c);
+            background: linear-gradient(45deg, #FFFF00, #FFD700);
             transform: scale(1.2);
         }
         
@@ -960,8 +1055,8 @@
             border-radius: 15px;
             padding: 20px;
             margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
-            border: 2px solid #8b0000;
+            box-shadow: 0 10px 30px rgba(255, 255, 0, 0.3);
+            border: 2px solid #FFFF00;
             position: sticky;
             top: 90px;
             z-index: 100;
@@ -983,7 +1078,7 @@
             justify-content: center;
             background: linear-gradient(45deg, #2a0000, #1a0000);
             color: white;
-            border: 2px solid #8b0000;
+            border: 2px solid #FFFF00;
             border-radius: 12px;
             padding: 12px 8px;
             min-width: 80px;
@@ -1011,10 +1106,10 @@
         }
         
         .category-nav-btn:hover {
-            background: linear-gradient(45deg, #8b0000, #dc143c);
+            background: linear-gradient(45deg, #FFFF00, #FFD700);
             border-color: #ff6b35;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(139, 0, 0, 0.4);
+            box-shadow: 0 8px 20px rgba(255, 255, 0, 0.4);
         }
         
         .category-nav-btn:active {
@@ -1055,6 +1150,45 @@
                 font-size: 0.55rem !important;
             }
         }
+        
+        /* Header Styling - Black Background */
+        .header {
+            background: #000000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: auto;
+            padding: 10px;
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        @media (min-width: 768px) {
+            .header .container {
+                height: 80px;
+                padding: 0 30px;
+                flex-direction: row;
+                gap: 0;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .header .container {
+                max-width: 1200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1062,13 +1196,13 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1>AUTOSHINE</h1>
+                <img src="brand logos/auto-champian-logo.jpg.jfif" alt="Auto Champain Logo" class="logo-image">
+                <h1>AUTO CHAMPAIN</h1>
             </div>
             <nav class="nav">
                 <ul>
                     <li><a href="index/index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -2166,12 +2300,38 @@
         </div>
     </section>
 
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="container">
+            <h2>Our Trusted Brands</h2>
+            <p class="brands-subtitle">We proudly distribute premium car care brands that are trusted by professionals and enthusiasts alike.</p>
+            <div class="brands-grid">
+                <div class="brand-item">
+                    <img src="brand logos/frontendformula1-logo.jpg.jpg" alt="Formula 1 Car Care" class="brand-logo" onerror="this.style.display='none'">
+                    <h4>Formula 1</h4>
+                    <p class="brand-description">Premium Car Care Products</p>
+                </div>
+                <div class="brand-item">
+                    <img src="brand logos/frontendaim-logo.jpg.jpg" alt="AIM Car Care" class="brand-logo" onerror="this.style.display='none'">
+                    <h4>AIM Car Care</h4>
+                    <p class="brand-description">Professional Auto Care</p>
+                </div>
+                <div class="brand-item">
+                    <img src="brand logos/frontendwd40-logo.jpg.jpg" alt="WD-40 Products" class="brand-logo" onerror="this.style.display='none'">
+                    <h4>WD-40 Products</h4>
+                    <p class="brand-description">Trusted Lubrication & Protection</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>AutoShine</h3>
+                    <h3>Auto Champain</h3>
                     <p>Pakistan's leading car care distribution company with 40 years of excellence.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -2193,11 +2353,12 @@
                         <li><a href="#">Formula 1</a></li>
                         <li><a href="#">AIM Car Care</a></li>
                         <li><a href="#">WD-40 Products</a></li>
+
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 AutoShine. All rights reserved.</p>
+                <p>&copy; 2024 Auto Champain. All rights reserved.</p>
             </div>
         </div>
     </footer>
