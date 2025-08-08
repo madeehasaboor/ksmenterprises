@@ -49,18 +49,42 @@
         }
         
         .logo h1 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #ffffff;
-            background: linear-gradient(45deg, #FFD700, #FFA500);
+            background: linear-gradient(45deg, #FFFF00, #FFD700, #FFA500, #FF8C00);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-weight: 900;
+            letter-spacing: 2px;
             text-align: center;
             text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-shadow: 
+                3px 3px 6px rgba(0, 0, 0, 0.9),
+                0 0 20px rgba(255, 255, 0, 0.6),
+                0 0 40px rgba(255, 215, 0, 0.4);
+            animation: logoGlow 2s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 10;
             margin: 0;
+        }
+        
+        @keyframes logoGlow {
+            0% {
+                background-position: 0% 50%;
+                text-shadow: 
+                    3px 3px 6px rgba(0, 0, 0, 0.9),
+                    0 0 20px rgba(255, 255, 0, 0.6),
+                    0 0 40px rgba(255, 215, 0, 0.4);
+            }
+            100% {
+                background-position: 100% 50%;
+                text-shadow: 
+                    3px 3px 6px rgba(0, 0, 0, 0.9),
+                    0 0 30px rgba(255, 255, 0, 0.8),
+                    0 0 60px rgba(255, 215, 0, 0.6);
+            }
         }
         
         @media (min-width: 480px) {
@@ -1785,7 +1809,7 @@
                     
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="products/MICRO FIBER CLOTHES/MICROFIBRE CLOTH X LARGE.jpeg" alt="Microfiber Cloth X Large">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER CLOTH X LARGE.jpeg" alt="Microfiber Cloth X Large">
                         </div>
                         <div class="product-info">
                             <h4>MICROFIBER CLOTH X LARGE</h4>
