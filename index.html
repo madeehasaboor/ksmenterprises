@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoShine - Premium Car Care</title>
+  <title>Auto Champain - Premium Car Care</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
          body {
@@ -12,8 +12,128 @@
        background: #000000;
        color: white;
      }
+         
+         /* Logo Styling */
+         .logo {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           background: rgba(255, 215, 0, 0.2);
+           padding: 10px 20px;
+           border-bottom: 2px solid #FFD700;
+           position: relative;
+           z-index: 10;
+           flex-shrink: 0;
+           gap: 15px;
+         }
+         
+         .logo-image {
+           height: 48px;
+           width: auto;
+           max-width: 120px;
+           object-fit: contain;
+           border-radius: 5px;
+           background-color: rgba(255, 255, 255, 0.1);
+           padding: 2px;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+           transition: all 0.3s ease;
+         }
+         
+         .logo-image:hover {
+           transform: scale(1.05);
+           box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+         }
+         
+         .logo h1 {
+           font-size: 1.8rem;
+           color: #ffffff;
+           background: linear-gradient(45deg, #FFFF00, #FFD700, #FFA500, #FF8C00);
+           background-size: 300% 300%;
+           -webkit-background-clip: text;
+           background-clip: text;
+           color: transparent;
+           font-weight: 900;
+           letter-spacing: 2px;
+           text-align: center;
+           text-transform: uppercase;
+           text-shadow: 
+               3px 3px 6px rgba(0, 0, 0, 0.9),
+               0 0 20px rgba(255, 255, 0, 0.6),
+               0 0 40px rgba(255, 215, 0, 0.4);
+           animation: logoGlow 2s ease-in-out infinite alternate;
+           position: relative;
+           z-index: 10;
+           margin: 0;
+         }
+         
+         @keyframes logoGlow {
+           0% {
+             background-position: 0% 50%;
+             text-shadow: 
+               3px 3px 6px rgba(0, 0, 0, 0.9),
+               0 0 20px rgba(255, 255, 0, 0.6),
+               0 0 40px rgba(255, 215, 0, 0.4);
+           }
+           100% {
+             background-position: 100% 50%;
+             text-shadow: 
+               3px 3px 6px rgba(0, 0, 0, 0.9),
+               0 0 30px rgba(255, 255, 0, 0.8),
+               0 0 60px rgba(255, 215, 0, 0.6);
+           }
+         }
+         
+         @media (min-width: 480px) {
+           .logo h1 {
+             font-size: 2rem;
+             letter-spacing: 2px;
+           }
+           .logo-image {
+             height: 56px;
+             max-width: 140px;
+           }
+         }
+         
+         @media (min-width: 768px) {
+           .logo h1 {
+             font-size: 2.5rem;
+             letter-spacing: 3px;
+           }
+           .logo-image {
+             height: 64px;
+             max-width: 160px;
+           }
+         }
+         
+         @media (min-width: 1024px) {
+           .logo h1 {
+             font-size: 3rem;
+             letter-spacing: 4px;
+           }
+           .logo-image {
+             height: 72px;
+             max-width: 180px;
+           }
+         }
+         
+         @media (max-width: 480px) {
+           .logo {
+             flex-direction: column;
+             gap: 8px;
+             padding: 8px 15px;
+           }
+           .logo-image {
+             height: 40px;
+             max-width: 100px;
+           }
+           .logo h1 {
+             font-size: 1.2rem;
+             letter-spacing: 1px;
+           }
+         }
+         
          header {
-       background: #1a0000;
+       background: #000000;
        padding: 15px 20px;
        position: sticky;
        top: 0;
@@ -26,7 +146,7 @@
          header h1 {
        margin: 0;
        font-size: 1.5em;
-       color: #ff0000;
+       color: #FFD700;
      }
     nav a {
       color: white;
@@ -75,68 +195,17 @@
        background: rgba(0, 0, 0, 0.5);
      }
      
-                     .hero-brands {
-       position: absolute;
-       left: 20px;
-       top: 50%;
-       transform: translateY(-50%);
-       z-index: 10;
-       display: flex;
-       flex-direction: column;
-       gap: 15px;
-       max-width: 140px;
-     }
-     
-                     .hero-brands .brand {
-       background: linear-gradient(135deg, rgba(255, 0, 0, 0.95), rgba(220, 20, 60, 0.95));
-       color: white;
-       padding: 8px 14px;
-       border-radius: 10px;
-       font-weight: 900;
-       font-size: 0.85em;
-       text-align: center;
-       min-width: 85px;
-       box-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
-       transition: all 0.3s ease;
-       margin-bottom: 12px;
-       border: 2px solid rgba(255, 255, 255, 0.3);
-       text-transform: uppercase;
-       letter-spacing: 1px;
-       backdrop-filter: blur(5px);
-     }
-     
-                     .hero-brands .brand:hover {
-       background: linear-gradient(135deg, rgba(255, 0, 0, 1), rgba(255, 107, 53, 1));
-       transform: translateX(8px) scale(1.05);
-       box-shadow: 0 8px 20px rgba(255, 0, 0, 0.6);
-       border-color: rgba(255, 255, 255, 0.8);
-     }
-      
-      .hero-brands .brands-title {
-        color: white;
-        font-size: 1.6em;
-        font-weight: 900;
-        text-align: center;
-        margin: 0 0 20px 0;
-        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        background: linear-gradient(45deg, #ff0000, #ff6b35);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-                           .delivery-banner-section {
+     .delivery-banner-section {
       text-align: center;
       padding: 20px;
       background: #000000;
     }
     .delivery-banner {
-      background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
-      color: white;
+      background: linear-gradient(135deg, #FFFF00 0%, #FFD700 100%);
+      color: black;
       padding: 12px 30px;
       border-radius: 25px;
-      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+      box-shadow: 0 4px 15px rgba(255, 255, 0, 0.3);
       overflow: hidden;
       white-space: nowrap;
       width: 400px;
@@ -184,24 +253,6 @@
        .slide-overlay {
          background: rgba(0, 0, 0, 0.7);
        }
-                             .hero-brands {
-         left: 10px;
-         gap: 10px;
-         max-width: 120px;
-       }
-              .hero-brands .brands-title {
-         font-size: 1.3em;
-         margin: 0 0 15px 0;
-         letter-spacing: 1px;
-       }
-       .hero-brands .brand {
-         padding: 6px 10px;
-         font-size: 0.7em;
-         min-width: 70px;
-         margin-bottom: 8px;
-         font-weight: 900;
-         letter-spacing: 0.5px;
-       }
        header {
          flex-direction: column;
          gap: 10px;
@@ -228,19 +279,6 @@
          background-size: contain;
          background-position: center;
        }
-               .hero-brands {
-          left: 10px;
-          gap: 12px;
-        }
-               .hero-brands .brands-title {
-          font-size: 1em;
-          margin: 0 0 10px 0;
-        }
-        .hero-brands .brand {
-          padding: 6px 12px;
-          font-size: 0.8em;
-          min-width: 80px;
-        }
        header {
          padding: 10px 15px;
          gap: 10px;
@@ -280,11 +318,11 @@
      }
          .brand {
        font-weight: bold;
-       color: #ff0000;
+       color: #FFFF00;
      }
          .product h4 {
        margin: 10px 0 5px;
-       color: #ff0000;
+       color: #FFFF00;
        font-size: 1.1em;
      }
          .product-image {
@@ -304,7 +342,7 @@
        margin: 8px 0 2px;
        font-size: 1.1em;
        font-weight: bold;
-       color: #ff0000;
+       color: #FFFF00;
      }
     .product-volume {
       margin: 0;
@@ -317,7 +355,7 @@
     }
          .category h4 {
        margin: 10px 0 5px;
-       color: #ff0000;
+       color: #FFFF00;
        font-size: 1.1em;
      }
     .category p {
@@ -357,26 +395,125 @@
          transform: translateX(-100%);
        }
      }
+     
+     /* Brands Section Styling */
+     .brands-section {
+       background: #000000;
+       padding: 40px 20px;
+       text-align: center;
+     }
+     
+     .brands-section h2 {
+       color: #FFD700;
+       font-size: 2.5em;
+       margin-bottom: 30px;
+       text-transform: uppercase;
+       letter-spacing: 2px;
+       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+     }
+     
+     .brands-grid {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 20px;
+       max-width: 800px;
+       margin: 0 auto;
+     }
+     
+     .brand-item {
+       background: linear-gradient(135deg, rgba(255, 215, 0, 0.95), rgba(255, 165, 0, 0.95));
+       color: black;
+       padding: 15px 25px;
+       border-radius: 15px;
+       font-weight: 900;
+       font-size: 1.1em;
+       text-align: center;
+       min-width: 120px;
+       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+       transition: all 0.3s ease;
+       border: 2px solid rgba(255, 255, 255, 0.3);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+       backdrop-filter: blur(5px);
+       cursor: pointer;
+     }
+     
+     .brand-item:hover {
+       background: linear-gradient(135deg, rgba(255, 215, 0, 1), rgba(255, 165, 0, 1));
+       transform: translateY(-5px) scale(1.05);
+       box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6);
+       border-color: rgba(255, 255, 255, 0.8);
+     }
+     
+     @media (max-width: 768px) {
+       .brands-section h2 {
+         font-size: 2em;
+       }
+       
+       .brands-grid {
+         gap: 15px;
+       }
+       
+       .brand-item {
+         padding: 12px 20px;
+         font-size: 1em;
+         min-width: 100px;
+       }
+     }
+     
+     @media (max-width: 480px) {
+       .brands-section h2 {
+         font-size: 1.5em;
+       }
+       
+       .brands-grid {
+         gap: 10px;
+       }
+       
+       .brand-item {
+         padding: 10px 15px;
+         font-size: 0.9em;
+         min-width: 80px;
+       }
+     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>AutoShine</h1>
+    <div class="logo">
+      <img src="../brand logos/auto-champian-logo.jpg.jfif" alt="Auto Champain Logo" class="logo-image">
+      <h1>Auto Champain</h1>
+    </div>
     <nav>
       <a href="../index.html">Home</a>
       <a href="../shop.html">Shop</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
-            </nav>
-    </header>
+    </nav>
+  </header>
 
-    <section class="hero">
+  <!-- Our Brands Section -->
+  <section class="brands-section">
+    <div class="container">
+      <h2>OUR BRANDS</h2>
+      <div class="brands-grid">
+        <div class="brand-item">WD-40</div>
+        <div class="brand-item">FORMULA 1</div>
+        <div class="brand-item">AIM</div>
+        <div class="brand-item">DTR</div>
+        <div class="brand-item">AREON</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero">
     <div class="slideshow">
       <div class="slide active" style="background-image: url('Annotation 2025-08-07 235825.png')">
         <div class="slide-overlay"></div>
       </div>
-      <div class="slide" style="background-image: url('Annotation 2025-08-07 233049.png')">
+      <div class="slide" style="background-image: url('Annotation 2025-08-07 232957.png')">
         <div class="slide-overlay"></div>
       </div>
       <div class="slide" style="background-image: url('Annotation 2025-08-07 233024.png')">
@@ -407,20 +544,10 @@
         <div class="slide-overlay"></div>
       </div>
         </div>
-    
-    <!-- Brands Section on Hero Left Side -->
-    <div class="hero-brands">
-      <h3 class="brands-title">OUR BRANDS</h3>
-      <div class="brand">WD-40</div>
-      <div class="brand">FORMULA 1</div>
-      <div class="brand">AIM</div>
-      <div class="brand">DTR</div>
-      <div class="brand">AREON</div>
-        </div>
     </section>
 
   <!-- Delivery Banner Section -->
-  <div style="background: #ff0000; color: white; text-align: center; padding: 8px; font-weight: bold; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; white-space: nowrap;">
+  <div style="background: #000000; color: #FFD700; text-align: center; padding: 8px; font-weight: bold; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; white-space: nowrap;">
     <div class="scrolling-text" style="display: inline-block; animation: scroll-left 20s linear infinite;">
       🚚 DELIVERY ALL OVER PAKISTAN • ⚡ FAST SHIPPING • 📦 FREE DELIVERY ON ORDERS ABOVE ₨2000 • 🏪 CASH ON DELIVERY AVAILABLE • 🕒 SAME DAY DELIVERY • 📱 TRACK YOUR ORDER ONLINE • 🚛 PROFESSIONAL DELIVERY PARTNERS • 💎 QUALITY GUARANTEED
     </div>
@@ -507,7 +634,7 @@
   </section>
 
   <footer>
-    &copy; 2025 AutoShine. All rights reserved.
+    &copy; 2025 Auto Champain. All rights reserved.
     </footer>
 
     <script>
