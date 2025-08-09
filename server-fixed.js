@@ -27,7 +27,7 @@ app.post('/api/test-email', async (req, res) => {
         const testMailOptions = {
             from: 'saboormadiha@gmail.com',
             to: 'saboormadiha@gmail.com',
-            subject: 'Test Email - KSM Enterprises',
+            subject: 'Test Email - Auto Champain',
             html: `
                 <h2>Test Email</h2>
                 <p>This is a test email to verify the email configuration is working.</p>
@@ -87,7 +87,7 @@ app.post('/api/order', async (req, res) => {
                 <p>Please process this order and contact the customer for delivery details.</p>
                 
                 <hr>
-                <p><em>This order was placed through the KSM Enterprises website.</em></p>
+                <p><em>This order was placed through the Auto Champain website.</em></p>
                 ${customerInfo.email ? `<p><em>Customer Email: ${customerInfo.email}</em></p>` : ''}
             `,
             replyTo: customerInfo.email || 'saboormadiha@gmail.com'
