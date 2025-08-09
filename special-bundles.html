@@ -142,13 +142,40 @@
                 </div>
 
                 <!-- Bundle 3: Exterior Protection Set -->
-                <div class="bundle-card">
+                <div class="bundle-card" id="exterior-protection">
                     <div class="bundle-header">
                         <h3>Exterior Protection Set</h3>
                         <span class="bundle-badge">NEW</span>
                     </div>
-                    <div class="bundle-image">
-                        <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="Exterior Protection Set">
+                    <div class="bundle-slideshow">
+                        <div class="slideshow-container">
+                            <div class="slide fade">
+                                <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="AIM Hard Wax">
+                                <span>AIM Hard Wax</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/CAR POLISH & SHINNERS/F1-114 CERAMIC SPRAY WAX.jpeg" alt="F1-114 Ceramic Spray Wax">
+                                <span>F1-114 Ceramic Spray Wax</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/CLEANERS/black and gold tire shine.jpeg" alt="Black & Gold Tire Shine">
+                                <span>Black & Gold Tire Shine</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfiber Towel Pack">
+                                <span>Microfiber Towel Pack</span>
+                            </div>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'exterior-protection')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'exterior-protection')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'exterior-protection')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'exterior-protection')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'exterior-protection')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'exterior-protection')"></span>
+                        </div>
                     </div>
                     <div class="bundle-products">
                         <h4>Includes:</h4>
@@ -419,9 +446,56 @@
         `;
         document.head.appendChild(style);
         
+        // Slideshow functionality
+        let slideIndex = { 'exterior-protection': 1 };
+        
+        function changeSlide(direction, slideshowId) {
+            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
+            const dots = document.querySelectorAll(`#${slideshowId} .dot`);
+            
+            slideIndex[slideshowId] += direction;
+            
+            if (slideIndex[slideshowId] > slides.length) {
+                slideIndex[slideshowId] = 1;
+            }
+            if (slideIndex[slideshowId] < 1) {
+                slideIndex[slideshowId] = slides.length;
+            }
+            
+            // Hide all slides
+            slides.forEach(slide => slide.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show current slide
+            slides[slideIndex[slideshowId] - 1].style.display = 'block';
+            dots[slideIndex[slideshowId] - 1].classList.add('active');
+        }
+        
+        function currentSlide(n, slideshowId) {
+            slideIndex[slideshowId] = n;
+            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
+            const dots = document.querySelectorAll(`#${slideshowId} .dot`);
+            
+            // Hide all slides
+            slides.forEach(slide => slide.style.display = 'none');
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            // Show current slide
+            slides[n - 1].style.display = 'block';
+            dots[n - 1].classList.add('active');
+        }
+        
+        function autoAdvance(slideshowId) {
+            setInterval(() => {
+                changeSlide(1, slideshowId);
+            }, 3000);
+        }
+        
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
+            // Initialize slideshow for Exterior Protection Set
+            autoAdvance('exterior-protection');
         });
     </script>
 </body>
