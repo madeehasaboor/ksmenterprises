@@ -1,4 +1,4 @@
-// Cart functionality
+// Auto Champain Cart functionality
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -50,7 +50,7 @@ function displayCart() {
     const totalAmountSpan = document.getElementById('totalAmount');
     
     if (cart.length === 0) {
-        cartContainer.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+        cartContainer.innerHTML = '<p class="empty-cart">Your Auto Champain cart is empty</p>';
         totalItemsSpan.textContent = '0';
         totalAmountSpan.textContent = 'Rs. 0';
         return;
@@ -77,7 +77,7 @@ function createCartItem(item) {
     
     cartItem.innerHTML = `
         <div class="cart-item-image">
-            <img src="${item.image}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/100x100?text=Product'">
+            <img src="${item.image}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/100x100?text=Auto+Champain+Product'">
         </div>
         <div class="cart-item-details">
             <h4>${item.name}</h4>
@@ -221,6 +221,20 @@ function proceedToCheckout() {
     document.getElementById('customerAddress').value = '';
     document.getElementById('customerEmail').value = '';
     
+    // Reset payment method fields
+    if (document.getElementById('jazzCashNumber')) {
+        document.getElementById('jazzCashNumber').value = '';
+    }
+    if (document.getElementById('transactionId')) {
+        document.getElementById('transactionId').value = '';
+    }
+    if (document.getElementById('bankTransactionId')) {
+        document.getElementById('bankTransactionId').value = '';
+    }
+    if (document.getElementById('bankName')) {
+        document.getElementById('bankName').value = '';
+    }
+    
     alert('Order submitted! You will receive a confirmation email shortly.');
 }
 
@@ -290,6 +304,14 @@ function sendOrderEmail(orderSummary, customerInfo) {
                     paymentDetailsText += `%0A• Transaction ID: ${customerInfo.paymentDetails.transactionId}`;
                 }
             }
+        } else if (customerInfo.paymentMethod === 'bankTransfer') {
+            paymentMethodText = '🏦 Bank Transfer';
+            if (customerInfo.paymentDetails && customerInfo.paymentDetails.bankTransactionId) {
+                paymentDetailsText = `%0A• Transaction ID: ${customerInfo.paymentDetails.bankTransactionId}`;
+                if (customerInfo.paymentDetails.bankName) {
+                    paymentDetailsText += `%0A• Customer Bank: ${customerInfo.paymentDetails.bankName}`;
+                }
+            }
         } else {
             paymentMethodText = '🏦 Bank Transfer';
         }
@@ -300,7 +322,7 @@ function sendOrderEmail(orderSummary, customerInfo) {
         
         // Try to open WhatsApp
         try {
-            window.open(whatsappLink, '_blank');
+        window.open(whatsappLink, '_blank');
             alert(`✅ Order submitted successfully!\n\n📋 Order Number: ${orderSummary.orderNumber}\n👤 Customer: ${customerInfo.name}\n📱 Phone: ${customerInfo.phone}\n\n📱 Order details have been sent to WhatsApp.\nPlease check your WhatsApp for complete order information.\n\nIf WhatsApp didn't open automatically, please manually send the order details to +923234890184`);
         } catch (whatsappError) {
             console.error('WhatsApp fallback failed:', whatsappError);
@@ -313,3 +335,51 @@ function sendOrderEmail(orderSummary, customerInfo) {
         checkoutBtn.disabled = false;
     });
 } 
+
+// Debug function to test order process
+function testOrderProcess() {
+    console.log('Testing order process...');
+    
+    // Test cart data
+    const testCart = [
+        {
+            id: 1,
+            name: 'Test Product',
+            price: 1000,
+            quantity: 2,
+            image: 'test.jpg'
+        }
+    ];
+    
+    // Test customer info
+    const testCustomerInfo = {
+        name: 'Test Customer',
+        phone: '+923234890184',
+        address: 'Test Address',
+        email: 'test@example.com'
+    };
+    
+    // Test order summary
+    const testOrderSummary = {
+        items: 'Test Product x2 - Rs. 2,000\n',
+        total: 2000,
+        orderNumber: 'KSM-TEST-' + Date.now()
+    };
+    
+    console.log('Test data:', {
+        cart: testCart,
+        customerInfo: testCustomerInfo,
+        orderSummary: testOrderSummary
+    });
+    
+    // Test WhatsApp message
+    const whatsappMessage = `🛒 *NEW ORDER* - ${testOrderSummary.orderNumber}%0A%0A👤 *Customer Details:*%0A• Name: ${testCustomerInfo.name}%0A• Phone: ${testCustomerInfo.phone}%0A• Address: ${testCustomerInfo.address}%0A• Email: ${testCustomerInfo.email}%0A%0A📦 *Order Details:*%0A${testOrderSummary.items}%0A💰 *Total Amount: Rs. ${testOrderSummary.total.toLocaleString()}*%0A%0A📅 Date: ${new Date().toLocaleDateString()}%0A⏰ Time: ${new Date().toLocaleTimeString()}`;
+    
+    console.log('WhatsApp message:', whatsappMessage);
+    console.log('WhatsApp link:', `https://wa.me/+923234890184?text=${whatsappMessage}`);
+    
+    alert('Test completed! Check console for details.');
+}
+
+// Add test function to window for easy access
+window.testOrderProcess = testOrderProcess; 
