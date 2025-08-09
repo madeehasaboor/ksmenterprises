@@ -42,13 +42,34 @@
             
             <div class="bundles-grid">
                 <!-- Bundle 1: Complete Car Care Kit -->
-                <div class="bundle-card">
+                <div class="bundle-card" id="complete-car-care">
                     <div class="bundle-header">
                         <h3>Complete Car Care Kit</h3>
                         <span class="bundle-badge">BEST SELLER</span>
                     </div>
-                    <div class="bundle-image">
-                        <img src="products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg" alt="Complete Car Care Kit">
+                    <div class="bundle-collage">
+                        <div class="collage-grid">
+                            <div class="collage-item main-item">
+                                <img src="products/CAR POLISH & SHINNERS/F1-113 CERAMIC LIQUID WAX.jpeg" alt="F1-113 Ceramic Liquid Wax">
+                                <span>F1-113 CERAMIC WAX</span>
+                            </div>
+                            <div class="collage-item">
+                                <img src="products/CLEANERS/F1-132 WHEEL & TIRE FOAM CLEANER.jpeg" alt="F1-132 Wheel & Tire Foam Cleaner">
+                                <span>F1-132 TIRE CLEANER</span>
+                            </div>
+                            <div class="collage-item">
+                                <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 6.jpeg" alt="Microfiber Towel Pack">
+                                <span>MICROFIBER PACK</span>
+                            </div>
+                            <div class="collage-item">
+                                <img src="products/CLEANERS/F1-117 GLASS CLEANER.jpeg" alt="F1-117 Glass Cleaner">
+                                <span>F1-117 GLASS CLEANER</span>
+                            </div>
+                            <div class="collage-item">
+                                <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="F1-130 SCRATCH OUT">
+                                <span>F1-130 SCRATCH OUT</span>
+                            </div>
+                        </div>
                     </div>
                                                 <div class="bundle-products">
                                 <h4>Includes:</h4>
@@ -76,43 +97,28 @@
                         <h3>Interior Care Package</h3>
                         <span class="bundle-badge">POPULAR</span>
                     </div>
-                    <div class="bundle-slideshow">
-                        <div class="slideshow-container">
-                            <div class="slide active">
+                    <div class="bundle-collage">
+                        <div class="collage-grid">
+                            <div class="collage-item main-item">
                                 <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="EASY KANGAROO® Cosmic Car Wax">
                                 <span>EASY KANGAROO®</span>
                             </div>
-                            <div class="slide">
+                            <div class="collage-item">
                                 <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="F1-130 SCRATCH OUT">
                                 <span>F1-130 SCRATCH OUT</span>
                             </div>
-                            <div class="slide">
+                            <div class="collage-item">
                                 <img src="products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg" alt="F1-101 CARNAUBA WASH + WAX">
                                 <span>F1-101 WASH + WAX</span>
                             </div>
-                            <div class="slide">
+                            <div class="collage-item">
                                 <img src="products/CLEANERS/A-126 AIM TIRE FOAM.jpeg" alt="A-126 AIM TIRE FOAM">
                                 <span>A-126 TIRE FOAM</span>
                             </div>
-                            <div class="slide">
+                            <div class="collage-item">
                                 <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="AIM Microfibre Polishing Cloth">
                                 <span>MICROFIBRE CLOTH</span>
                             </div>
-                        </div>
-                        <div class="slideshow-controls">
-                            <button class="prev-btn" onclick="changeSlide(-1, 'interior-care')">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <div class="slide-indicators">
-                                <span class="indicator active" onclick="currentSlide(1, 'interior-care')"></span>
-                                <span class="indicator" onclick="currentSlide(2, 'interior-care')"></span>
-                                <span class="indicator" onclick="currentSlide(3, 'interior-care')"></span>
-                                <span class="indicator" onclick="currentSlide(4, 'interior-care')"></span>
-                                <span class="indicator" onclick="currentSlide(5, 'interior-care')"></span>
-                            </div>
-                            <button class="next-btn" onclick="changeSlide(1, 'interior-care')">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
                         </div>
                     </div>
                                          <div class="bundle-products">
@@ -413,62 +419,9 @@
         `;
         document.head.appendChild(style);
         
-        // Slideshow functionality
-        let slideIndex = {
-            'interior-care': 1
-        };
-
-        function changeSlide(direction, slideshowId) {
-            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
-            const indicators = document.querySelectorAll(`#${slideshowId} .indicator`);
-            
-            if (!slides.length) return;
-            
-            slideIndex[slideshowId] += direction;
-            
-            if (slideIndex[slideshowId] > slides.length) {
-                slideIndex[slideshowId] = 1;
-            }
-            if (slideIndex[slideshowId] < 1) {
-                slideIndex[slideshowId] = slides.length;
-            }
-            
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            
-            // Show current slide
-            slides[slideIndex[slideshowId] - 1].classList.add('active');
-            indicators[slideIndex[slideshowId] - 1].classList.add('active');
-        }
-
-        function currentSlide(n, slideshowId) {
-            slideIndex[slideshowId] = n;
-            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
-            const indicators = document.querySelectorAll(`#${slideshowId} .indicator`);
-            
-            // Hide all slides
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(indicator => indicator.classList.remove('active'));
-            
-            // Show current slide
-            slides[n - 1].classList.add('active');
-            indicators[n - 1].classList.add('active');
-        }
-
-        // Auto-advance slideshow
-        function autoAdvance(slideshowId) {
-            setInterval(() => {
-                changeSlide(1, slideshowId);
-            }, 3000); // Change slide every 3 seconds
-        }
-
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
-            
-            // Initialize slideshow for Interior Care Package
-            autoAdvance('interior-care');
         });
     </script>
 </body>
