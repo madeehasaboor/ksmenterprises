@@ -580,11 +580,32 @@
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
+            
             // Initialize slideshows for all bundles
-            autoAdvance('exterior-protection');
-            autoAdvance('engine-care');
-            autoAdvance('premium-detailing');
-            autoAdvance('budget-starter');
+            const slideshowIds = ['exterior-protection', 'engine-care', 'premium-detailing', 'budget-starter'];
+            
+            slideshowIds.forEach(id => {
+                // Show first slide and activate first dot
+                const slides = document.querySelectorAll(`#${id} .slide`);
+                const dots = document.querySelectorAll(`#${id} .dot`);
+                
+                if (slides.length > 0) {
+                    // Hide all slides first
+                    slides.forEach(slide => slide.style.display = 'none');
+                    // Show first slide
+                    slides[0].style.display = 'block';
+                }
+                
+                if (dots.length > 0) {
+                    // Remove active class from all dots
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    // Activate first dot
+                    dots[0].classList.add('active');
+                }
+                
+                // Start auto-advance
+                autoAdvance(id);
+            });
         });
     </script>
 </body>

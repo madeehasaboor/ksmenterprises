@@ -2077,7 +2077,7 @@ body {
         padding: 0 8px;
     }
 
-    .prev-btn, .next-btn {
+    .slideshow-controls .prev, .slideshow-controls .next {
         background: rgba(255, 215, 0, 0.2);
         border: 1px solid #FFD700;
         color: #FFD700;
@@ -2092,9 +2092,35 @@ body {
         font-size: 12px;
     }
 
-    .prev-btn:hover, .next-btn:hover {
+    .slideshow-controls .prev:hover, .slideshow-controls .next:hover {
         background: #FFD700;
         color: #000000;
+        transform: scale(1.1);
+    }
+
+    .slideshow-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 12px;
+    }
+
+    .slideshow-dots .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 215, 0, 0.3);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .slideshow-dots .dot:hover {
+        background: rgba(255, 215, 0, 0.6);
+        transform: scale(1.2);
+    }
+
+    .slideshow-dots .dot.active {
+        background: #FFD700;
         transform: scale(1.1);
     }
 
@@ -2135,7 +2161,7 @@ body {
             font-size: 0.7rem;
         }
 
-        .prev-btn, .next-btn {
+        .slideshow-controls .prev, .slideshow-controls .next {
             width: 28px;
             height: 28px;
             font-size: 10px;
@@ -2155,7 +2181,7 @@ body {
             font-size: 0.6rem;
         }
 
-        .prev-btn, .next-btn {
+        .slideshow-controls .prev, .slideshow-controls .next {
             width: 24px;
             height: 24px;
             font-size: 9px;
