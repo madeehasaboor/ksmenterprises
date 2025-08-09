@@ -71,33 +71,50 @@
                 </div>
 
                 <!-- Bundle 2: Interior Care Package -->
-                <div class="bundle-card">
+                <div class="bundle-card" id="interior-care">
                     <div class="bundle-header">
                         <h3>Interior Care Package</h3>
                         <span class="bundle-badge">POPULAR</span>
                     </div>
-                                         <div class="bundle-images">
-                         <div class="bundle-image-item">
-                             <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="EASY KANGAROO® Cosmic Car Wax">
-                             <span>EASY KANGAROO®</span>
-                         </div>
-                         <div class="bundle-image-item">
-                             <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="F1-130 SCRATCH OUT">
-                             <span>F1-130 SCRATCH OUT</span>
-                         </div>
-                         <div class="bundle-image-item">
-                             <img src="products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg" alt="F1-101 CARNAUBA WASH + WAX">
-                             <span>F1-101 WASH + WAX</span>
-                         </div>
-                         <div class="bundle-image-item">
-                             <img src="products/CLEANERS/A-126 AIM TIRE FOAM.jpeg" alt="A-126 AIM TIRE FOAM">
-                             <span>A-126 TIRE FOAM</span>
-                         </div>
-                         <div class="bundle-image-item">
-                             <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="AIM Microfibre Polishing Cloth">
-                             <span>MICROFIBRE CLOTH</span>
-                         </div>
-                     </div>
+                    <div class="bundle-slideshow">
+                        <div class="slideshow-container">
+                            <div class="slide active">
+                                <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="EASY KANGAROO® Cosmic Car Wax">
+                                <span>EASY KANGAROO®</span>
+                            </div>
+                            <div class="slide">
+                                <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="F1-130 SCRATCH OUT">
+                                <span>F1-130 SCRATCH OUT</span>
+                            </div>
+                            <div class="slide">
+                                <img src="products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg" alt="F1-101 CARNAUBA WASH + WAX">
+                                <span>F1-101 WASH + WAX</span>
+                            </div>
+                            <div class="slide">
+                                <img src="products/CLEANERS/A-126 AIM TIRE FOAM.jpeg" alt="A-126 AIM TIRE FOAM">
+                                <span>A-126 TIRE FOAM</span>
+                            </div>
+                            <div class="slide">
+                                <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="AIM Microfibre Polishing Cloth">
+                                <span>MICROFIBRE CLOTH</span>
+                            </div>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev-btn" onclick="changeSlide(-1, 'interior-care')">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="slide-indicators">
+                                <span class="indicator active" onclick="currentSlide(1, 'interior-care')"></span>
+                                <span class="indicator" onclick="currentSlide(2, 'interior-care')"></span>
+                                <span class="indicator" onclick="currentSlide(3, 'interior-care')"></span>
+                                <span class="indicator" onclick="currentSlide(4, 'interior-care')"></span>
+                                <span class="indicator" onclick="currentSlide(5, 'interior-care')"></span>
+                            </div>
+                            <button class="next-btn" onclick="changeSlide(1, 'interior-care')">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                    </div>
                                          <div class="bundle-products">
                          <h4>Includes:</h4>
                          <ul>
@@ -396,9 +413,62 @@
         `;
         document.head.appendChild(style);
         
+        // Slideshow functionality
+        let slideIndex = {
+            'interior-care': 1
+        };
+
+        function changeSlide(direction, slideshowId) {
+            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
+            const indicators = document.querySelectorAll(`#${slideshowId} .indicator`);
+            
+            if (!slides.length) return;
+            
+            slideIndex[slideshowId] += direction;
+            
+            if (slideIndex[slideshowId] > slides.length) {
+                slideIndex[slideshowId] = 1;
+            }
+            if (slideIndex[slideshowId] < 1) {
+                slideIndex[slideshowId] = slides.length;
+            }
+            
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Show current slide
+            slides[slideIndex[slideshowId] - 1].classList.add('active');
+            indicators[slideIndex[slideshowId] - 1].classList.add('active');
+        }
+
+        function currentSlide(n, slideshowId) {
+            slideIndex[slideshowId] = n;
+            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
+            const indicators = document.querySelectorAll(`#${slideshowId} .indicator`);
+            
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // Show current slide
+            slides[n - 1].classList.add('active');
+            indicators[n - 1].classList.add('active');
+        }
+
+        // Auto-advance slideshow
+        function autoAdvance(slideshowId) {
+            setInterval(() => {
+                changeSlide(1, slideshowId);
+            }, 3000); // Change slide every 3 seconds
+        }
+
         // Initialize page
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
+            
+            // Initialize slideshow for Interior Care Package
+            autoAdvance('interior-care');
         });
     </script>
 </body>
