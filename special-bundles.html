@@ -376,6 +376,67 @@
         </div>
     </section>
 
+    <!-- Bundle 5: Engine Care Essentials -->
+    <section class="bundles-section">
+        <div class="container">
+            <div class="bundle-card" id="engine-essentials">
+                <div class="bundle-header">
+                    <h3>Engine Care Essentials</h3>
+                    <span class="bundle-badge">ENGINE</span>
+                </div>
+                <div class="bundle-content">
+                    <div class="bundle-slideshow" id="engine-essentials">
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/WD-40 SPECIALIST DEGREASER.jpeg" alt="WD-40 Specialist Degreaser">
+                            <span>WD-40 Specialist Degreaser</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/AIM OCTANE BOOSTER.jpeg" alt="Aim Octane Booster">
+                            <span>Aim Octane Booster</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/WD-40 CONTACT CLEANER.jpeg" alt="WD-40 Contact Cleaner">
+                            <span>WD-40 Contact Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/AIM MICROFIBRE CLOTH.jpeg" alt="Aim Microfibre Cloth">
+                            <span>Aim Microfibre Cloth</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'engine-essentials')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'engine-essentials')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'engine-essentials')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'engine-essentials')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'engine-essentials')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'engine-essentials')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-details">
+                        <div class="bundle-products">
+                            <h4>What's Included:</h4>
+                            <ul>
+                                <li>WD-40 Specialist Degreaser (500ml)</li>
+                                <li>Aim Octane Booster (355ml)</li>
+                                <li>WD-40 Contact Cleaner (311g)</li>
+                                <li>Aim Microfibre Polishing Cloth (1 piece)</li>
+                            </ul>
+                        </div>
+                        <div class="bundle-pricing">
+                            <div class="original-price">₨ 2,600</div>
+                            <div class="bundle-price">₨ 2,100</div>
+                            <div class="savings">Save ₨ 500 (19% OFF)</div>
+                        </div>
+                        <button class="add-to-cart-btn" onclick="addBundleToCart('engine-essentials', 2100, 'Engine Care Essentials')">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Bundle 7: Interior Care Essentials -->
     <section class="bundles-section">
         <div class="container">
@@ -611,6 +672,7 @@
             'complete-car-care': 1,
             'exterior-protection': 1,
             'engine-care': 1,
+            'engine-essentials': 1,
             'premium-detailing': 1,
             'budget-starter': 1,
             'interior-essentials': 1
@@ -663,7 +725,7 @@
             updateCartCount();
             
             // Initialize slideshows for all bundles
-            const slideshowIds = ['complete-car-care', 'exterior-protection', 'engine-care', 'premium-detailing', 'budget-starter', 'interior-essentials'];
+            const slideshowIds = ['complete-car-care', 'exterior-protection', 'engine-care', 'engine-essentials', 'premium-detailing', 'budget-starter', 'interior-essentials'];
             
             slideshowIds.forEach(id => {
                 // Show first slide and activate first dot
