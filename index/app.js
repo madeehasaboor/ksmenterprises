@@ -1,5 +1,5 @@
-// Auto Champain E-commerce Application
-// Main application logic for the index directory
+// Main index.js file for Auto Champain E-commerce
+// This file handles the main application logic
 
 // Global variables
 let products = [];
@@ -160,4 +160,16 @@ function showNotification(message) {
     setTimeout(() => {
         notification.remove();
     }, 3000);
+}
+
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        initializeApp,
+        addToCart,
+        updateCartCount,
+        showCategory,
+        showNotification,
+        showAddToCartFeedback
+    };
 } 
