@@ -181,7 +181,7 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #000000;
+    color: #FFD700;
     font-weight: 600;
     font-size: 0.8rem;
     transition: all 0.3s ease;
@@ -194,8 +194,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: #000000;
     border-radius: 5px;
+    border: 1px solid #FFD700;
+}
+
+.nav a:hover {
+    background: #FFD700;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
 }
 
 @media (min-width: 480px) {
@@ -234,8 +242,9 @@ body {
 }
 
 .nav a.active {
-    color: #000000;
-    background: rgba(255, 255, 255, 0.4);
+    color: #FFD700;
+    background: #000000;
+    border: 2px solid #FFD700;
 }
 
 .nav {
