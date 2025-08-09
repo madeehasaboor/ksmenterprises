@@ -1,559 +1,385 @@
-// Comprehensive Product Database for AUTO SHINE
-// Complete product catalog with all categories
+// Auto Champain Cart functionality
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-const productsDatabase = {
-    // Microfibre Products
-    microfibre: [
-        {
-            id: "microfibre_cloth_xlarge",
-            name: "MICROFIBRE CLOTH X LARGE",
-            price: 400,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
-            description: "Extra large microfiber cloth for professional cleaning"
-        },
-        {
-            id: "microfibre_towel_xlarge",
-            name: "MICROFIBRE TOWEL X LARGE",
-            price: 600,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg",
-            description: "Extra large microfiber towel for superior drying"
-        },
-        {
-            id: "microfibre_glass_cleaner",
-            name: "MICROFIBRE GLASS CLEANER",
-            price: 350,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
-            description: "Specialized microfiber for streak-free glass cleaning"
-        },
-        {
-            id: "microfibre_designed_cloth_mix",
-            name: "MICROFIBRE DESIGNED CLOTH MIX",
-            price: 550,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
-            description: "Designer microfiber cloth mix for various surfaces"
-        },
-        {
-            id: "microfibre_cloth_lq",
-            name: "MICROFIBRE CLOTH (LQ)",
-            price: 250,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
-            description: "Light quality microfiber cloth"
-        },
-        {
-            id: "microfibre_towel_small_lq",
-            name: "MICROFIBRE TOWEL SMALL (LQ)",
-            price: 250,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
-            description: "Small light quality microfiber towel"
-        },
-        {
-            id: "microfibre_towel_large_lq",
-            name: "MICROFIBRE TOWEL LARGE (LQ)",
-            price: 300,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
-            description: "Large light quality microfiber towel"
-        },
-        {
-            id: "aim_microfibre_cloth",
-            name: "AIM MICROFIBRE CLOTH",
-            price: 350,
-            category: "microfibre",
-            brand: "AIM",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
-            description: "AIM brand microfiber cloth for professional use"
-        },
-        {
-            id: "aim_microfibre_towel_large",
-            name: "AIM MICROFIBRE TOWEL LARGE",
-            price: 500,
-            category: "microfibre",
-            brand: "AIM",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg",
-            description: "AIM brand large microfiber towel"
-        },
-        {
-            id: "aim_microfibre_towel_small",
-            name: "AIM MICROFIBRE TOWEL SMALL",
-            price: 400,
-            category: "microfibre",
-            brand: "AIM",
-            image: "./products/MICRO FIBER CLOTHES/SINGLE MICROFIBER TOWEL.jpeg",
-            description: "AIM brand small microfiber towel"
-        },
-        {
-            id: "microfibre_cloth_pack_2",
-            name: "MICROFIBRE CLOTH PACK OF 2",
-            price: 700,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
-            description: "Pack of 2 microfiber cloths for value"
-        },
-        {
-            id: "microfibre_towel_pack_2",
-            name: "MICROFIBRE TOWEL PACK OF 2",
-            price: 1050,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg",
-            description: "Pack of 2 microfiber towels for value"
-        },
-        {
-            id: "microfibre_cloth_pack_4",
-            name: "MICROFIBRE CLOTH PACK OF 4",
-            price: 1350,
-            category: "microfibre",
-            brand: "AUTO SHINE",
-            image: "./products/MICRO FIBER CLOTHES/MICROFIBER CLOTH PACK OF 4.jpeg",
-            description: "Pack of 4 microfiber cloths for maximum value"
-        }
-    ],
-    // Waxes & Protectants
-    waxes: [
-        {
-            id: "wax_230g_soft_carnauba",
-            name: "Wax 230g (Soft Carnauba USA)",
-            price: 1400,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-107 CARNAUBA WAX PASTE.jpeg",
-            description: "Soft Carnauba wax 230g for ultimate shine"
-        },
-        {
-            id: "wax_340g_soft_carnauba",
-            name: "Wax 340g (Soft Carnauba USA)",
-            price: 1850,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-106 CARNABUNA WAX PASTE.jpeg",
-            description: "Soft Carnauba wax 340g for professional use"
-        },
-        {
-            id: "liquid_wax_carnauba",
-            name: "Liquid Wax (Carnauba USA)",
-            price: 1400,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-104 CARNAUBA LIQUID WAX.jpeg",
-            description: "Liquid Carnauba wax for easy application"
-        },
-        {
-            id: "fast_wax_spray",
-            name: "Fast Wax (Spray)",
-            price: 1500,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/F1-114 CERAMIC SPRAY WAX.jpeg",
-            description: "Quick spray wax for fast application"
-        },
-        {
-            id: "dry_clean_upholstery_cleaner",
-            name: "Dry Clean Upholstery Cleaner (USA)",
-            price: 1500,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/A-121 LEATHER TYRE WAX.jpeg",
-            description: "Professional upholstery cleaner"
-        },
-        {
-            id: "mr_leather",
-            name: "Mr. Leather",
-            price: 1625,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/A-118 LEATHER AND TYPRE WAX.jpeg",
-            description: "Professional leather conditioner"
-        },
-        {
-            id: "mr_leather_small",
-            name: "Mr. Leather Small",
-            price: 1400,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/A-115 LEATHER AND TYRE WAX.jpeg",
-            description: "Small size leather conditioner"
-        },
-        {
-            id: "bug_tar_remover",
-            name: "Bug and Tar Remover",
-            price: 1950,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/A-120 LEATHER AND TYRE WAX.jpeg",
-            description: "Effective bug and tar removal solution"
-        },
+document.addEventListener('DOMContentLoaded', function() {
+    displayCart();
+    updateCartCount();
+    
+    // Add payment method change listeners
+    setupPaymentMethodListeners();
+});
 
-        {
-            id: "black_gold_tyre_cleaner",
-            name: "Black Gold Tyre Cleaner",
-            price: 1750,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/black and gold tire shine.jpeg",
-            description: "Premium tire cleaning solution"
-        },
-        {
-            id: "protectant_new_car",
-            name: "Protectant New Car",
-            price: 1125,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR PROCTING SPRAYS/formulla 1 protectant spray f1-123.jpeg",
-            description: "Protectant specifically for new cars"
-        },
-        {
-            id: "protectant_citrus",
-            name: "Protectant Citrus",
-            price: 1125,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR PROCTING SPRAYS/f1-120 formulla 1 protectant spray.jpeg",
-            description: "Citrus scented protectant"
-        },
-        {
-            id: "protectant_strawberry",
-            name: "Protectant Strawberry",
-            price: 1125,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR PROCTING SPRAYS/formulla 1 protectant spray.jpeg",
-            description: "Strawberry scented protectant"
-        },
-        {
-            id: "protectant_vanilla",
-            name: "Protectant Vanilla",
-            price: 1125,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/CAR PROCTING SPRAYS/protectant spray 295ml.jpeg",
-            description: "Vanilla scented protectant"
-        }
-    ],
-    // Spray Paints & Cleaners
-    sprayPaints: [
-        {
-            id: "spray_paint_bright_gold",
-            name: "Spray Paint Bright Gold",
-            price: 450,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CAR SPRAY PAINTS/AIM SPRAY PAINT A-149 YELLOW.jpeg",
-            description: "Bright gold spray paint for automotive use"
-        },
-        {
-            id: "spray_paint_bright_chrome",
-            name: "Spray Paint Bright Chrome",
-            price: 450,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CAR SPRAY PAINTS/A-150 SPRAY PAINT.jpeg",
-            description: "Bright chrome spray paint for automotive use"
-        },
-        {
-            id: "dashboard_450ml",
-            name: "DashBoard 450ml",
-            price: 375,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
-            description: "Dashboard cleaner 450ml"
-        },
-        {
-            id: "dashboard_brown_450ml",
-            name: "DashBoard Brown 450ml",
-            price: 400,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-128 AIM FOAMY CLEANER.jpeg",
-            description: "Brown dashboard cleaner 450ml"
-        },
-        {
-            id: "carb_cleaner_medium_450ml",
-            name: "Carb Cleaner Medium 450ml",
-            price: 350,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-112 AIM CARB CLEANER.jpeg",
-            description: "Medium carburetor cleaner 450ml"
-        },
-        {
-            id: "dashboard_small",
-            name: "DASHBOARD SMALL",
-            price: 275,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
-            description: "Small dashboard cleaner"
-        },
-        {
-            id: "foamy_cleaner",
-            name: "Foamy Cleaner",
-            price: 425,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-129 AIM FOAMY CLEANER.jpeg",
-            description: "Foamy cleaning solution"
-        },
-        {
-            id: "tire_foam_cleaner",
-            name: "Tire Foam Cleaner",
-            price: 425,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-127 AIM TIRE FOAM.jpeg",
-            description: "Foam cleaner for tires"
-        },
-        {
-            id: "engine_degreaser",
-            name: "ENGINE DEGREASER",
-            price: 425,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-125 AIM ENGINE CLEANER.jpeg",
-            description: "Professional engine degreaser"
-        },
-        {
-            id: "glass_cleaner_450ml",
-            name: "Glass Cleaner 450ml",
-            price: 425,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-131 AIM GLASS CLEANER.jpeg",
-            description: "Glass cleaner 450ml"
-        }
-    ],
-    // Other Car Products
-    otherProducts: [
-        {
-            id: "tire_gel",
-            name: "Tire Gel",
-            price: 550,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/CAR POLISH & SHINNERS/aim tire gel 500ml.jpeg",
-            description: "Professional tire gel for shine and protection"
-        },
-        {
-            id: "octane_booster",
-            name: "Octane Booster",
-            price: 500,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/OTHERS/A-137 AIM OCTANE BOOSTER.jpeg",
-            description: "Fuel octane booster for improved performance"
-        },
-        {
-            id: "aw_shampoo_16oz",
-            name: "AW SHAMPOO 16OZ",
-            price: 500,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH SHAMPOOS/AW-157 AIM WASH & SHAMPOO.jpeg",
-            description: "Car wash shampoo 16oz"
-        },
-        {
-            id: "furniture_polish",
-            name: "Furniture Polish",
-            price: 425,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/CAR POLISH & SHINNERS/aim furtinure polish.jpeg",
-            description: "Professional furniture polish"
-        },
-        {
-            id: "leather_spray",
-            name: "Leather Spray",
-            price: 550,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/CAR WASH & WAX/A-121 LEATHER TYRE WAX.jpeg",
-            description: "Leather conditioning spray"
-        },
-        {
-            id: "scratch_remover",
-            name: "SCRATCH REMOVER",
-            price: 550,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/CAR POLISH & SHINNERS/scratchout paste.jpeg",
-            description: "Professional scratch removal solution"
-        }
-    ],
-    // Coolants
-    coolants: [
-        {
-            id: "coolant_500ml",
-            name: "Coolant 500ml",
-            price: 225,
-            category: "coolants",
-            brand: "AUTO SHINE",
-            image: "./products/RADIATOR COOLER/A-103 AIM RADIATOR COOLANT.jpeg",
-            description: "Engine coolant 500ml"
-        },
-        {
-            id: "coolant_1litre",
-            name: "Coolant 1 Litre",
-            price: 300,
-            category: "coolants",
-            brand: "AUTO SHINE",
-            image: "./products/RADIATOR COOLER/A-102 AIM RADIATOR COOLANT.jpeg",
-            description: "Engine coolant 1 litre"
-        },
-        {
-            id: "coolant_2litre",
-            name: "Coolant 2 Litre",
-            price: 500,
-            category: "coolants",
-            brand: "AUTO SHINE",
-            image: "./products/RADIATOR COOLER/A-105 AIM RADIATOR COOLANT.jpeg",
-            description: "Engine coolant 2 litre"
-        },
-        {
-            id: "coolant_4litre",
-            name: "Coolant 4 Litre",
-            price: 850,
-            category: "coolants",
-            brand: "AUTO SHINE",
-            image: "./products/RADIATOR COOLER/A-106 AIM RADIATOR COOLANT.jpeg",
-            description: "Engine coolant 4 litre"
-        }
-    ],
-    // Anti Rust Sprays
-    antiRust: [
-        {
-            id: "anti_rust_100ml",
-            name: "Anti Rust Spray 100ML",
-            price: 250,
-            category: "antiRust",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/A-124 AIM ANTI-RUST.jpeg",
-            description: "Anti-rust protection spray 100ml"
-        },
-        {
-            id: "anti_rust_220ml",
-            name: "Anti Rust Spray 220ML",
-            price: 300,
-            category: "antiRust",
-            brand: "AUTO SHINE",
-            image: "./products/CLEANERS/AIM ANTI-RUST 300ML.jpeg",
-            description: "Anti-rust protection spray 220ml"
-        }
-    ],
-    // New Products Added
-    // Glass Cleaners
-    glassCleaners: [
-        {
-            id: "glass_cleaner",
-            name: "Glass Cleaner",
-            price: 450,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/Glass Cleaner with Rain Repellent.jpg",
-            description: "Professional glass cleaner for streak-free cleaning"
-        },
-        {
-            id: "glass_cleaner_rain_repellent",
-            name: "Glass Cleaner with Rain Repellent",
-            price: 550,
-            category: "sprayPaints",
-            brand: "AUTO SHINE",
-            image: "./products/Glass Cleaner with Rain Repellent.jpg",
-            description: "Glass cleaner with rain repellent technology"
-        }
-    ],
-    // Wheel Care Products
-    wheelCare: [
-        {
-            id: "wheel_tyre_clean",
-            name: "Wheel Tyre Clean",
-            price: 400,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/Wheel tyre clean.jpg",
-            description: "Professional wheel and tyre cleaning solution"
-        },
-        {
-            id: "wheel_rim_clean",
-            name: "Wheel Rim Clean",
-            price: 450,
-            category: "otherProducts",
-            brand: "AUTO SHINE",
-            image: "./products/Wheel rim cleaner.jpg",
-            description: "Specialized wheel rim cleaning solution"
-        }
-    ],
-    // WD-40 Products
-    wd40Products: [
-        {
-            id: "wd_400",
-            name: "WD-40 400ML",
-            price: 800,
-            category: "otherProducts",
-            brand: "WD-40",
-            image: "./products/WD-40.jpg",
-            description: "WD-40 multi-purpose lubricant 400ml"
-        }
-    ],
-    // Auto Shine Wax
-    autoShineWax: [
-        {
-            id: "auto_shine_wax_230",
-            name: "Auto Shine Wax 230g",
-            price: 1400,
-            category: "waxes",
-            brand: "AUTO SHINE",
-            image: "./products/auto shine wax.jpg",
-            description: "Auto Shine premium wax 230g for ultimate shine"
-        }
-    ]
-};
-
-// Helper function to get all products
-function getAllProducts() {
-    return Object.values(productsDatabase).flat();
+function setupPaymentMethodListeners() {
+    const codRadio = document.getElementById('cod');
+    const jazzCashRadio = document.getElementById('jazzCash');
+    const bankRadio = document.getElementById('bankTransfer');
+    const codInfo = document.getElementById('codInfo');
+    const jazzCashInfo = document.getElementById('jazzCashInfo');
+    const bankInfo = document.getElementById('bankInfo');
+    
+    if (codRadio && jazzCashRadio && bankRadio) {
+        codRadio.addEventListener('change', function() {
+            if (this.checked) {
+                codInfo.style.display = 'block';
+                jazzCashInfo.style.display = 'none';
+                bankInfo.style.display = 'none';
+            }
+        });
+        
+        jazzCashRadio.addEventListener('change', function() {
+            if (this.checked) {
+                codInfo.style.display = 'none';
+                jazzCashInfo.style.display = 'block';
+                bankInfo.style.display = 'none';
+            }
+        });
+        
+        bankRadio.addEventListener('change', function() {
+            if (this.checked) {
+                codInfo.style.display = 'none';
+                jazzCashInfo.style.display = 'none';
+                bankInfo.style.display = 'block';
+            }
+        });
+    }
 }
 
-// Helper function to get products by brand
-function getProductsByBrand(brand) {
-    return getAllProducts().filter(product => product.brand === brand);
+function displayCart() {
+    const cartContainer = document.getElementById('cartItems');
+    const totalItemsSpan = document.getElementById('totalItems');
+    const totalAmountSpan = document.getElementById('totalAmount');
+    
+    if (cart.length === 0) {
+        cartContainer.innerHTML = '<p class="empty-cart">Your Auto Champain cart is empty</p>';
+        totalItemsSpan.textContent = '0';
+        totalAmountSpan.textContent = 'Rs. 0';
+        return;
+    }
+    
+    cartContainer.innerHTML = '';
+    let totalItems = 0;
+    let totalAmount = 0;
+    
+    cart.forEach(item => {
+        const cartItem = createCartItem(item);
+        cartContainer.appendChild(cartItem);
+        totalItems += item.quantity;
+        totalAmount += item.price * item.quantity;
+    });
+    
+    totalItemsSpan.textContent = totalItems;
+    totalAmountSpan.textContent = `Rs. ${totalAmount.toLocaleString()}`;
 }
 
-// Helper function to get products by category
-function getProductsByCategory(category) {
-    return getAllProducts().filter(product => product.category === category);
+function createCartItem(item) {
+    const cartItem = document.createElement('div');
+    cartItem.className = 'cart-item';
+    
+    cartItem.innerHTML = `
+        <div class="cart-item-image">
+            <img src="${item.image}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/100x100?text=Auto+Champain+Product'">
+        </div>
+        <div class="cart-item-details">
+            <h4>${item.name}</h4>
+            <p class="cart-item-price">Rs. ${item.price}</p>
+            <div class="quantity-controls">
+                <button onclick="updateQuantity(${item.id}, -1)">-</button>
+                <span>${item.quantity}</span>
+                <button onclick="updateQuantity(${item.id}, 1)">+</button>
+            </div>
+        </div>
+        <div class="cart-item-total">
+            <p>Rs. ${(item.price * item.quantity).toLocaleString()}</p>
+            <button class="remove-btn" onclick="removeFromCart(${item.id})">
+                <i class="fas fa-trash"></i>
+            </button>
+        </div>
+    `;
+    
+    return cartItem;
 }
 
-// Helper function to search products
-function searchProducts(query) {
-    const allProducts = getAllProducts();
-    return allProducts.filter(product => 
-        product.name.toLowerCase().includes(query.toLowerCase()) ||
-        product.description.toLowerCase().includes(query.toLowerCase()) ||
-        product.brand.toLowerCase().includes(query.toLowerCase())
-    );
+function updateQuantity(productId, change) {
+    const item = cart.find(item => item.id === productId);
+    if (item) {
+        item.quantity += change;
+        if (item.quantity <= 0) {
+            removeFromCart(productId);
+        } else {
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCart();
+            updateCartCount();
+        }
+    }
 }
 
-// Export for use in other files
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        productsDatabase,
-        getAllProducts,
-        getProductsByBrand,
-        getProductsByCategory,
-        searchProducts
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const cartCount = document.getElementById('cartCount');
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    cartCount.textContent = totalItems;
+}
+
+function proceedToCheckout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    
+    // Show customer form if not already visible
+    const customerForm = document.getElementById('customerForm');
+    if (customerForm.style.display === 'none') {
+        customerForm.style.display = 'block';
+        document.querySelector('.checkout-btn').textContent = 'Submit Order';
+        return;
+    }
+    
+    // Validate form
+    const customerName = document.getElementById('customerName').value.trim();
+    const customerPhone = document.getElementById('customerPhone').value.trim();
+    const customerAddress = document.getElementById('customerAddress').value.trim();
+    const customerEmail = document.getElementById('customerEmail').value.trim();
+    
+    // Get payment method
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+    if (!paymentMethod) {
+        alert('Please select a payment method');
+        return;
+    }
+    
+    // Validate JazzCash fields if selected
+    if (paymentMethod.value === 'jazzCash') {
+        const jazzCashNumber = document.getElementById('jazzCashNumber').value.trim();
+        if (!jazzCashNumber) {
+            alert('Please enter your JazzCash number');
+            return;
+        }
+        if (!jazzCashNumber.match(/^03\d{9}$/)) {
+            alert('Please enter a valid JazzCash number (03XXXXXXXXX)');
+            return;
+        }
+    }
+    
+    // Validate Bank Transfer fields if selected
+    if (paymentMethod.value === 'bankTransfer') {
+        const bankTransactionId = document.getElementById('bankTransactionId').value.trim();
+        if (!bankTransactionId) {
+            alert('Please enter the bank transaction ID or reference number');
+            return;
+        }
+    }
+    
+    if (!customerName || !customerPhone || !customerAddress) {
+        alert('Please fill in all required fields (Name, Phone, Address)');
+        return;
+    }
+    
+    // Create order summary
+    const orderSummary = createOrderSummary();
+    
+    // Get additional payment details
+    let paymentDetails = {};
+    if (paymentMethod.value === 'jazzCash') {
+        paymentDetails = {
+            jazzCashNumber: document.getElementById('jazzCashNumber').value.trim(),
+            transactionId: document.getElementById('transactionId').value.trim()
+        };
+    } else if (paymentMethod.value === 'bankTransfer') {
+        paymentDetails = {
+            bankTransactionId: document.getElementById('bankTransactionId').value.trim(),
+            bankName: document.getElementById('bankName').value.trim()
+        };
+    }
+    
+    // Send email with order details
+    sendOrderEmail(orderSummary, {
+        name: customerName,
+        phone: customerPhone,
+        address: customerAddress,
+        email: customerEmail,
+        paymentMethod: paymentMethod.value,
+        paymentDetails: paymentDetails
+    });
+    
+    // Clear cart
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayCart();
+    updateCartCount();
+    
+    // Reset form
+    customerForm.style.display = 'none';
+    document.querySelector('.checkout-btn').textContent = 'Proceed to Checkout';
+    document.getElementById('customerName').value = '';
+    document.getElementById('customerPhone').value = '';
+    document.getElementById('customerAddress').value = '';
+    document.getElementById('customerEmail').value = '';
+    
+    // Reset payment method fields
+    if (document.getElementById('jazzCashNumber')) {
+        document.getElementById('jazzCashNumber').value = '';
+    }
+    if (document.getElementById('transactionId')) {
+        document.getElementById('transactionId').value = '';
+    }
+    if (document.getElementById('bankTransactionId')) {
+        document.getElementById('bankTransactionId').value = '';
+    }
+    if (document.getElementById('bankName')) {
+        document.getElementById('bankName').value = '';
+    }
+    
+    alert('Order submitted! You will receive a confirmation email shortly.');
+}
+
+function createOrderSummary() {
+    let totalAmount = 0;
+    let itemsList = '';
+    
+    cart.forEach(item => {
+        const itemTotal = item.price * item.quantity;
+        totalAmount += itemTotal;
+        itemsList += `${item.name} x${item.quantity} - Rs. ${itemTotal.toLocaleString()}\n`;
+    });
+    
+    return {
+        items: itemsList,
+        total: totalAmount,
+        orderNumber: 'KSM-' + Date.now()
     };
+}
+
+function sendOrderEmail(orderSummary, customerInfo) {
+    // Show loading state
+    const checkoutBtn = document.querySelector('.checkout-btn');
+    const originalText = checkoutBtn.textContent;
+    checkoutBtn.textContent = 'Processing Order...';
+    checkoutBtn.disabled = true;
+
+    // Send email using backend API
+    fetch('https://api.ksmenterprises.sbs/api/order', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            orderSummary,
+            customerInfo
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            console.log('Email sent successfully');
+            alert(`Order submitted successfully!\n\nOrder Number: ${orderSummary.orderNumber}\nCustomer: ${customerInfo.name}\nPhone: ${customerInfo.phone}\n\nOrder details have been sent to saboormadiha@gmail.com`);
+        } else {
+            throw new Error('Email sending failed: ' + (data.message || 'Unknown error'));
+        }
+    })
+    .catch(error => {
+        console.error('Email sending failed:', error);
+        
+        // Fallback to WhatsApp with improved message formatting
+        let paymentMethodText = '';
+        let paymentDetailsText = '';
+        
+        if (customerInfo.paymentMethod === 'cod') {
+            paymentMethodText = '💵 Cash on Delivery (COD)';
+        } else if (customerInfo.paymentMethod === 'jazzCash') {
+            paymentMethodText = '📱 JazzCash';
+            if (customerInfo.paymentDetails && customerInfo.paymentDetails.jazzCashNumber) {
+                paymentDetailsText = `%0A• Customer JazzCash: ${customerInfo.paymentDetails.jazzCashNumber}`;
+                if (customerInfo.paymentDetails.transactionId) {
+                    paymentDetailsText += `%0A• Transaction ID: ${customerInfo.paymentDetails.transactionId}`;
+                }
+            }
+        } else if (customerInfo.paymentMethod === 'bankTransfer') {
+            paymentMethodText = '🏦 Bank Transfer';
+            if (customerInfo.paymentDetails && customerInfo.paymentDetails.bankTransactionId) {
+                paymentDetailsText = `%0A• Transaction ID: ${customerInfo.paymentDetails.bankTransactionId}`;
+                if (customerInfo.paymentDetails.bankName) {
+                    paymentDetailsText += `%0A• Customer Bank: ${customerInfo.paymentDetails.bankName}`;
+                }
+            }
+        } else {
+            paymentMethodText = '🏦 Bank Transfer';
+        }
+        
+        const whatsappMessage = `🛒 *NEW ORDER* - ${orderSummary.orderNumber}%0A%0A👤 *Customer Details:*%0A• Name: ${customerInfo.name}%0A• Phone: ${customerInfo.phone}%0A• Address: ${customerInfo.address}${customerInfo.email ? `%0A• Email: ${customerInfo.email}` : ''}%0A%0A💳 *Payment Method:* ${paymentMethodText}${paymentDetailsText}%0A%0A📦 *Order Details:*%0A${orderSummary.items.replace(/\n/g, '%0A')}%0A%0A💰 *Total Amount: Rs. ${orderSummary.total.toLocaleString()}*%0A%0A📅 Date: ${new Date().toLocaleDateString()}%0A⏰ Time: ${new Date().toLocaleTimeString()}`;
+        
+        const whatsappLink = `https://wa.me/+923234890184?text=${whatsappMessage}`;
+        
+        // Try to open WhatsApp
+        try {
+        window.open(whatsappLink, '_blank');
+            alert(`✅ Order submitted successfully!\n\n📋 Order Number: ${orderSummary.orderNumber}\n👤 Customer: ${customerInfo.name}\n📱 Phone: ${customerInfo.phone}\n\n📱 Order details have been sent to WhatsApp.\nPlease check your WhatsApp for complete order information.\n\nIf WhatsApp didn't open automatically, please manually send the order details to +923234890184`);
+        } catch (whatsappError) {
+            console.error('WhatsApp fallback failed:', whatsappError);
+            alert(`✅ Order submitted successfully!\n\n📋 Order Number: ${orderSummary.orderNumber}\n👤 Customer: ${customerInfo.name}\n📱 Phone: ${customerInfo.phone}\n\n⚠️ Please manually send order details to WhatsApp: +923234890184\n\nOrder Details:\n${orderSummary.items}\n\nTotal: Rs. ${orderSummary.total.toLocaleString()}`);
+        }
+    })
+    .finally(() => {
+        // Reset button state
+        checkoutBtn.textContent = originalText;
+        checkoutBtn.disabled = false;
+    });
 } 
+
+// Debug function to test order process
+function testOrderProcess() {
+    console.log('Testing order process...');
+    
+    // Test cart data
+    const testCart = [
+        {
+            id: 1,
+            name: 'Test Product',
+            price: 1000,
+            quantity: 2,
+            image: 'test.jpg'
+        }
+    ];
+    
+    // Test customer info
+    const testCustomerInfo = {
+        name: 'Test Customer',
+        phone: '+923234890184',
+        address: 'Test Address',
+        email: 'test@example.com'
+    };
+    
+    // Test order summary
+    const testOrderSummary = {
+        items: 'Test Product x2 - Rs. 2,000\n',
+        total: 2000,
+        orderNumber: 'KSM-TEST-' + Date.now()
+    };
+    
+    console.log('Test data:', {
+        cart: testCart,
+        customerInfo: testCustomerInfo,
+        orderSummary: testOrderSummary
+    });
+    
+    // Test WhatsApp message
+    const whatsappMessage = `🛒 *NEW ORDER* - ${testOrderSummary.orderNumber}%0A%0A👤 *Customer Details:*%0A• Name: ${testCustomerInfo.name}%0A• Phone: ${testCustomerInfo.phone}%0A• Address: ${testCustomerInfo.address}%0A• Email: ${testCustomerInfo.email}%0A%0A📦 *Order Details:*%0A${testOrderSummary.items}%0A💰 *Total Amount: Rs. ${testOrderSummary.total.toLocaleString()}*%0A%0A📅 Date: ${new Date().toLocaleDateString()}%0A⏰ Time: ${new Date().toLocaleTimeString()}`;
+    
+    console.log('WhatsApp message:', whatsappMessage);
+    console.log('WhatsApp link:', `https://wa.me/+923234890184?text=${whatsappMessage}`);
+    
+    alert('Test completed! Check console for details.');
+}
+
+// Add test function to window for easy access
+window.testOrderProcess = testOrderProcess; 
