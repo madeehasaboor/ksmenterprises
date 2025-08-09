@@ -156,7 +156,7 @@
                         <h3>Exterior Protection Set</h3>
                         <span class="bundle-badge">NEW</span>
                     </div>
-                    <div class="bundle-slideshow">
+                    <div class="bundle-slideshow" id="exterior-protection">
                         <div class="slideshow-container">
                             <div class="slide fade">
                                 <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="AIM Hard Wax">
@@ -214,7 +214,7 @@
                         <h3>Engine Care Combo</h3>
                         <span class="bundle-badge">LIMITED</span>
                     </div>
-                    <div class="bundle-slideshow">
+                    <div class="bundle-slideshow" id="engine-care">
                         <div class="slideshow-container">
                             <div class="slide fade">
                                 <img src="products/CLEANERS/A-125 AIM ENGINE CLEANER.jpeg" alt="A-125 AIM Engine Cleaner">
@@ -269,7 +269,7 @@
                         <h3>Premium Detailing Kit</h3>
                         <span class="bundle-badge featured-badge">FEATURED</span>
                     </div>
-                    <div class="bundle-slideshow">
+                    <div class="bundle-slideshow" id="premium-detailing">
                         <div class="slideshow-container">
                             <div class="slide fade">
                                 <img src="products/CAR WASH & WAX/F1-113 CERAMIC LIQUID WAX.jpeg" alt="F1-113 Ceramic Liquid Wax">
@@ -330,7 +330,7 @@
                         <h3>Budget Starter Pack</h3>
                         <span class="bundle-badge">VALUE</span>
                     </div>
-                    <div class="bundle-slideshow">
+                    <div class="bundle-slideshow" id="budget-starter">
                         <div class="slideshow-container">
                             <div class="slide fade">
                                 <img src="products/CAR WASH & WAX/AW-102 AW WASH & WAX.jpeg" alt="AW-102 AW Wash & Wax">
@@ -679,8 +679,11 @@
         };
         
         function changeSlide(direction, slideshowId) {
-            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
-            const dots = document.querySelectorAll(`#${slideshowId} .dot`);
+            const slideshowContainer = document.querySelector(`#${slideshowId}`);
+            if (!slideshowContainer) return;
+            
+            const slides = slideshowContainer.querySelectorAll('.slide');
+            const dots = slideshowContainer.querySelectorAll('.dot');
             
             slideIndex[slideshowId] += direction;
             
@@ -702,8 +705,11 @@
         
         function currentSlide(n, slideshowId) {
             slideIndex[slideshowId] = n;
-            const slides = document.querySelectorAll(`#${slideshowId} .slide`);
-            const dots = document.querySelectorAll(`#${slideshowId} .dot`);
+            const slideshowContainer = document.querySelector(`#${slideshowId}`);
+            if (!slideshowContainer) return;
+            
+            const slides = slideshowContainer.querySelectorAll('.slide');
+            const dots = slideshowContainer.querySelectorAll('.dot');
             
             // Hide all slides
             slides.forEach(slide => slide.style.display = 'none');
@@ -724,19 +730,25 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
             
-            // Initialize slideshows for all bundles
+            // Initialize slideshows for all bundles that have slideshows
             const slideshowIds = ['complete-car-care', 'exterior-protection', 'engine-care', 'engine-essentials', 'premium-detailing', 'budget-starter', 'interior-essentials'];
             
             slideshowIds.forEach(id => {
-                // Show first slide and activate first dot
-                const slides = document.querySelectorAll(`#${id} .slide`);
-                const dots = document.querySelectorAll(`#${id} .dot`);
+                // Check if this bundle actually has a slideshow
+                const slideshowContainer = document.querySelector(`#${id}`);
+                if (!slideshowContainer) return;
+                
+                const slides = slideshowContainer.querySelectorAll('.slide');
+                const dots = slideshowContainer.querySelectorAll('.dot');
                 
                 if (slides.length > 0) {
                     // Hide all slides first
                     slides.forEach(slide => slide.style.display = 'none');
                     // Show first slide
                     slides[0].style.display = 'block';
+                    
+                    // Start auto-advance only if there are slides
+                    autoAdvance(id);
                 }
                 
                 if (dots.length > 0) {
@@ -745,9 +757,6 @@
                     // Activate first dot
                     dots[0].classList.add('active');
                 }
-                
-                // Start auto-advance
-                autoAdvance(id);
             });
         });
     </script>
