@@ -2045,7 +2045,7 @@ body {
         background: rgba(0, 0, 0, 0.8);
     }
 
-    .slide:first-child {
+    .slide.active {
         display: flex;
     }
 

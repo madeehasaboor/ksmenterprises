@@ -291,6 +291,26 @@
                                 <img src="products/CLEANERS/F1-117 GLASS CLEANER.jpeg" alt="F1-117 Glass Cleaner">
                                 <span>F1-117 Glass Cleaner</span>
                             </div>
+                            <div class="slide fade">
+                                <img src="products/CLEANERS/F1-119 DASHBOARD SPRAY.jpeg" alt="Dashboard Spray Formula 1">
+                                <span>Dashboard Spray Formula 1</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/CLEANERS/A-128 AIM FOAM CLEANER.jpeg" alt="Foam Cleaner AIM">
+                                <span>Foam Cleaner AIM</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/CLEANERS/A-125 AIM LEATHER SPRAY.jpeg" alt="Leather Spray AIM">
+                                <span>Leather Spray AIM</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/MICRO FIBER CLOTHES/MICROFIBER CLOTH AIM.jpeg" alt="Microfibre Cloth AIM">
+                                <span>Microfibre Cloth AIM</span>
+                            </div>
+                            <div class="slide fade">
+                                <img src="products/PERFUMES/PERFUME CARD.jpeg" alt="Perfume Card">
+                                <span>Perfume Card</span>
+                            </div>
                         </div>
                         <div class="slideshow-controls">
                             <button class="prev" onclick="changeSlide(-1, 'premium-detailing')">&#10094;</button>
@@ -302,6 +322,11 @@
                             <span class="dot" onclick="currentSlide(3, 'premium-detailing')"></span>
                             <span class="dot" onclick="currentSlide(4, 'premium-detailing')"></span>
                             <span class="dot" onclick="currentSlide(5, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(6, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(7, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(8, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(9, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(10, 'premium-detailing')"></span>
                         </div>
                     </div>
                     <div class="bundle-products">
@@ -312,6 +337,11 @@
                             <li>F1-119 Leather Cleaner & Conditioner (500ml)</li>
                             <li>Microfiber Towel Pack (8 pieces)</li>
                             <li>F1-117 Glass Cleaner (500ml)</li>
+                            <li>Dashboard Spray Formula 1 (500ml)</li>
+                            <li>Foam Cleaner AIM (500ml)</li>
+                            <li>Leather Spray AIM (500ml)</li>
+                            <li>Microfibre Cloth AIM (1 piece)</li>
+                            <li>Perfume Card (1 piece)</li>
                         </ul>
                     </div>
                     <div class="bundle-pricing">
@@ -695,11 +725,11 @@
             }
             
             // Hide all slides
-            slides.forEach(slide => slide.style.display = 'none');
+            slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
             
             // Show current slide
-            slides[slideIndex[slideshowId] - 1].style.display = 'block';
+            slides[slideIndex[slideshowId] - 1].classList.add('active');
             dots[slideIndex[slideshowId] - 1].classList.add('active');
         }
         
@@ -712,11 +742,11 @@
             const dots = slideshowContainer.querySelectorAll('.dot');
             
             // Hide all slides
-            slides.forEach(slide => slide.style.display = 'none');
+            slides.forEach(slide => slide.classList.remove('active'));
             dots.forEach(dot => dot.classList.remove('active'));
             
             // Show current slide
-            slides[n - 1].style.display = 'block';
+            slides[n - 1].classList.add('active');
             dots[n - 1].classList.add('active');
         }
         
@@ -743,9 +773,9 @@
                 
                 if (slides.length > 0) {
                     // Hide all slides first
-                    slides.forEach(slide => slide.style.display = 'none');
+                    slides.forEach(slide => slide.classList.remove('active'));
                     // Show first slide
-                    slides[0].style.display = 'block';
+                    slides[0].classList.add('active');
                     
                     // Start auto-advance only if there are slides
                     autoAdvance(id);
