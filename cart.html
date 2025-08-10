@@ -66,6 +66,89 @@
                             <label for="customerEmail">Email (Optional)</label>
                             <input type="email" id="customerEmail">
                         </div>
+                        
+                        <!-- Payment Method Section -->
+                        <div class="payment-method">
+                            <h4>Payment Method</h4>
+                            <div class="payment-options">
+                                <div class="payment-option">
+                                    <input type="radio" id="cod" name="paymentMethod" value="cod" checked>
+                                    <label for="cod">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                        Cash on Delivery (COD)
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="jazzCash" name="paymentMethod" value="jazzCash">
+                                    <label for="jazzCash">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        JazzCash
+                                    </label>
+                                </div>
+                                <div class="payment-option">
+                                    <input type="radio" id="bankTransfer" name="paymentMethod" value="bankTransfer">
+                                    <label for="bankTransfer">
+                                        <i class="fas fa-university"></i>
+                                        Bank Transfer
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <!-- COD Information -->
+                            <div class="cod-info" id="codInfo">
+                                <div class="info-box">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p><strong>Cash on Delivery:</strong> Pay when you receive your order. No advance payment required.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- JazzCash Information -->
+                            <div class="jazzcash-info" id="jazzCashInfo" style="display: none;">
+                                <div class="info-box">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p><strong>JazzCash:</strong> Send payment via JazzCash and provide transaction details.</p>
+                                    <div class="jazzcash-details">
+                                        <p><strong>JazzCash Number:</strong> +923234890184</p>
+                                        <p><strong>Account Name:</strong> KSM Enterprises</p>
+                                        <p><strong>Instructions:</strong> Send the exact amount and keep the transaction receipt</p>
+                                    </div>
+                                    <div class="jazzcash-form" style="margin-top: 15px;">
+                                        <div class="form-group">
+                                            <label for="jazzCashNumber">Your JazzCash Number *</label>
+                                            <input type="tel" id="jazzCashNumber" placeholder="03XXXXXXXXX" maxlength="11">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="transactionId">Transaction ID (Optional)</label>
+                                            <input type="text" id="transactionId" placeholder="Enter transaction ID if available">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bank Transfer Information -->
+                            <div class="bank-info" id="bankInfo" style="display: none;">
+                                <div class="info-box">
+                                    <i class="fas fa-info-circle"></i>
+                                    <p><strong>Bank Transfer:</strong> Transfer the amount to our bank account and provide transaction details.</p>
+                                    <div class="bank-details">
+                                        <p><strong>Bank:</strong> Meezan Bank</p>
+                                        <p><strong>Account Title:</strong> M Arslan Ayub</p>
+                                        <p><strong>Account Number:</strong> 02740104197297</p>
+                                        <p><strong>Instructions:</strong> Transfer the exact amount and keep the transaction receipt</p>
+                                    </div>
+                                    <div class="bank-form" style="margin-top: 15px;">
+                                        <div class="form-group">
+                                            <label for="bankTransactionId">Transaction ID/Reference Number *</label>
+                                            <input type="text" id="bankTransactionId" placeholder="Enter bank transaction ID or reference number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="bankName">Your Bank Name (Optional)</label>
+                                            <input type="text" id="bankName" placeholder="e.g., HBL, UBL, MCB, etc.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                     <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
@@ -111,6 +194,6 @@
         </div>
     </footer>
 
-    <script src="JS files/cart.js"></script>
+    <script src="JS files/cart-updated.js"></script>
 </body>
 </html> 
