@@ -199,9 +199,51 @@
          filter: brightness(1.2) contrast(1.2) saturate(1.3);
          border: 2px solid rgba(255, 215, 0, 0.3);
        }
-    .slide.active {
-      opacity: 1;
-    }
+          .slide.active {
+       opacity: 1;
+     }
+     
+     .hero-title {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       z-index: 10;
+       text-align: center;
+     }
+     
+     .hero-title h1 {
+       font-size: 4rem;
+       color: #FFD700;
+       font-weight: 900;
+       text-transform: uppercase;
+       letter-spacing: 3px;
+       text-shadow: 
+         0 0 20px rgba(255, 215, 0, 0.8),
+         0 0 40px rgba(255, 215, 0, 0.6),
+         0 0 60px rgba(255, 215, 0, 0.4),
+         3px 3px 6px rgba(0, 0, 0, 0.8);
+       margin: 0;
+       animation: titleGlow 3s ease-in-out infinite alternate;
+     }
+     
+     @keyframes titleGlow {
+       0% {
+         text-shadow: 
+           0 0 20px rgba(255, 215, 0, 0.8),
+           0 0 40px rgba(255, 215, 0, 0.6),
+           0 0 60px rgba(255, 215, 0, 0.4),
+           3px 3px 6px rgba(0, 0, 0, 0.8);
+       }
+       100% {
+         text-shadow: 
+           0 0 30px rgba(255, 215, 0, 1),
+           0 0 50px rgba(255, 215, 0, 0.8),
+           0 0 70px rgba(255, 215, 0, 0.6),
+           0 0 90px rgba(255, 215, 0, 0.4),
+           3px 3px 6px rgba(0, 0, 0, 0.8);
+       }
+     }
                    .slide-overlay {
         position: absolute;
         top: 0;
@@ -275,14 +317,22 @@
        .hero-content p {
          font-size: 1em;
        }
-       .slide {
-         background-size: contain;
-         background-position: center;
-       }
-       .slide-overlay {
-         background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.3) 100%);
-         backdrop-filter: blur(1px);
-       }
+               .slide {
+          background-size: contain;
+          background-position: center;
+        }
+        .hero-title h1 {
+          font-size: 1.8rem;
+          letter-spacing: 1px;
+        }
+        .hero-title h1 {
+          font-size: 2.5rem;
+          letter-spacing: 2px;
+        }
+        .slide-overlay {
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.3) 100%);
+          backdrop-filter: blur(1px);
+        }
        header {
          flex-direction: column;
          gap: 10px;
@@ -598,53 +648,57 @@
     </div>
   </section>
 
-           <section class="hero">
-      <div class="slideshow">
-        <div class="slide active" style="background-image: url('Annotation 2025-08-07 235825.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232957.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 233024.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232809.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232741.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232705.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232642.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232558.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232329.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Annotation 2025-08-07 232212.png')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Complete Car Care Kit.jpg')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Premium Detailing Kit.jpg')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Engine Care Combo.jpg')">
-          <div class="slide-overlay"></div>
-        </div>
-        <div class="slide" style="background-image: url('Interior Care Package.jpg')">
-          <div class="slide-overlay"></div>
-        </div>
-      </div>
+                       <section class="hero">
+       <div class="slideshow">
+         <div class="slide active" style="background-image: url('Annotation 2025-08-07 235825.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232957.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 233024.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232809.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232741.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232705.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232642.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232558.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232329.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Annotation 2025-08-07 232212.png')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Complete Car Care Kit.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Premium Detailing Kit.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Engine Care Combo.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+         <div class="slide" style="background-image: url('Interior Care Package.jpg')">
+           <div class="slide-overlay"></div>
+         </div>
+       </div>
+       
+       <div class="hero-title">
+         <h1>Our Premium Products</h1>
+       </div>
 
-    </section>
+     </section>
 
   <!-- Delivery Banner Section -->
   <div style="background: #000000; color: #FFD700; text-align: center; padding: 8px; font-weight: bold; font-size: 0.9em; text-transform: uppercase; letter-spacing: 0.5px; overflow: hidden; white-space: nowrap;">
