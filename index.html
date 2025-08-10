@@ -142,7 +142,7 @@
       text-decoration: none;
       font-size: 0.9em;
     }
-         .hero {
+                   .hero {
        position: relative;
        height: 80vh;
        display: flex;
@@ -154,7 +154,7 @@
        padding-left: 5%;
      }
     
-         .hero::before {
+                   .hero::before {
        content: '';
        position: absolute;
        top: 0;
@@ -165,9 +165,19 @@
        pointer-events: none;
        z-index: 1;
      }
-    
-    
-    .slideshow {
+     
+     @keyframes heroLightShift {
+       0%, 100% {
+         opacity: 1;
+         transform: scale(1);
+       }
+       50% {
+         opacity: 0.8;
+         transform: scale(1.05);
+       }
+     }
+     
+     .slideshow {
       position: absolute;
       top: 0;
       left: 0;
