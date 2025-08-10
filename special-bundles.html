@@ -8,18 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="brand logos/auto-champian-logo.jpg.jfif" alt="Auto Champain Logo" class="logo-image">
-            <h1>Auto Champain</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="brand logos/auto-champian-logo.jpg.jfif" alt="Auto Champain Logo" class="logo-image">
+                <h1>AUTO CHAMPAIN</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="special-bundles.html" class="active">Special Bundles</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+            </div>
         </div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="shop.html">Shop</a>
-            <a href="special-bundles.html" class="active">Special Bundles</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
     </header>
 
     <!-- Special Bundles Section -->
