@@ -2003,7 +2003,7 @@ body {
     .slideshow-container {
         position: relative;
         width: 100%;
-        height: 220px;
+        height: 240px;
         border-radius: 10px;
         overflow: hidden;
     }
@@ -2023,6 +2023,7 @@ body {
         transform: scale(0.9);
         transition: all 0.5s ease-in-out;
         padding: 15px;
+        box-sizing: border-box;
     }
 
     .slide.active {
@@ -2034,12 +2035,14 @@ body {
     .slide img {
         width: 100%;
         height: 150px;
-        object-fit: cover;
+        object-fit: contain;
         border-radius: 8px;
         border: 3px solid #FFD700;
         margin-bottom: 10px;
         box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
         transition: all 0.3s ease;
+        background: rgba(0, 0, 0, 0.1);
+        padding: 5px;
     }
 
     .slide:hover img {
@@ -2074,10 +2077,11 @@ body {
         margin-top: 15px;
         padding: 0 10px;
         position: absolute;
-        bottom: 10px;
+        bottom: 15px;
         left: 0;
         right: 0;
         z-index: 10;
+        pointer-events: none;
     }
 
     .slideshow-controls .prev, .slideshow-controls .next {
@@ -2095,6 +2099,7 @@ body {
         font-size: 14px;
         font-weight: bold;
         backdrop-filter: blur(10px);
+        pointer-events: auto;
     }
 
     .slideshow-controls .prev:hover, .slideshow-controls .next:hover {
@@ -2117,6 +2122,8 @@ body {
         background: rgba(0, 0, 0, 0.6);
         border-radius: 20px;
         backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 5;
     }
 
     .slideshow-dots .dot {
@@ -2159,13 +2166,27 @@ body {
     }
 
     /* Responsive adjustments for slideshow */
-    @media (max-width: 768px) {
+    @media (min-width: 1024px) {
         .slideshow-container {
-            height: 180px;
+            height: 280px;
         }
 
         .slide img {
-            height: 120px;
+            height: 180px;
+            object-fit: contain;
+            padding: 8px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .slideshow-container {
+            height: 200px;
+        }
+
+        .slide img {
+            height: 140px;
+            object-fit: contain;
+            padding: 3px;
         }
 
         .slide span {
@@ -2187,11 +2208,13 @@ body {
 
     @media (max-width: 480px) {
         .slideshow-container {
-            height: 160px;
+            height: 180px;
         }
 
         .slide img {
-            height: 100px;
+            height: 120px;
+            object-fit: contain;
+            padding: 2px;
         }
 
         .slide span {
