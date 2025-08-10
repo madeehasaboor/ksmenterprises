@@ -407,10 +407,81 @@
                     <button class="add-to-cart-btn" onclick="addBundleToCart('budget-starter', 950, 'Budget Starter Pack')">
                         <i class="fas fa-shopping-cart"></i> Add to Cart
                     </button>
-                </div>
-            </div>
-        </div>
-    </section>
+                                 </div>
+
+                 <!-- Bundle 7: Complete Car - Basic -->
+                 <div class="bundle-card" id="complete-car-basic">
+                     <div class="bundle-header">
+                         <h3>Complete Car - Basic</h3>
+                         <span class="bundle-badge">BASIC</span>
+                     </div>
+                     <div class="bundle-slideshow" id="complete-car-basic">
+                         <div class="slide fade">
+                             <img src="products/CAR POLISH & SHINNERS/cosmic-polish.jpg" alt="Cosmic Polish">
+                             <span>Cosmic Polish</span>
+                         </div>
+                         <div class="slide fade">
+                             <img src="products/CAR WASH SHAMPOOS/aim-shampoo-1l.jpg" alt="Shampoo 1 Litre AIM">
+                             <span>Shampoo 1 Litre AIM</span>
+                         </div>
+                         <div class="slide fade">
+                             <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Towel">
+                             <span>Towel</span>
+                         </div>
+                         <div class="slide fade">
+                             <img src="products/CLEANERS/A-128 AIM FOAMY CLEANER.jpeg" alt="Dashboard Spray AIM">
+                             <span>Dashboard Spray AIM</span>
+                         </div>
+                         <div class="slide fade">
+                             <img src="products/CLEANERS/A-128 AIM FOAMY CLEANER.jpeg" alt="Foam Cleaner">
+                             <span>Foam Cleaner</span>
+                         </div>
+                         <div class="slide fade">
+                             <img src="products/CLEANERS/A-126 AIM TIRE FOAM.jpeg" alt="Tire Foam">
+                             <span>Tire Foam</span>
+                         </div>
+                         <div class="slide fade">
+                             <img src="products/CLEANERS/A-125 AIM ENGINE CLEANER.jpeg" alt="Engine Degreaser">
+                             <span>Engine Degreaser</span>
+                         </div>
+                         <div class="slideshow-controls">
+                             <button class="prev" onclick="changeSlide(-1, 'complete-car-basic')">&#10094;</button>
+                             <button class="next" onclick="changeSlide(1, 'complete-car-basic')">&#10095;</button>
+                         </div>
+                         <div class="slideshow-dots">
+                             <span class="dot" onclick="currentSlide(1, 'complete-car-basic')"></span>
+                             <span class="dot" onclick="currentSlide(2, 'complete-car-basic')"></span>
+                             <span class="dot" onclick="currentSlide(3, 'complete-car-basic')"></span>
+                             <span class="dot" onclick="currentSlide(4, 'complete-car-basic')"></span>
+                             <span class="dot" onclick="currentSlide(5, 'complete-car-basic')"></span>
+                             <span class="dot" onclick="currentSlide(6, 'complete-car-basic')"></span>
+                             <span class="dot" onclick="currentSlide(7, 'complete-car-basic')"></span>
+                         </div>
+                     </div>
+                     <div class="bundle-products">
+                         <h4>Includes:</h4>
+                         <ul>
+                             <li>Cosmic Polish (500ml)</li>
+                             <li>Shampoo 1 Litre AIM (1L)</li>
+                             <li>Towel (1 piece)</li>
+                             <li>Dashboard Spray AIM (500ml)</li>
+                             <li>Foam Cleaner (500ml)</li>
+                             <li>Tire Foam (500ml)</li>
+                             <li>Engine Degreaser (500ml)</li>
+                         </ul>
+                     </div>
+                     <div class="bundle-pricing">
+                         <div class="original-price">₨ 2,100</div>
+                         <div class="bundle-price">₨ 1,650</div>
+                         <div class="savings">Save ₨ 450 (21% OFF)</div>
+                     </div>
+                     <button class="add-to-cart-btn" onclick="addBundleToCart('complete-car-basic', 1650, 'Complete Car - Basic')">
+                         <i class="fas fa-shopping-cart"></i> Add to Cart
+                     </button>
+                 </div>
+             </div>
+         </div>
+     </section>
 
     <footer>
         <div class="container">
@@ -538,14 +609,15 @@
         document.head.appendChild(style);
         
         // Enhanced Slideshow functionality
-        let slideIndex = { 
-            'complete-car-care': 1,
-            'interior-care': 1,
-            'exterior-protection': 1,
-            'engine-care': 1,
-            'premium-detailing': 1,
-            'budget-starter': 1
-        };
+                 let slideIndex = { 
+             'complete-car-care': 1,
+             'interior-care': 1,
+             'exterior-protection': 1,
+             'engine-care': 1,
+             'premium-detailing': 1,
+             'budget-starter': 1,
+             'complete-car-basic': 1
+         };
         
         let autoAdvanceTimers = {};
         let isPaused = {};
@@ -664,8 +736,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             updateCartCount();
             
-            // Initialize slideshows for all bundles that have slideshows
-            const slideshowIds = ['complete-car-care', 'interior-care', 'exterior-protection', 'engine-care', 'premium-detailing', 'budget-starter'];
+                         // Initialize slideshows for all bundles that have slideshows
+             const slideshowIds = ['complete-car-care', 'interior-care', 'exterior-protection', 'engine-care', 'premium-detailing', 'budget-starter', 'complete-car-basic'];
             
             slideshowIds.forEach(id => {
                 // Check if this bundle actually has a slideshow
