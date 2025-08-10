@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Bundles - Auto Champain</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="brand logos/auto-champian-logo.jpg.jfif" alt="Auto Champain Logo" class="logo-image">
+            <h1>Auto Champain</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="special-bundles.html" class="active">Special Bundles</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Special Bundles Section -->
+    <section id="bundles" class="bundles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Exclusive Car Care Bundles</h2>
+                <p class="section-subtitle">Save big with our specially curated product combinations</p>
+                <div class="section-decoration">
+                    <div class="decoration-line"></div>
+                    <i class="fas fa-gem"></i>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <div class="bundles-grid">
+                <!-- Bundle 1: Complete Car Care Kit -->
+                <div class="bundle-card" id="complete-car-care">
+                    <div class="bundle-header">
+                        <h3>Complete Car Care Kit</h3>
+                        <span class="bundle-badge">BEST SELLER</span>
+                    </div>
+                    <div class="bundle-slideshow" id="complete-car-care">
+                        <div class="slide fade">
+                            <img src="products/CAR WASH & WAX/F1-113 CERAMIC LIQUID WAX.jpeg" alt="F1-113 Ceramic Liquid Wax">
+                            <span>F1-113 CERAMIC WAX</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg" alt="F1-132 Wheel & Tire Foam Cleaner">
+                            <span>F1-132 TIRE CLEANER</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfiber Towel Pack">
+                            <span>MICROFIBER PACK</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-117 GLASS CLEANER.jpeg" alt="F1-117 Glass Cleaner">
+                            <span>F1-117 GLASS CLEANER</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="F1-130 SCRATCH OUT">
+                            <span>F1-130 SCRATCH OUT</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg" alt="F1-101 CARNAUBA WASH + WAX">
+                            <span>F1-101 WASH + WAX</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-131 AIM GLASS CLEANER.jpeg" alt="A-131 AIM Glass Cleaner">
+                            <span>A-131 GLASS CLEANER</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'complete-car-care')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'complete-car-care')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'complete-car-care')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'complete-car-care')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'complete-car-care')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'complete-car-care')"></span>
+                            <span class="dot" onclick="currentSlide(5, 'complete-car-care')"></span>
+                            <span class="dot" onclick="currentSlide(6, 'complete-car-care')"></span>
+                            <span class="dot" onclick="currentSlide(7, 'complete-car-care')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-products">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>F1-113 Ceramic Liquid Wax (500ml)</li>
+                            <li>F1-132 Wheel & Tire Foam Cleaner (500ml)</li>
+                            <li>Microfiber Towel Pack (6 pieces)</li>
+                            <li>F1-117 Glass Cleaner (500ml)</li>
+                            <li>F1-130 SCRATCH OUT Paste Polishing Compound (227g)</li>
+                        </ul>
+                    </div>
+                    <div class="bundle-pricing">
+                        <div class="original-price">₨ 2,800</div>
+                        <div class="bundle-price">₨ 2,200</div>
+                        <div class="savings">Save ₨ 600 (21% OFF)</div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addBundleToCart('complete-car-care', 2200, 'Complete Car Care Kit')">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Bundle 2: Interior Care Package -->
+                <div class="bundle-card" id="interior-care">
+                    <div class="bundle-header">
+                        <h3>Interior Care Package</h3>
+                        <span class="bundle-badge">POPULAR</span>
+                    </div>
+                    <div class="bundle-slideshow" id="interior-care">
+                        <div class="slide fade">
+                            <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="AIM Hard Wax">
+                            <span>AIM HARD WAX</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR POLISH & SHINNERS/scratchout paste.jpeg" alt="F1-130 SCRATCH OUT">
+                            <span>F1-130 SCRATCH OUT</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg" alt="F1-101 CARNAUBA WASH + WAX">
+                            <span>F1-101 WASH + WAX</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-126 AIM TIRE FOAM.jpeg" alt="A-126 AIM TIRE FOAM">
+                            <span>A-126 TIRE FOAM</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="AIM Microfibre Polishing Cloth">
+                            <span>MICROFIBRE CLOTH</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-119 LEATHER CLEANER +CONDITIONER.jpeg" alt="F1-119 Leather Cleaner & Conditioner">
+                            <span>F1-119 LEATHER CLEANER</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-133 AIM LEATHER CLEANER.jpeg" alt="A-133 AIM Leather Cleaner">
+                            <span>A-133 LEATHER CLEANER</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'interior-care')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'interior-care')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'interior-care')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'interior-care')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'interior-care')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'interior-care')"></span>
+                            <span class="dot" onclick="currentSlide(5, 'interior-care')"></span>
+                            <span class="dot" onclick="currentSlide(6, 'interior-care')"></span>
+                            <span class="dot" onclick="currentSlide(7, 'interior-care')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-products">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>EASY KANGAROO® Cosmic Car Wax</li>
+                            <li>F1-130 SCRATCH OUT Paste Polishing Compound (227g)</li>
+                            <li>F1-101 CARNAUBA WASH + WAX (473ml)</li>
+                            <li>A-126 AIM TIRE FOAM (650ml)</li>
+                            <li>AIM Microfibre Polishing Cloth</li>
+                        </ul>
+                    </div>
+                    <div class="bundle-pricing">
+                        <div class="original-price">₨ 2,400</div>
+                        <div class="bundle-price">₨ 1,950</div>
+                        <div class="savings">Save ₨ 450 (19% OFF)</div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addBundleToCart('interior-care', 1950, 'Interior Care Package')">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Bundle 3: Exterior Protection Set -->
+                <div class="bundle-card" id="exterior-protection">
+                    <div class="bundle-header">
+                        <h3>Exterior Protection Set</h3>
+                        <span class="bundle-badge">NEW</span>
+                    </div>
+                    <div class="bundle-slideshow" id="exterior-protection">
+                        <div class="slide fade">
+                            <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="AIM Hard Wax">
+                            <span>AIM Hard Wax</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR WASH & WAX/F1-114 CERAMIC SPRAY WAX.jpeg" alt="F1-114 Ceramic Spray Wax">
+                            <span>F1-114 Ceramic Spray Wax</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR POLISH & SHINNERS/black and gold tire shine.jpeg" alt="Black & Gold Tire Shine">
+                            <span>Black & Gold Tire Shine</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfiber Towel Pack">
+                            <span>Microfiber Towel Pack</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'exterior-protection')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'exterior-protection')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'exterior-protection')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'exterior-protection')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'exterior-protection')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'exterior-protection')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-products">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>AIM Hard Wax (500ml)</li>
+                            <li>F1-114 Ceramic Spray Wax (500ml)</li>
+                            <li>Black & Gold Tire Shine (500ml)</li>
+                            <li>Microfiber Towel Pack (4 pieces)</li>
+                        </ul>
+                    </div>
+                    <div class="bundle-pricing">
+                        <div class="original-price">₨ 2,600</div>
+                        <div class="bundle-price">₨ 2,100</div>
+                        <div class="savings">Save ₨ 500 (19% OFF)</div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addBundleToCart('exterior-protection', 2100, 'Exterior Protection Set')">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Bundle 4: Engine Care Combo -->
+                <div class="bundle-card" id="engine-care">
+                    <div class="bundle-header">
+                        <h3>Engine Care Combo</h3>
+                        <span class="bundle-badge">LIMITED</span>
+                    </div>
+                    <div class="bundle-slideshow" id="engine-care">
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-125 AIM ENGINE CLEANER.jpeg" alt="A-125 AIM Engine Cleaner">
+                            <span>A-125 AIM Engine Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-109 INJECTOR CLEANER.jpeg" alt="A-109 AIM Injector Cleaner">
+                            <span>A-109 AIM Injector Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-123 AIM ANTI-RUST.jpeg" alt="A-123 AIM Anti-Rust">
+                            <span>A-123 AIM Anti-Rust</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-135 AIM FUEL INJECTOR CLEANER.jpeg" alt="A-135 AIM Fuel Injector Cleaner">
+                            <span>A-135 AIM Fuel Injector Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-136 AIM CATALYIC SYSTEM CLEANER.jpeg" alt="A-136 AIM Catalytic System Cleaner">
+                            <span>A-136 AIM Catalytic System Cleaner</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'engine-care')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'engine-care')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'engine-care')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'engine-care')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'engine-care')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'engine-care')"></span>
+                            <span class="dot" onclick="currentSlide(5, 'engine-care')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-products">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>A-125 AIM Engine Cleaner (500ml)</li>
+                            <li>A-109 AIM Injector Cleaner (300ml)</li>
+                            <li>A-123 AIM Anti-Rust (300ml)</li>
+                            <li>A-135 AIM Fuel Injector Cleaner (300ml)</li>
+                            <li>A-136 AIM Catalytic System Cleaner (300ml)</li>
+                        </ul>
+                    </div>
+                    <div class="bundle-pricing">
+                        <div class="original-price">₨ 2,200</div>
+                        <div class="bundle-price">₨ 1,750</div>
+                        <div class="savings">Save ₨ 450 (20% OFF)</div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addBundleToCart('engine-care', 1750, 'Engine Care Combo')">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+
+                <!-- Bundle 5: Premium Detailing Kit -->
+                <div class="bundle-card featured" id="premium-detailing">
+                    <div class="bundle-header">
+                        <h3>Premium Detailing Kit</h3>
+                        <span class="bundle-badge featured-badge">FEATURED</span>
+                    </div>
+                    <div class="bundle-slideshow" id="premium-detailing">
+                        <div class="slide fade">
+                            <img src="products/CAR WASH & WAX/F1-113 CERAMIC LIQUID WAX.jpeg" alt="F1-113 Ceramic Liquid Wax">
+                            <span>F1-113 Ceramic Liquid Wax</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-132 WHEEL+TIRE FOAM CLEANER.jpeg" alt="F1-132 Wheel & Tire Foam Cleaner">
+                            <span>F1-132 Wheel & Tire Foam Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-119 LEATHER CLEANER +CONDTIONER.jpeg" alt="F1-119 Leather Cleaner & Conditioner">
+                            <span>F1-119 Leather Cleaner & Conditioner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfiber Towel Pack">
+                            <span>Microfiber Towel Pack (4 pieces)</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-117 GLASS CLEANER.jpeg" alt="F1-117 Glass Cleaner">
+                            <span>F1-117 Glass Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/F1-119 LEATHER CLEANER +CONDTIONER.jpeg" alt="Dashboard Spray Formula 1">
+                            <span>Dashboard Spray Formula 1</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-128 AIM FOAMY CLEANER.jpeg" alt="Foam Cleaner AIM">
+                            <span>Foam Cleaner AIM</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-133 AIM LEATHER CLEANER.jpeg" alt="Leather Spray AIM">
+                            <span>Leather Spray AIM</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL PACK OF 4.jpeg" alt="Microfibre Cloth AIM">
+                            <span>Microfibre Cloth AIM</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-131 AIM GLASS CLEANER.jpeg" alt="Perfume Card">
+                            <span>Perfume Card</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'premium-detailing')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'premium-detailing')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(5, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(6, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(7, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(8, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(9, 'premium-detailing')"></span>
+                            <span class="dot" onclick="currentSlide(10, 'premium-detailing')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-products">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>F1-113 Ceramic Liquid Wax (500ml)</li>
+                            <li>F1-132 Wheel & Tire Foam Cleaner (500ml)</li>
+                            <li>F1-119 Leather Cleaner & Conditioner (500ml)</li>
+                            <li>Microfiber Towel Pack (8 pieces)</li>
+                            <li>F1-117 Glass Cleaner (500ml)</li>
+                            <li>Dashboard Spray Formula 1 (500ml)</li>
+                            <li>Foam Cleaner AIM (500ml)</li>
+                            <li>Leather Spray AIM (500ml)</li>
+                            <li>Microfibre Cloth AIM (1 piece)</li>
+                            <li>Perfume Card (1 piece)</li>
+                        </ul>
+                    </div>
+                    <div class="bundle-pricing">
+                        <div class="original-price">₨ 3,200</div>
+                        <div class="bundle-price">₨ 2,500</div>
+                        <div class="savings">Save ₨ 700 (22% OFF)</div>
+                    </div>
+                    <button class="add-to-cart-btn featured-btn" onclick="addBundleToCart('premium-detailing', 2500, 'Premium Detailing Kit')">
+                        <i class="fas fa-crown"></i> Premium Deal
+                    </button>
+                </div>
+
+                <!-- Bundle 6: Budget Starter Pack -->
+                <div class="bundle-card" id="budget-starter">
+                    <div class="bundle-header">
+                        <h3>Budget Starter Pack</h3>
+                        <span class="bundle-badge">VALUE</span>
+                    </div>
+                    <div class="bundle-slideshow" id="budget-starter">
+                        <div class="slide fade">
+                            <img src="products/CAR WASH & WAX/AW-102 AW WASH & WAX.jpeg" alt="AW-102 AW Wash & Wax">
+                            <span>AW-102 AW Wash & Wax</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/MICRO FIBER CLOTHES/MICROFIBER TOWEL (5).jpeg" alt="Microfiber Towel (5 pieces)">
+                            <span>Microfiber Towel (5 pieces)</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CLEANERS/A-131 AIM GLASS CLEANER.jpeg" alt="A-131 AIM Glass Cleaner">
+                            <span>A-131 AIM Glass Cleaner</span>
+                        </div>
+                        <div class="slide fade">
+                            <img src="products/CAR POLISH & SHINNERS/aim had wax.jpeg" alt="AIM Hard Wax">
+                            <span>AIM Hard Wax</span>
+                        </div>
+                        <div class="slideshow-controls">
+                            <button class="prev" onclick="changeSlide(-1, 'budget-starter')">&#10094;</button>
+                            <button class="next" onclick="changeSlide(1, 'budget-starter')">&#10095;</button>
+                        </div>
+                        <div class="slideshow-dots">
+                            <span class="dot" onclick="currentSlide(1, 'budget-starter')"></span>
+                            <span class="dot" onclick="currentSlide(2, 'budget-starter')"></span>
+                            <span class="dot" onclick="currentSlide(3, 'budget-starter')"></span>
+                            <span class="dot" onclick="currentSlide(4, 'budget-starter')"></span>
+                        </div>
+                    </div>
+                    <div class="bundle-products">
+                        <h4>Includes:</h4>
+                        <ul>
+                            <li>AW-102 AW Wash & Wax (1L)</li>
+                            <li>Microfiber Towel (5 pieces)</li>
+                            <li>A-131 AIM Glass Cleaner (500ml)</li>
+                            <li>AIM Hard Wax (500ml)</li>
+                        </ul>
+                    </div>
+                    <div class="bundle-pricing">
+                        <div class="original-price">₨ 1,600</div>
+                        <div class="bundle-price">₨ 1,250</div>
+                        <div class="savings">Save ₨ 350 (22% OFF)</div>
+                    </div>
+                    <button class="add-to-cart-btn" onclick="addBundleToCart('budget-starter', 1250, 'Budget Starter Pack')">
+                        <i class="fas fa-shopping-cart"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Auto Champain</h3>
+                    <p>Your trusted partner for premium car care products.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="special-bundles.html">Special Bundles</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2023 Auto Champain. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add bundle to cart functionality
+        function addBundleToCart(bundleId, price, bundleName) {
+            // Get existing cart from localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Create bundle item
+            const bundleItem = {
+                id: bundleId,
+                name: bundleName,
+                price: price,
+                quantity: 1,
+                image: 'products/CAR WASH & WAX/F1-101 CARNAUBA WASH &WAX.jpeg', // Default image
+                type: 'bundle'
+            };
+            
+            // Check if bundle already exists in cart
+            const existingIndex = cart.findIndex(item => item.id === bundleId);
+            
+            if (existingIndex !== -1) {
+                // Update quantity if already exists
+                cart[existingIndex].quantity += 1;
+            } else {
+                // Add new bundle to cart
+                cart.push(bundleItem);
+            }
+            
+            // Save updated cart
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Show success message
+            showNotification(`${bundleName} added to cart!`);
+            
+            // Update cart count if cart count element exists
+            updateCartCount();
+        }
+        
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #FFD700;
+                color: #000;
+                padding: 15px 20px;
+                border-radius: 5px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                z-index: 1000;
+                animation: slideIn 0.3s ease-out;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Remove notification after 3 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease-in';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+        
+        // Update cart count
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+            
+            // Update cart count in header if it exists
+            const cartCountElement = document.querySelector('.cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = totalItems;
+            }
+        }
+        
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Enhanced Slideshow functionality
+        let slideIndex = { 
+            'complete-car-care': 1,
+            'interior-care': 1,
+            'exterior-protection': 1,
+            'engine-care': 1,
+            'premium-detailing': 1,
+            'budget-starter': 1
+        };
+        
+        let autoAdvanceTimers = {};
+        let isPaused = {};
+        
+        function changeSlide(direction, slideshowId) {
+            const slideshowContainer = document.querySelector(`#${slideshowId}`);
+            if (!slideshowContainer) return;
+            
+            const slides = slideshowContainer.querySelectorAll('.slide');
+            const dots = slideshowContainer.querySelectorAll('.dot');
+            
+            // Hide current slide with fade out effect
+            const currentSlide = slides[slideIndex[slideshowId] - 1];
+            if (currentSlide) {
+                currentSlide.style.opacity = '0';
+                currentSlide.style.transform = 'scale(0.9) translateY(10px)';
+            }
+            
+            slideIndex[slideshowId] += direction;
+            
+            if (slideIndex[slideshowId] > slides.length) {
+                slideIndex[slideshowId] = 1;
+            }
+            if (slideIndex[slideshowId] < 1) {
+                slideIndex[slideshowId] = slides.length;
+            }
+            
+            // Show new slide with fade in effect
+            setTimeout(() => {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                    slide.style.opacity = '0';
+                    slide.style.transform = 'scale(0.9) translateY(10px)';
+                });
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show current slide
+                const newSlide = slides[slideIndex[slideshowId] - 1];
+                if (newSlide) {
+                    newSlide.classList.add('active');
+                    setTimeout(() => {
+                        newSlide.style.opacity = '1';
+                        newSlide.style.transform = 'scale(1) translateY(0)';
+                    }, 50);
+                }
+                
+                if (dots[slideIndex[slideshowId] - 1]) {
+                    dots[slideIndex[slideshowId] - 1].classList.add('active');
+                }
+            }, 300);
+        }
+        
+        function currentSlide(n, slideshowId) {
+            const slideshowContainer = document.querySelector(`#${slideshowId}`);
+            if (!slideshowContainer) return;
+            
+            const slides = slideshowContainer.querySelectorAll('.slide');
+            const dots = slideshowContainer.querySelectorAll('.dot');
+            
+            // Hide current slide
+            const currentSlide = slides[slideIndex[slideshowId] - 1];
+            if (currentSlide) {
+                currentSlide.style.opacity = '0';
+                currentSlide.style.transform = 'scale(0.9) translateY(10px)';
+            }
+            
+            slideIndex[slideshowId] = n;
+            
+            setTimeout(() => {
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                    slide.style.opacity = '0';
+                    slide.style.transform = 'scale(0.9) translateY(10px)';
+                });
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Show selected slide
+                const selectedSlide = slides[n - 1];
+                if (selectedSlide) {
+                    selectedSlide.classList.add('active');
+                    setTimeout(() => {
+                        selectedSlide.style.opacity = '1';
+                        selectedSlide.style.transform = 'scale(1) translateY(0)';
+                    }, 50);
+                }
+                
+                if (dots[n - 1]) {
+                    dots[n - 1].classList.add('active');
+                }
+            }, 300);
+        }
+        
+        function autoAdvance(slideshowId) {
+            if (autoAdvanceTimers[slideshowId]) {
+                clearInterval(autoAdvanceTimers[slideshowId]);
+            }
+            
+            autoAdvanceTimers[slideshowId] = setInterval(() => {
+                if (!isPaused[slideshowId]) {
+                    changeSlide(1, slideshowId);
+                }
+            }, 4000); // Increased to 4 seconds for better user experience
+        }
+        
+        function pauseSlideshow(slideshowId) {
+            isPaused[slideshowId] = true;
+        }
+        
+        function resumeSlideshow(slideshowId) {
+            isPaused[slideshowId] = false;
+        }
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Initialize slideshows for all bundles that have slideshows
+            const slideshowIds = ['complete-car-care', 'interior-care', 'exterior-protection', 'engine-care', 'premium-detailing', 'budget-starter'];
+            
+            slideshowIds.forEach(id => {
+                // Check if this bundle actually has a slideshow
+                const slideshowContainer = document.querySelector(`#${id}`);
+                if (!slideshowContainer) return;
+                
+                const slides = slideshowContainer.querySelectorAll('.slide');
+                const dots = slideshowContainer.querySelectorAll('.dot');
+                
+                if (slides.length > 0) {
+                    // Hide all slides first
+                    slides.forEach(slide => {
+                        slide.classList.remove('active');
+                        slide.style.opacity = '0';
+                        slide.style.transform = 'scale(0.9) translateY(10px)';
+                    });
+                    
+                    // Show first slide
+                    slides[0].classList.add('active');
+                    setTimeout(() => {
+                        slides[0].style.opacity = '1';
+                        slides[0].style.transform = 'scale(1) translateY(0)';
+                    }, 100);
+                    
+                    // Start auto-advance only if there are slides
+                    autoAdvance(id);
+                    
+                    // Add pause/resume functionality on hover
+                    slideshowContainer.addEventListener('mouseenter', () => pauseSlideshow(id));
+                    slideshowContainer.addEventListener('mouseleave', () => resumeSlideshow(id));
+                }
+                
+                if (dots.length > 0) {
+                    // Remove active class from all dots
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    // Activate first dot
+                    dots[0].classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
