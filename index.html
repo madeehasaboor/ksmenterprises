@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Auto Champain - Premium Car Care</title>
+  <link rel="icon" type="image/x-icon" href="brand logos/auto-champian-logo.jpg.jfif">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
          body {
@@ -497,6 +498,141 @@
      
      .brands-section h2 {
        color: #FFD700;
+     }
+     
+     /* Customer Reviews Section Styling */
+     .reviews {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+       gap: 25px;
+       margin-top: 30px;
+     }
+     
+     .review {
+       background: linear-gradient(135deg, #1a0000 0%, #2a0000 100%);
+       border: 1px solid #333;
+       border-radius: 15px;
+       padding: 25px;
+       box-shadow: 0 8px 25px rgba(255, 215, 0, 0.1);
+       transition: all 0.3s ease;
+       position: relative;
+       overflow: hidden;
+     }
+     
+     .review::before {
+       content: '';
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       height: 3px;
+       background: linear-gradient(90deg, #FFD700, #FFA500, #FFD700);
+       background-size: 200% 100%;
+       animation: gradientShift 3s ease-in-out infinite;
+     }
+     
+     .review:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+       border-color: #FFD700;
+     }
+     
+     .review-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: flex-start;
+       margin-bottom: 15px;
+     }
+     
+     .reviewer-info {
+       display: flex;
+       align-items: center;
+       gap: 12px;
+     }
+     
+     .reviewer-avatar {
+       font-size: 2.5em;
+       background: linear-gradient(135deg, #FFD700, #FFA500);
+       border-radius: 50%;
+       width: 50px;
+       height: 50px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: #000;
+       font-weight: bold;
+     }
+     
+     .reviewer-details h4 {
+       margin: 0 0 5px 0;
+       color: #FFD700;
+       font-size: 1.1em;
+       font-weight: 600;
+     }
+     
+     .stars {
+       font-size: 1.1em;
+       color: #FFD700;
+     }
+     
+     .review-date {
+       color: #999;
+       font-size: 0.85em;
+       font-style: italic;
+     }
+     
+     .review-text {
+       color: #e2e8f0;
+       line-height: 1.6;
+       font-size: 0.95em;
+       margin: 0;
+       font-style: italic;
+     }
+     
+     .review-text::before {
+       content: '"';
+       font-size: 2em;
+       color: #FFD700;
+       font-family: serif;
+       line-height: 0;
+       margin-right: 5px;
+     }
+     
+     .review-text::after {
+       content: '"';
+       font-size: 2em;
+       color: #FFD700;
+       font-family: serif;
+       line-height: 0;
+       margin-left: 5px;
+     }
+     
+     @keyframes gradientShift {
+       0% { background-position: 0% 50%; }
+       100% { background-position: 100% 50%; }
+     }
+     
+     @media (max-width: 768px) {
+       .reviews {
+         grid-template-columns: 1fr;
+         gap: 20px;
+       }
+       
+       .review {
+         padding: 20px;
+       }
+       
+       .review-header {
+         flex-direction: column;
+         gap: 10px;
+       }
+       
+       .reviewer-avatar {
+         width: 40px;
+         height: 40px;
+         font-size: 2em;
+       }
+     }
        font-size: 2.5em;
        margin-bottom: 30px;
        text-transform: uppercase;
@@ -665,7 +801,7 @@
     <div class="products">
              <div class="product">
          <div class="product-image">
-           <img src="products/WD-40.jpg" alt="WD-40 Multi-Function Product" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
+           <img src="WD-40.jpg" alt="WD-40 Multi-Function Product" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
                  </div>
          <h4>WD-40 Multi-Function</h4>
          <p class="product-description">Eliminates squeaks, displaces moisture, cleans & protects</p>
@@ -692,7 +828,7 @@
        </div>
        <div class="product">
          <div class="product-image">
-           <img src="products/CAR PROCTING SPRAYS/formulla 1 protectant spray 295ml.jpeg" alt="Formula 1 Protectant Spray" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
+                       <img src="products/CAR PROTECTING SPRAYS/formula 1 protectant spray 295ml.jpeg" alt="Formula 1 Protectant Spray" style="width: 100%; height: 120px; object-fit: contain; border-radius: 8px;">
          </div>
          <h4>Formula 1 Protectant Spray</h4>
          <p class="product-description">Shines, protects & freshens with Cherry Fragrance</p>
@@ -736,6 +872,68 @@
         <p>Rust prevention & treatment</p>
             </div>
         </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section class="section container">
+    <h2>What Our Customers Say</h2>
+    <div class="reviews">
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Ahmed Khan</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">2 days ago</div>
+        </div>
+        <p class="review-text">"Excellent quality products! The Formula 1 protectant spray works wonders on my car's interior. Fast delivery and great customer service. Highly recommended!"</p>
+      </div>
+      
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Fatima Ali</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">1 week ago</div>
+        </div>
+        <p class="review-text">"The microfiber towels are amazing! They don't leave any scratches and absorb water perfectly. My car has never looked better!"</p>
+      </div>
+      
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Muhammad Hassan</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">3 weeks ago</div>
+        </div>
+        <p class="review-text">"Auto Champain products are the real deal! The tire gel gives my car that showroom shine. Professional quality at reasonable prices."</p>
+      </div>
+      
+      <div class="review">
+        <div class="review-header">
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">👤</div>
+            <div class="reviewer-details">
+              <h4>Ayesha Malik</h4>
+              <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+          </div>
+          <div class="review-date">1 month ago</div>
+        </div>
+        <p class="review-text">"Outstanding service! The complete car care kit saved me money and time. All products work perfectly together. Will definitely order again!"</p>
+      </div>
+    </div>
   </section>
 
   <footer>

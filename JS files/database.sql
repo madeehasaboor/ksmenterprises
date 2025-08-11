@@ -93,7 +93,7 @@ INSERT INTO categories (name, description) VALUES
 -- Insert sample products
 INSERT INTO products (name, description, price, category, brand, image_url, stock_quantity) VALUES
 ('AIM Tire Gel 500ml', 'Professional tire gel for long-lasting shine', 850.00, 'CAR POLISH & SHINNERS', 'AIM', 'products/CAR POLISH & SHINNERS/aim tire gel 500ml.jpeg', 50),
-('Formula 1 Protectant Spray', 'Advanced protectant spray for all surfaces', 1200.00, 'CAR PROTECTING SPRAYS', 'Formula 1', 'products/CAR PROCTING SPRAYS/formula 1 protectant spray.jpeg', 30),
+('Formula 1 Protectant Spray', 'Advanced protectant spray for all surfaces', 1200.00, 'CAR PROTECTING SPRAYS', 'Formula 1', 'products/CAR PROTECTING SPRAYS/formula 1 protectant spray.jpeg', 30),
 ('AIM Spray Paint Red', 'High-quality automotive spray paint', 450.00, 'CAR SPRAY PAINTS', 'AIM', 'products/CAR SPRAY PAINTS/A-143 AIM SPRAY  PAINT RED.jpeg', 25),
 ('AIM Wash & Shampoo', 'Professional car wash shampoo', 650.00, 'CAR WASH SHAMPOOS', 'AIM', 'products/CAR WASH SHAMPOOS/AW-157 AIM WASH & SHAMPOO.jpeg', 40),
 ('Formula 1 Carnuba Wax', 'Premium carnauba wax for ultimate protection', 1800.00, 'CAR WAX', 'Formula 1', 'products/CAR WAX/F1-101 CARNAUBA WASH &WAX.jpeg', 20),
