@@ -858,13 +858,20 @@
             // Initialize slideshows for all bundles that have slideshows
             const slideshowIds = ['complete-car-care', 'interior-care', 'exterior-protection', 'engine-care', 'premium-detailing', 'budget-starter', 'complete-car-basic', 'premium'];
             
+            console.log('Initializing slideshows...');
+            
             slideshowIds.forEach(id => {
                 // Check if this bundle actually has a slideshow
                 const slideshowContainer = document.querySelector(`#${id}`);
-                if (!slideshowContainer) return;
+                if (!slideshowContainer) {
+                    console.log(`Slideshow container not found for: ${id}`);
+                    return;
+                }
                 
                 const slides = slideshowContainer.querySelectorAll('.slide');
                 const dots = slideshowContainer.querySelectorAll('.dot');
+                
+                console.log(`Found ${slides.length} slides and ${dots.length} dots for ${id}`);
                 
                 if (slides.length > 0) {
                     // Hide all slides first
@@ -887,6 +894,10 @@
                     // Add pause/resume functionality on hover
                     slideshowContainer.addEventListener('mouseenter', () => pauseSlideshow(id));
                     slideshowContainer.addEventListener('mouseleave', () => resumeSlideshow(id));
+                    
+                    console.log(`Slideshow ${id} initialized successfully`);
+                } else {
+                    console.log(`No slides found for ${id}`);
                 }
                 
                 if (dots.length > 0) {
