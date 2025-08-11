@@ -110,4 +110,30 @@ INSERT INTO users (username, email, password_hash, role) VALUES
 CREATE INDEX idx_products_category ON products(category);
 CREATE INDEX idx_products_active ON products(active);
 CREATE INDEX idx_orders_status ON orders(status);
-CREATE INDEX idx_cart_session ON cart(session_id); 
+CREATE INDEX idx_cart_session ON cart(session_id);
+
+-- Accounts table for credit limits and auto-repay preferences
+CREATE TABLE IF NOT EXISTS accounts (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_phone VARCHAR(20) NOT NULL UNIQUE,
+    credit_limit DECIMAL(10,2) NOT NULL DEFAULT 0,
+    outstanding_balance DECIMAL(10,2) NOT NULL DEFAULT 0,
+    auto_repay_enabled BOOLEAN DEFAULT FALSE,
+    repayment_method VARCHAR(50),
+    repayment_target VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Repayments ledger to record auto-repay events
+CREATE TABLE IF NOT EXISTS repayments (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_phone VARCHAR(20) NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    method VARCHAR(50),
+    target VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_accounts_phone ON accounts(customer_phone);
+CREATE INDEX idx_repayments_phone ON repayments(customer_phone); 
