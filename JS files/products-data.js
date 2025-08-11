@@ -212,7 +212,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO CHAMPAIN",
-            image: "./products/CAR PROTECTING SPRAYS/formula 1 protectant spray f1-123.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/formulla 1 protectant spray f1-123.jpeg",
             description: "Protectant specifically for new cars"
         },
         {
@@ -221,7 +221,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO CHAMPAIN",
-            image: "./products/CAR PROTECTING SPRAYS/f1-120 formula 1 protectant spray.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/f1-120 formulla 1 protectant spray.jpeg",
             description: "Citrus scented protectant"
         },
         {
@@ -230,7 +230,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO CHAMPAIN",
-            image: "./products/CAR PROTECTING SPRAYS/formula 1 protectant spray.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/formulla 1 protectant spray.jpeg",
             description: "Strawberry scented protectant"
         },
         {
@@ -239,7 +239,7 @@ const productsDatabase = {
             price: 1125,
             category: "waxes",
             brand: "AUTO CHAMPAIN",
-            image: "./products/CAR PROTECTING SPRAYS/protectant spray 295ml.jpeg",
+            image: "./products/CAR PROCTING SPRAYS/protectant spray 295ml.jpeg",
             description: "Vanilla scented protectant"
         }
     ],
