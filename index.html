@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Auto Champain - Premium Car Care</title>
   <link rel="icon" type="image/x-icon" href="brand logos/auto-champian-logo.jpg.jfif">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,6 +12,12 @@
         font-family: 'Roboto', sans-serif;
         background: #000000 !important;
         color: white;
+        /* Mobile optimizations */
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        /* Prevent horizontal scroll */
+        overflow-x: hidden;
       }
          
          /* Logo Styling */
@@ -121,6 +127,22 @@
            }
          }
          
+         @media (max-width: 360px) {
+           .logo {
+             padding: 6px 10px;
+             gap: 6px;
+           }
+           .logo-image {
+             height: 35px;
+             max-width: 80px;
+           }
+           .logo h1 {
+             font-size: 1rem;
+             letter-spacing: 0.5px;
+             padding: 6px 10px;
+           }
+         }
+         
                    header {
         background: #000000 !important;
         padding: 15px 20px;
@@ -142,6 +164,11 @@
       margin-left: 15px;
       text-decoration: none;
       font-size: 0.9em;
+       transition: color 0.3s ease;
+     }
+     
+     nav a:hover {
+       color: #FFD700;
     }
                                        .hero {
         position: relative;
@@ -336,6 +363,24 @@
          gap: 10px;
          padding: 15px;
        }
+        
+        nav {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 10px;
+        }
+        
+        nav a {
+          margin-left: 0;
+          padding: 8px 12px;
+          border-radius: 5px;
+          background: rgba(255, 215, 0, 0.1);
+          border: 1px solid rgba(255, 215, 0, 0.3);
+          font-size: 0.85em;
+          min-width: 80px;
+          text-align: center;
+        }
        .delivery-banner-section {
          padding: 15px;
        }
@@ -362,6 +407,11 @@
          font-size: 1.5em;
          letter-spacing: 1px;
        }
+        
+        .hero-content p {
+          font-size: 0.85em;
+          line-height: 1.4;
+        }
        .hero-content p {
          font-size: 0.9em;
        }
@@ -373,6 +423,16 @@
          padding: 10px 15px;
          gap: 10px;
        }
+        
+        nav {
+          gap: 8px;
+        }
+        
+        nav a {
+          padding: 6px 10px;
+          font-size: 0.8em;
+          min-width: 70px;
+        }
        .delivery-banner-section {
          padding: 10px;
        }
@@ -380,6 +440,11 @@
          padding: 8px 20px;
          width: 250px;
        }
+        
+        .scrolling-text {
+          font-size: 0.75em;
+          animation: scroll-left 15s linear infinite;
+        }
        .bullet-slide h3 {
          font-size: 0.7em;
        }
@@ -510,6 +575,20 @@
         color: #999;
         border-top: 1px solid #333;
       }
+       
+       @media (max-width: 768px) {
+         footer {
+           padding: 15px;
+           font-size: 12px;
+         }
+       }
+       
+       @media (max-width: 480px) {
+         footer {
+           padding: 12px;
+           font-size: 11px;
+         }
+       }
     @media (max-width: 600px) {
       .brand, .product, .category {
         width: 100%;
@@ -517,6 +596,32 @@
       .hero-content h2 {
         font-size: 1.8em;
       }
+       
+       .products {
+         gap: 15px;
+       }
+       
+       .product {
+         padding: 15px;
+         border-radius: 8px;
+       }
+       
+       .product h4 {
+         font-size: 1em;
+       }
+       
+       .product-description {
+         font-size: 0.75em;
+         min-height: 35px;
+       }
+       
+       .product-price {
+         font-size: 1em;
+       }
+       
+       .product-volume {
+         font-size: 0.7em;
+       }
     }
          .container {
        max-width: 1200px;
@@ -677,6 +782,30 @@
          font-size: 2em;
        }
      }
+      
+      @media (max-width: 480px) {
+        .reviews {
+          gap: 15px;
+        }
+        
+        .review {
+          padding: 15px;
+        }
+        
+        .reviewer-avatar {
+          width: 35px;
+          height: 35px;
+          font-size: 1.8em;
+        }
+        
+        .reviewer-details h4 {
+          font-size: 1em;
+        }
+        
+        .review-text {
+          font-size: 0.9em;
+        }
+      }
      
      .brands-section h2 {
        font-size: 2.5em;
@@ -749,8 +878,25 @@
          padding: 10px 15px;
          font-size: 0.9em;
          min-width: 80px;
-       }
-     }
+        }
+      }
+      
+      @media (max-width: 360px) {
+        .brands-section h2 {
+          font-size: 1.3em;
+          margin-bottom: 20px;
+        }
+        
+        .brands-grid {
+          gap: 8px;
+        }
+        
+        .brand-item {
+          padding: 8px 12px;
+          font-size: 0.8em;
+          min-width: 70px;
+        }
+      }
 
      /* Brand-Wise Products Section Styles */
      .brand-products-container {
@@ -1285,9 +1431,37 @@
          left: 100%;
        }
 
-       .brand-item:active {
-         transform: translateY(-2px) scale(0.98);
-       }
+               .brand-item:active {
+          transform: translateY(-2px) scale(0.98);
+        }
+        
+        /* Mobile touch optimizations */
+        @media (max-width: 768px) {
+          /* Improve touch targets */
+          .brand-item, .product, .modal-close, .btn-close-modal {
+            min-height: 44px;
+            min-width: 44px;
+          }
+          
+          /* Disable hover effects on touch devices */
+          .brand-item:hover {
+            transform: none;
+          }
+          
+          .product:hover {
+            transform: none;
+          }
+          
+          /* Improve scrolling performance */
+          .modal-content {
+            -webkit-overflow-scrolling: touch;
+          }
+          
+          /* Optimize animations for mobile */
+          .brand-item, .product, .modal-product-card {
+            transition: all 0.2s ease;
+          }
+        }
 
                /* Mobile responsive for modal */
         @media (max-width: 768px) {
@@ -1348,46 +1522,109 @@
           }
         }
 
-        @media (max-width: 480px) {
-          .modal-header h2 {
-            font-size: 1.5em;
+                 @media (max-width: 480px) {
+           .modal-header h2 {
+             font-size: 1.5em;
+           }
+ 
+           .brand-modal-image {
+             max-width: 200px;
+             height: 120px;
+           }
+ 
+                      .features-list li, .products-list li {
+              font-size: 0.9em;
+              padding: 6px 0;
+            }
+ 
+            .modal-products-grid {
+              grid-template-columns: 1fr;
+              gap: 10px;
+            }
+ 
+            .modal-product-card {
+              padding: 12px;
+            }
+ 
+            .modal-product-image {
+              height: 60px;
+            }
+ 
+            .modal-product-info h4 {
+              font-size: 0.8em;
+            }
+ 
+            .modal-product-price {
+              font-size: 0.9em;
+            }
+ 
+            .modal-product-volume {
+              font-size: 0.7em;
+            }
           }
-
-          .brand-modal-image {
-            max-width: 200px;
-            height: 120px;
-          }
-
-                     .features-list li, .products-list li {
-             font-size: 0.9em;
-             padding: 6px 0;
-           }
-
-           .modal-products-grid {
-             grid-template-columns: 1fr;
-             gap: 10px;
-           }
-
-           .modal-product-card {
-             padding: 12px;
-           }
-
-           .modal-product-image {
-             height: 60px;
-           }
-
-           .modal-product-info h4 {
-             font-size: 0.8em;
-           }
-
-           .modal-product-price {
-             font-size: 0.9em;
-           }
-
-           .modal-product-volume {
-             font-size: 0.7em;
-           }
-         }
+          
+          @media (max-width: 360px) {
+            .modal-content {
+              width: 98%;
+              margin: 5px;
+            }
+            
+            .modal-header {
+              padding: 15px;
+            }
+            
+            .modal-header h2 {
+              font-size: 1.3em;
+            }
+            
+            .modal-close {
+              width: 35px;
+              height: 35px;
+              font-size: 1.3em;
+            }
+            
+            .modal-body {
+              padding: 15px;
+            }
+            
+            .brand-modal-image {
+              max-width: 180px;
+              height: 100px;
+            }
+            
+            .brand-description {
+              font-size: 0.9em;
+            }
+            
+            .features-section h3, .products-section h3 {
+              font-size: 1em;
+            }
+            
+            .features-list li, .products-list li {
+              font-size: 0.8em;
+              padding: 5px 0;
+            }
+            
+            .modal-product-card {
+              padding: 10px;
+            }
+            
+            .modal-product-image {
+              height: 50px;
+            }
+            
+            .modal-product-info h4 {
+              font-size: 0.75em;
+            }
+            
+            .modal-product-price {
+              font-size: 0.8em;
+            }
+            
+            .modal-product-volume {
+              font-size: 0.65em;
+       }
+     }
   </style>
 </head>
 <body>
@@ -1406,56 +1643,21 @@
      </nav>
    </header>
 
-     <!-- Our Brands Section -->
-   <section class="brands-section">
-     <div class="container">
-       <h2>OUR BRANDS</h2>
-       <div class="brands-grid">
+  <!-- Our Brands Section -->
+  <section class="brands-section">
+    <div class="container">
+      <h2>OUR BRANDS</h2>
+      <div class="brands-grid">
          <div class="brand-item" data-brand="wd40">WD-40</div>
          <div class="brand-item" data-brand="formula1">FORMULA 1</div>
          <div class="brand-item" data-brand="aim">AIM</div>
          <div class="brand-item" data-brand="dtr">DTR</div>
          <div class="brand-item" data-brand="areon">AREON</div>
-       </div>
-     </div>
-   </section>
-
-  <!-- Shop by Category Section -->
-  <section class="section container">
-    <h2>Shop by Category</h2>
-    <div class="categories">
-      <div class="category">
-        <div class="category-icon">🧽</div>
-        <h4>Microfiber Products</h4>
-        <p>Premium cleaning cloths & towels</p>
-                    </div>
-      <div class="category">
-        <div class="category-icon">✨</div>
-        <h4>Wax & Protectants</h4>
-        <p>Car wax, sealants & protection</p>
-                </div>
-      <div class="category">
-        <div class="category-icon">🎨</div>
-        <h4>Spray Paint</h4>
-        <p>Touch-up paints & refinishing</p>
-                </div>
-      <div class="category">
-        <div class="category-icon">🧴</div>
-        <h4>Cleaners</h4>
-        <p>All-purpose & specialized cleaners</p>
-                </div>
-      <div class="category">
-        <div class="category-icon">❄️</div>
-        <h4>Coolers</h4>
-        <p>Coolant & antifreeze products</p>
-            </div>
-      <div class="category">
-        <div class="category-icon">🛡️</div>
-        <h4>Anti-Rust Spray</h4>
-        <p>Rust prevention & treatment</p>
-            </div>
-        </div>
+      </div>
+    </div>
   </section>
+
+
 
                        <section class="hero">
        <div class="slideshow">
@@ -1731,20 +1933,30 @@
     });
 
     // Change slide every 3 seconds
-    setInterval(nextSlide, 3000);
-
-    // Add touch/swipe support for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.querySelector('.slideshow').addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    document.querySelector('.slideshow').addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe();
-    });
+     let slideInterval = setInterval(nextSlide, 3000);
+ 
+     // Add touch/swipe support for mobile
+     let touchStartX = 0;
+     let touchEndX = 0;
+     let isMobile = window.innerWidth <= 768;
+ 
+     // Optimize for mobile devices
+     if (isMobile) {
+       // Disable auto-advance on mobile for better user control
+       clearInterval(slideInterval);
+       
+       // Add manual slide advancement
+       slideInterval = setInterval(nextSlide, 5000);
+     }
+ 
+     document.querySelector('.slideshow').addEventListener('touchstart', e => {
+       touchStartX = e.changedTouches[0].screenX;
+     });
+ 
+     document.querySelector('.slideshow').addEventListener('touchend', e => {
+       touchEndX = e.changedTouches[0].screenX;
+       handleSwipe();
+     });
 
     function handleSwipe() {
       const swipeThreshold = 50;
@@ -1798,22 +2010,18 @@
              function showBrandModal(brand) {
          // Brand information data with all products from BRANDWISE PRODUCTS folders
          const brandInfo = {
-           wd40: {
-             name: "WD-40",
-             description: "Multi-purpose lubricants and protectants",
-             features: ["Eliminates squeaks", "Displaces moisture", "Cleans & protects", "Fast-drying", "Non-conductive", "Multi-purpose", "Long-lasting protection"],
-             products: [
-               { name: "WD-40 Multi-Purpose", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.51 AM.jpeg" },
-               { name: "WD-40 Specialist", price: "₨ 550", volume: "300ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.52 AM.jpeg" },
-               { name: "WD-40 Multi-Function Product", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.53 AM.jpeg" },
-               { name: "WD-40 Contact Cleaner", price: "₨ 650", volume: "250ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.54 AM.jpeg" },
-               { name: "WD-40 Silicone Spray", price: "₨ 480", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.55 AM.jpeg" },
-               { name: "WD-40 Penetrating Oil", price: "₨ 520", volume: "150ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.56 AM.jpeg" },
-               { name: "WD-40 Chain Lube", price: "₨ 580", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.57 AM.jpeg" },
-               { name: "WD-40 Bike Care", price: "₨ 420", volume: "100ml", image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.58 AM.jpeg" }
-             ],
-             image: "BRANDWISE PRODUCTS/WD-40/WhatsApp Image 2025-08-01 at 11.11.51 AM.jpeg"
-           },
+                       wd40: {
+              name: "WD-40",
+              description: "Multi-purpose lubricants and protectants",
+              features: ["Eliminates squeaks", "Displaces moisture", "Cleans & protects", "Fast-drying", "Non-conductive", "Multi-purpose", "Long-lasting protection"],
+              products: [
+                { name: "WD-40 Multi-Purpose", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WD-40 Multi-Purpose 450.jpg" },
+                { name: "WD-40 Specialist", price: "₨ 550", volume: "300ml", image: "BRANDWISE PRODUCTS/WD-40/WD-40 Specialist.jpg" },
+                { name: "WD-40 Multi-Function Product", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/WD-40 Multi-Function Product.jpg" },
+                { name: "WD-40 Contact Cleaner", price: "₨ 650", volume: "250ml", image: "BRANDWISE PRODUCTS/WD-40/WD-40 Contact Cleaner.jpg" }
+              ],
+              image: "BRANDWISE PRODUCTS/WD-40/WD-40 Multi-Purpose 450.jpg"
+            },
            formula1: {
              name: "Formula 1",
              description: "Professional car care and protection",
@@ -1858,38 +2066,29 @@
              ],
              image: "BRANDWISE PRODUCTS/AIm/WhatsApp Image 2025-08-01 at 11.11.31 AM.jpeg"
            },
-           dtr: {
-             name: "DTR",
-             description: "Professional automotive solutions",
-             features: ["Fast-acting", "Powerful cleaning", "Brake system safe", "Carburetor cleaning", "Professional grade", "Heavy-duty", "Industrial strength"],
-             products: [
-               { name: "DTR Engine Cleaner", price: "₨ 800", volume: "500ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.11.59 AM.jpeg" },
-               { name: "DTR Brake Cleaner", price: "₨ 600", volume: "400ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.00 PM.jpeg" },
-               { name: "DTR Contact Cleaner", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.01 PM.jpeg" },
-               { name: "DTR Carburetor Cleaner", price: "₨ 550", volume: "300ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.02 PM.jpeg" },
-               { name: "DTR Fuel Injector Cleaner", price: "₨ 680", volume: "400ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.03 PM.jpeg" },
-               { name: "DTR Throttle Body Cleaner", price: "₨ 520", volume: "300ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.04 PM.jpeg" },
-               { name: "DTR Air Filter Cleaner", price: "₨ 480", volume: "250ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.05 PM.jpeg" },
-               { name: "DTR MAF Sensor Cleaner", price: "₨ 420", volume: "200ml", image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.12.06 PM.jpeg" }
-             ],
-             image: "BRANDWISE PRODUCTS/DTR/WhatsApp Image 2025-08-01 at 11.11.59 AM.jpeg"
-           },
-           areon: {
-             name: "AREON",
-             description: "Advanced automotive care technology",
-             features: ["Odor elimination", "AC system cleaning", "Fabric protection", "Advanced formula", "Long-lasting", "Anti-bacterial", "Fresh fragrance"],
-             products: [
-               { name: "Areon Air Freshener", price: "₨ 350", volume: "100ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.07 PM.jpeg" },
-               { name: "Areon Interior Spray", price: "₨ 400", volume: "150ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.08 PM.jpeg" },
-               { name: "Areon Fabric Freshener", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.09 PM.jpeg" },
-               { name: "Areon AC Cleaner", price: "₨ 580", volume: "300ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.10 PM.jpeg" },
-               { name: "Areon Odor Eliminator", price: "₨ 420", volume: "250ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.11 PM.jpeg" },
-               { name: "Areon Fabric Protector", price: "₨ 520", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.12 PM.jpeg" },
-               { name: "Areon Leather Care", price: "₨ 480", volume: "150ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.13 PM.jpeg" },
-               { name: "Areon Dashboard Cleaner", price: "₨ 380", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.14 PM.jpeg" }
-             ],
-             image: "BRANDWISE PRODUCTS/AERON/WhatsApp Image 2025-08-01 at 11.12.07 PM.jpeg"
-           }
+                       dtr: {
+              name: "DTR",
+              description: "Professional automotive solutions",
+              features: ["Fast-acting", "Powerful cleaning", "Brake system safe", "Carburetor cleaning", "Professional grade", "Heavy-duty", "Industrial strength"],
+              products: [
+                { name: "DTR Engine Cleaner", price: "₨ 800", volume: "500ml", image: "BRANDWISE PRODUCTS/WD-40/DTR Engine Cleaner.jpg" },
+                { name: "DTR Brake Cleaner", price: "₨ 600", volume: "400ml", image: "BRANDWISE PRODUCTS/WD-40/DTR Brake Cleaner.jpg" },
+                { name: "DTR Contact Cleaner", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/WD-40/DTR Contact Cleaner.jpg" },
+                { name: "DTR Carburetor Cleaner", price: "₨ 550", volume: "300ml", image: "BRANDWISE PRODUCTS/WD-40/DTR Carburetor Cleaner.jpg" }
+              ],
+              image: "BRANDWISE PRODUCTS/WD-40/DTR Engine Cleaner.jpg"
+            },
+                       areon: {
+              name: "AREON",
+              description: "Advanced automotive care technology",
+              features: ["Odor elimination", "AC system cleaning", "Fabric protection", "Advanced formula", "Long-lasting", "Anti-bacterial", "Fresh fragrance"],
+              products: [
+                { name: "Areon Air Freshener", price: "₨ 350", volume: "100ml", image: "BRANDWISE PRODUCTS/AERON/Areon Air Freshener.jpg" },
+                { name: "Areon Interior Spray", price: "₨ 400", volume: "150ml", image: "BRANDWISE PRODUCTS/AERON/Areon Interior Spray.jpg" },
+                { name: "Areon Fabric Freshener", price: "₨ 450", volume: "200ml", image: "BRANDWISE PRODUCTS/AERON/Areon Fabric Freshener.jpg" }
+              ],
+              image: "BRANDWISE PRODUCTS/AERON/Areon Air Freshener.jpg"
+            }
          };
 
         const info = brandInfo[brand];
@@ -1979,7 +2178,7 @@
 
 
 
-     </script>
+    </script>
 
 </body>
 </html> 
